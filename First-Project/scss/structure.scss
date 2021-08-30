@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding-bottom: 14px;
+}
+section{
+    min-height: calc(100vh - 100px);
+    background-color: aqua;
+}
