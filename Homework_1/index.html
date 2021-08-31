@@ -8,23 +8,79 @@
     <script src="app/app.js"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <div class="container">z
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="pages/products.html">PRODUCTS</a>
-            <a href="pages/content.html">CONTENT</a>
-            <a href="pages/about.html">ABOUT</a>
+<body> 
+    <!-- I create a container to begin with to seperate my page content and footer. Reason for this is 
+    that I cant keep the footer at  the bottom of the page after that way no matter how much space is 
+    left it will always go to bottom of the page this helps with compatibility since diffrent will have 
+    diffrent heights  -->
+    <div class="container">
+        <!-- logo section to place the originzation name and icon -->
+        <div class="logo">
+            <div class="logo__icon">
+                <img class="logo__icon__image" src="" alt="">
+            </div>
+        </div>
+        <!-- Navigation section where I will put page links and search bar -->
+        <nav class="nav">
+            <div class="nav__holder">
+                <a class="nav__holder__home" href="index.html">HOME</a>
+                <a class="nav__holder__products" href="pages/products.html">PRODUCTS</a>
+                <a class="nav__holder__content" href="pages/content.html">CONTENT</a>
+                <a class="nav__holder__about" href="pages/about.html">ABOUT</a>
+                <div class="nav__holder__searchbar">
+                    <input class="nav__holder__searchbar__input" type="text" name="" id="">
+                    <button class="nav__holder__serchbar__searchbtn"></button>
+                </div>
+            </div>
         </nav>
-        <section>
-            Home
-        </section>
-        <section>
-    
-        </section>
-    </div>
-    <footer class="footer">
+        <div class="content">
+               <!-- Section one of the webpage -->
+            <section class="content__sec1">
+            
+            </section>
+            <!-- Section 2 of the webpage -->
+            <section class="content__sec2">
+        
+            </section>
 
+        </div>
+    </div>
+    <!-- Footer of the website here I plan on putting another logo of the website tot he left along with website slogan and menu navigation to the right with sub navigations.
+    Here I placed the footer outside of the container to set up the footer to always stick tot he bottom of the page when theirs extra space so that it is not hovering. 
+    Its done in a way thats flexible and suitible for all screen sizes.-->
+    <footer class="footer">
+        <div class="footer__holder">
+            <!-- here I plan on putting organization logo and slogan -->
+            <div class="footer__holder__icon">
+
+            </div>
+            <!-- footer navigation menu -->
+            <div class="footer__holder__menus">
+                <div class="footer__holder__menus__home">
+
+                </div>
+                <div class="footer__holder__menus__products">
+
+                </div>
+                <div class="footer__holder__menus__content">
+
+                </div>
+                <div class="footer__holder__menus__about">
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- this section will extend the footer and hover under the menu and logo / slogan where Ill put tos and copy right information -->
+        <div class="footer__under">
+            <div class="footer__under__tos">
+
+            </div>
+            <div class="footer__under__copyright">
+
+            </div>
+        </div>
+        <br>
     </footer>
 </body>
 </html>
