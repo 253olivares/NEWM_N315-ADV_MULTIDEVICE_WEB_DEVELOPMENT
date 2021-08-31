@@ -19,7 +19,7 @@ section {
 }
 
 nav {
-  min-height: 50px;
+  min-height: 75px;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;

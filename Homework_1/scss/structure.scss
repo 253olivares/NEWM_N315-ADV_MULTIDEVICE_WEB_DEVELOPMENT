@@ -1,0 +1,18 @@
+// reset code that cleans page to begin coding
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body {
+    position: relative;
+    height: 100vh;
+}
+/* adds space for the footer so that it always sits at the bottom of the page no matter what missing space their is*/
+.container {
+    padding-bottom:75px;
+  }
+h1,h2,h3,h4,h5,h6,p{
+    padding-bottom: 14px;
+}
