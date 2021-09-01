@@ -20,23 +20,37 @@ h1, h2, h3, h4, h5, h6, p {
   padding-bottom: 14px;
 }
 
-nav {
-  min-height: 50px;
+.nav {
+  min-height: 80px;
   background-color: #000;
+  width: 100%;
+}
+.nav__holder {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  line-height: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-nav a {
-  color: #fff;
+.nav__holder__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.nav__holder__links a {
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
   text-decoration: none;
-  text-transform: uppercase;
+  letter-spacing: 5px;
 }
 
 /* css that sets my footer giving it a height and colors and what not*/
@@ -51,7 +65,8 @@ nav a {
   border-top: 2px solid #8c8c8c;
 }
 .footer__holder {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2%;
   display: -webkit-box;
@@ -90,7 +105,8 @@ nav a {
   cursor: pointer;
 }
 .footer__under {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2%;
   display: -webkit-box;

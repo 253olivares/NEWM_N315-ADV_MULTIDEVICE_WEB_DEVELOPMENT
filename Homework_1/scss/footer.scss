@@ -10,7 +10,8 @@
     border-top: 2px solid #8c8c8c; 
 
     &__holder{
-      width: 1000px;
+      width: 100%;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2%;
       display: flex;
@@ -50,7 +51,8 @@
       }
     }
     &__under{
-      width: 1000px;
+      width: 100%;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2%;
       display: flex;

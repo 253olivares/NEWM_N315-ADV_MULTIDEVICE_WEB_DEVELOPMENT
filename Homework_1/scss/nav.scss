@@ -1,12 +1,24 @@
-nav{
-    min-height: 50px;
+.nav{
+    min-height: 80px;
     background-color: #000;
-    display:flex;
-    align-items: center;
-    justify-content: space-evenly;
-    a{
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
+    width: 100%;
+    &__holder{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        line-height: 80px;
+        justify-content: space-between;
+        &__links{
+            display: flex;
+            justify-content: flex-start;
+            a{
+                color: white;
+                font-size: 20px;
+                padding-left: 20px;
+                text-decoration: none;
+                letter-spacing:5px ;
+            }
+        }
     }
 }
