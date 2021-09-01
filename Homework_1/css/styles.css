@@ -13,7 +13,7 @@ html, body {
 
 /* adds space for the footer so that it always sits at the bottom of the page no matter what missing space their is*/
 .container {
-  padding-bottom: 75px;
+  padding-bottom: 325px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -43,7 +43,77 @@ nav a {
 .footer {
   position: absolute;
   bottom: 0;
+  margin: 0 auto;
+  clear: both;
+  min-height: 315px;
   width: 100%;
-  height: 75px;
   background-color: #EEE;
+  border-top: 2px solid #8c8c8c;
+}
+.footer__holder {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__holder__icon {
+  margin-top: 15px;
+  width: 25%;
+}
+.footer__holder__menus {
+  width: 70%;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.footer__holder__menus .cont h5 {
+  font-size: 15px;
+  font-style: bold;
+  margin-bottom: 20px;
+  line-height: 35px;
+  text-decoration: underline;
+}
+.footer__holder__menus .cont ul li {
+  list-style: none;
+  line-height: 30px;
+  font-size: 15px;
+}
+.footer__holder__menus .cont ul li:hover {
+  cursor: pointer;
+}
+.footer__under {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__under__tos {
+  width: 26%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 15px;
+  line-height: 30px;
+}
+.footer__under__copyright {
+  width: 70%;
+  text-align: right;
+  font-size: 15px;
+  line-height: 30px;
 }
