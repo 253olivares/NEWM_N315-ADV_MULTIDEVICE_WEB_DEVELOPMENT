@@ -12,6 +12,23 @@ html, body {
 /* adds space for the footer so that it always sits at the bottom of the page no matter what missing space their is*/
 .container {
     padding-bottom:325px;
+    .logo{
+        &__icon{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            img{
+                margin-top: 5px;
+                margin-bottom: 10px;
+                width: 100px;
+            }
+            h1{
+                font-size: 80px;
+            }
+        }
+    }
   }
 h1,h2,h3,h4,h5,h6,p{
     padding-bottom: 14px;

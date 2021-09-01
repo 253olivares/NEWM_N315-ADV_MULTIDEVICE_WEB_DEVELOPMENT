@@ -8,16 +8,48 @@
         margin: 0 auto;
         display: flex;
         line-height: 80px;
-        justify-content: space-between;
+        position: relative;
         &__links{
             display: flex;
             justify-content: flex-start;
+            position: absolute;
             a{
                 color: white;
                 font-size: 20px;
-                padding-left: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
                 text-decoration: none;
                 letter-spacing:5px ;
+                transition: all .8s ease-in-out;
+                height: 80px;
+
+            }
+            a:hover{
+                background-color: #ff8533;
+                height: 90px;
+            }
+        }
+        &__searchbar{
+            right: 10px;
+            position: absolute;
+            &__input{
+                padding: 10px 6px 10px 6px;
+                border: none;
+                font-size: 17px;
+                border-radius: 0px;
+
+            }
+            &__input:focus{
+                background-color: #f2f2f2;
+            }
+            &__searchbtn{
+                background-color: #cccccc;
+                cursor: pointer;
+                padding: 10px 6px 10px 6px;
+                border: none;
+                font-size: 17px;
+                border-radius:0px;
+                
             }
         }
     }

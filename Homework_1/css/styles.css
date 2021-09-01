@@ -15,6 +15,25 @@ html, body {
 .container {
   padding-bottom: 325px;
 }
+.container .logo__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container .logo__icon img {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+.container .logo__icon h1 {
+  font-size: 80px;
+}
 
 h1, h2, h3, h4, h5, h6, p {
   padding-bottom: 14px;
@@ -33,9 +52,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: -ms-flexbox;
   display: flex;
   line-height: 80px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: relative;
 }
 .nav__holder__links {
   display: -webkit-box;
@@ -44,13 +61,43 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  position: absolute;
 }
 .nav__holder__links a {
   color: white;
   font-size: 20px;
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-decoration: none;
   letter-spacing: 5px;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  height: 80px;
+}
+.nav__holder__links a:hover {
+  background-color: #ff8533;
+  height: 90px;
+}
+.nav__holder__searchbar {
+  right: 10px;
+  position: absolute;
+}
+.nav__holder__searchbar__input {
+  padding: 10px 6px 10px 6px;
+  border: none;
+  font-size: 17px;
+  border-radius: 0px;
+}
+.nav__holder__searchbar__input:focus {
+  background-color: #f2f2f2;
+}
+.nav__holder__searchbar__searchbtn {
+  background-color: #cccccc;
+  cursor: pointer;
+  padding: 10px 6px 10px 6px;
+  border: none;
+  font-size: 17px;
+  border-radius: 0px;
 }
 
 /* css that sets my footer giving it a height and colors and what not*/
@@ -79,6 +126,17 @@ h1, h2, h3, h4, h5, h6, p {
 .footer__holder__icon {
   margin-top: 15px;
   width: 25%;
+  text-align: center;
+}
+.footer__holder__icon img {
+  max-width: 100px;
+  margin: 0 auto 10px auto;
+}
+.footer__holder__icon p {
+  text-align: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 19px;
 }
 .footer__holder__menus {
   width: 70%;
