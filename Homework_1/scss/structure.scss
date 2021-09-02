@@ -38,5 +38,6 @@ body::-webkit-scrollbar {
     }
   }
 h1,h2,h3,h4,h5,h6,p{
-    padding-bottom: 14px;
+    //commented out becuase every time I add padding and margin to text it causes a weird issue at the bottom of my page where there is extra white space
+//    padding-bottom: 14px;
 }
