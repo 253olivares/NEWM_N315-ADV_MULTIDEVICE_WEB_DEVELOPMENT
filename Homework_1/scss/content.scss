@@ -1,0 +1,17 @@
+.content{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    &__purchase{
+        &__title{
+            font-size: 40px;
+            margin-top: 30px;
+        }
+    }
+    &__subscriptions{
+        &__title{
+            font-size: 40px;
+            margin-top: 40px;
+        }
+    }
+}

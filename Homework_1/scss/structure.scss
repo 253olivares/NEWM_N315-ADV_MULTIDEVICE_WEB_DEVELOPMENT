@@ -9,8 +9,13 @@ html, body {
     position: relative;
     clear: both;
     min-height: 100vh;
+    -ms-overflow-style: none; 
+  scrollbar-width: none;
     font-family: Arial, sans-serif;
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 /* adds space for the footer so that it always sits at the bottom of the page no matter what missing space their is*/
 .container {
     padding-bottom: 395px;
