@@ -8,12 +8,14 @@
 
 html, body {
   position: relative;
-  height: 100vh;
+  clear: both;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 /* adds space for the footer so that it always sits at the bottom of the page no matter what missing space their is*/
 .container {
-  padding-bottom: 325px;
+  padding-bottom: 395px;
 }
 .container .logo__icon {
   display: -webkit-box;
@@ -100,13 +102,49 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 0px;
 }
 
+.home {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.home__sec1__title {
+  font-size: 40px;
+  margin-top: 30px;
+}
+.home__sec1__kiwis {
+  width: 100%;
+}
+.home__sec1__kiwis img {
+  margin: 20px auto 0px auto;
+  display: block;
+  max-width: 750px;
+}
+.home__sec2__title {
+  font-size: 40px;
+  margin-top: 40px;
+}
+.home__sec2__text {
+  margin-top: 20px;
+}
+.home__sec2__text p {
+  font-size: 20px;
+  line-height: 30px;
+  text-indent: 50px;
+  text-align: justify;
+  margin: 0 auto;
+}
+.home__sec2__text img {
+  margin: 30px auto 100px auto;
+  display: block;
+  max-width: 750px;
+}
+
 /* css that sets my footer giving it a height and colors and what not*/
 .footer {
   position: absolute;
   bottom: 0;
   margin: 0 auto;
-  clear: both;
-  min-height: 315px;
+  min-height: 395px;
   width: 100%;
   background-color: #EEE;
   border-top: 2px solid #8c8c8c;

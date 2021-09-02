@@ -7,11 +7,13 @@
 }
 html, body {
     position: relative;
-    height: 100vh;
+    clear: both;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
 }
 /* adds space for the footer so that it always sits at the bottom of the page no matter what missing space their is*/
 .container {
-    padding-bottom:325px;
+    padding-bottom: 395px;
     .logo{
         &__icon{
             display: flex;

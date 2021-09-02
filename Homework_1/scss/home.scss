@@ -1,0 +1,40 @@
+.home{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    &__sec1{
+        &__title{
+            font-size: 40px;
+            margin-top: 30px;
+        }
+        &__kiwis{
+            width: 100%;
+            img{
+                margin: 20px auto 0px auto;
+                display: block;
+                max-width: 750px;
+            }
+        }
+    }
+    &__sec2{
+        &__title{
+            font-size: 40px;
+            margin-top: 40px;
+        }
+        &__text{
+            margin-top: 20px;
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                text-indent: 50px;
+                text-align: justify;
+                margin: 0 auto;
+            }
+            img{
+                margin: 30px auto 100px auto;
+                display: block;
+                max-width: 750px;
+            }
+        }
+    }
+}
