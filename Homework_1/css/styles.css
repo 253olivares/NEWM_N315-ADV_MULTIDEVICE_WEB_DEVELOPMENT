@@ -358,6 +358,7 @@ body::-webkit-scrollbar {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   z-index: 2;
+  cursor: pointer;
 }
 .products__sec1__recipes .recipe:hover .dishName {
   top: 40%;
@@ -444,6 +445,7 @@ body::-webkit-scrollbar {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   z-index: 2;
+  cursor: pointer;
 }
 .products__sec1__recipes .recipe:hover .dishName {
   top: 40%;
