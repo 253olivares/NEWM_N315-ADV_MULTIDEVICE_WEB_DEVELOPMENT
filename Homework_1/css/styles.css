@@ -261,6 +261,54 @@ body::-webkit-scrollbar {
   text-align: justify;
 }
 
+.about {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about__sec1__title {
+  font-size: 40px;
+  margin-top: 30px;
+}
+.about__sec1__text p {
+  font-size: 20px;
+  line-height: 30px;
+  text-indent: 50px;
+  text-align: justify;
+  margin: 0 auto;
+}
+.about__sec2__title {
+  font-size: 40px;
+  margin-top: 30px;
+}
+.about__sec2__text p {
+  font-size: 20px;
+  line-height: 30px;
+  text-indent: 50px;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+.products {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.products__sec1__title {
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.products {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.products__sec1__title {
+  font-size: 40px;
+  margin-top: 30px;
+}
+
 /* css that sets my footer giving it a height and colors and what not*/
 .footer {
   position: absolute;

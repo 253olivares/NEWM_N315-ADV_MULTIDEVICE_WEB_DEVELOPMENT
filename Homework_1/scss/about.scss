@@ -1,0 +1,35 @@
+.about{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    &__sec1{
+        &__title{
+            font-size: 40px;
+            margin-top: 30px;
+        }
+        &__text{
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                text-indent: 50px;
+                text-align: justify;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__sec2{
+        &__title{
+            font-size: 40px;
+            margin-top: 30px;
+        }
+        &__text{
+            p{
+                font-size: 20px;
+                line-height: 30px;
+                text-indent: 50px;
+                text-align: justify;
+                margin: 0 auto;
+            }
+        }
+    }
+}
