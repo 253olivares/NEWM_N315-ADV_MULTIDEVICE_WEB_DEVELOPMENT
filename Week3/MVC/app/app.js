@@ -1,11 +1,33 @@
+
+function showVariable(newName){
+    console.log("newName app.js " + newName);
+}
+
+
+
+function showNewVariable(Name){
+    console.log("I like " + Name);
+}
 function setBindings(){
-    $("nav a").click(function(e){
+    $(".start a").click(function(e){
         let btnID = e.currentTarget.id;
         console.log(btnID);
-        MODEL.getMyVariable(btnID);
+        MODEL.getMyVariable(btnID, showVariable);
     });
 }
+
+function SetDogCatBind(){
+    $(".catDogBind a").click(function(e){
+        let btnID = e.currentTarget.id;
+        console.log (btnID)
+        MODEL.getCatDogVariable(btnID,showNewVariable)
+    });
+}
+
+
+
 $(document).ready(function(){
         console.log("ready");
         setBindings();
+        SetDogCatBind()
 });
