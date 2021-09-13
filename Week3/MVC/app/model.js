@@ -7,7 +7,7 @@ var MODEL = (function(){
     var _getMyVariable = function(buttonID, callback){
         console.log("Model.js 6 " + buttonID);
         let newName = buttonID + " Callback";
-
+        $("#content").html(eval(newName));
         if(buttonID == "home"){
             $("#homePage").append(buttonID);
         } else{
