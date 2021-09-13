@@ -14,9 +14,6 @@ function setBindings(){
         console.log(btnID);
         MODEL.getMyVariable(btnID, showVariable);
     });
-}
-
-function SetDogCatBind(){
     $(".catDogBind a").click(function(e){
         let btnID = e.currentTarget.id;
         console.log (btnID)
@@ -29,5 +26,4 @@ function SetDogCatBind(){
 $(document).ready(function(){
         console.log("ready");
         setBindings();
-        SetDogCatBind()
 });

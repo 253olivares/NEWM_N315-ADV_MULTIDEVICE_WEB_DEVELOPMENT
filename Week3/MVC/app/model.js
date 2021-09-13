@@ -2,6 +2,7 @@
 var MODEL = (function(){
     
     var _myVar = "Model";
+    var _homePageInfo = "";
 
     var _getMyVariable = function(buttonID, callback){
         console.log("Model.js 6 " + buttonID);
@@ -13,8 +14,9 @@ var MODEL = (function(){
             $("#aboutPage").append(buttonID);
         }
         // return _myVar;
-        
-        callback(newName);
+        if(callback){
+            callback(newName);
+        };
     };
 
     var _getCatDogVariable = function(btnID, callback){
