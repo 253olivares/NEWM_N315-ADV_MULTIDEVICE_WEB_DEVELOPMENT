@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6, p {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
+  z-index: 2;
 }
 .aboveNav .head {
   width: 30%;
@@ -84,6 +85,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #555;
   color: white;
 }
+.aboveNav__searchBar form button:hover {
+  cursor: pointer;
+}
 .aboveNav__cart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,11 +107,18 @@ h1, h2, h3, h4, h5, h6, p {
   text-decoration: none;
   padding: 0px 20px 0px 20px;
 }
+.aboveNav__cart img {
+  cursor: pointer;
+}
 
 nav {
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: 40px;
   background-color: #000;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 nav .nav__holder {
   max-width: 950px;
@@ -129,15 +140,35 @@ nav .nav__holder {
 }
 nav .nav__holder .red {
   background-color: #c21e5c;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+nav .nav__holder .red:hover {
+  background-color: #e03879;
 }
 nav .nav__holder .blue {
   background-color: #0d47a1;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+nav .nav__holder .blue:hover {
+  background-color: #136aec;
 }
 nav .nav__holder .purple {
   background-color: #4a148c;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+nav .nav__holder .purple:hover {
+  background-color: #8436e2;
 }
 nav .nav__holder .pink {
   background-color: #cc00cc;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+nav .nav__holder .pink:hover {
+  background-color: #ff1aff;
 }
 nav .nav__holder a {
   line-height: 40px;
@@ -146,4 +177,10 @@ nav .nav__holder a {
   color: white;
   width: 12.5%;
   text-decoration: none;
+}
+
+.content {
+  background-color: white;
+  min-height: 500px;
+  width: 100%;
 }
