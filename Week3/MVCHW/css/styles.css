@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #content-wrap {
-  padding-bottom: 75px;
+  padding-bottom: 350px;
   /* Will always be footer height*/
 }
 
@@ -33,8 +33,9 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 75px;
+  height: 350px;
   /* Will always be footer height */
+  background-color: white;
 }
 
 .aboveNav {
@@ -144,7 +145,10 @@ nav .nav__holder .red {
   transition: 0.8s;
 }
 nav .nav__holder .red:hover {
-  background-color: #e03879;
+  background-color: #e76597;
+}
+nav .nav__holder .selectedRed {
+  background-color: #e76597;
 }
 nav .nav__holder .blue {
   background-color: #0d47a1;
@@ -152,7 +156,10 @@ nav .nav__holder .blue {
   transition: 0.8s;
 }
 nav .nav__holder .blue:hover {
-  background-color: #136aec;
+  background-color: #4288f0;
+}
+nav .nav__holder .selectedBlue {
+  background-color: #4288f0;
 }
 nav .nav__holder .purple {
   background-color: #4a148c;
@@ -162,12 +169,18 @@ nav .nav__holder .purple {
 nav .nav__holder .purple:hover {
   background-color: #8436e2;
 }
+nav .nav__holder .selectedPurple {
+  background-color: #8436e2;
+}
 nav .nav__holder .pink {
   background-color: #cc00cc;
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
 nav .nav__holder .pink:hover {
+  background-color: #ff1aff;
+}
+nav .nav__holder .selectedPink {
   background-color: #ff1aff;
 }
 nav .nav__holder a {
@@ -183,4 +196,64 @@ nav .nav__holder a {
   background-color: white;
   min-height: 500px;
   width: 100%;
+}
+
+.footerNav {
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+.footerNav .stuff {
+  margin-bottom: 30px;
+}
+.footerNav .stuff h5 {
+  font-size: 15px;
+  font-style: bold;
+  color: #464646;
+  line-height: 15px;
+  text-decoration: underline;
+}
+.footerNav .stuff ul li {
+  list-style: none;
+  line-height: 25px;
+  font-size: 15px;
+}
+.footerNav .stuff ul li:hover {
+  cursor: pointer;
+}
+
+.socials {
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.socials img {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.socials img:hover {
+  cursor: pointer;
 }

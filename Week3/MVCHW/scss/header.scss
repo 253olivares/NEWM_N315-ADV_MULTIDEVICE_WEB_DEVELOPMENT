@@ -78,14 +78,24 @@ nav{
     .red:hover{
         background-color: 
 
-        #e03879;
+         #e76597
+        ;
+    }
+    .selectedRed{
+        background-color: 
+
+         #e76597
+        ;
     }
     .blue{
         background-color: #0d47a1;
         transition: 0.8s;
     }
     .blue:hover{
-        background-color: #136aec;
+        background-color: #4288f0;
+    }
+    .selectedBlue{
+        background-color: #4288f0;
     }
     .purple{
         background-color: #4a148c;
@@ -94,11 +104,17 @@ nav{
     .purple:hover{
         background-color:  #8436e2;
     }
+    .selectedPurple{
+        background-color:  #8436e2;
+    }
     .pink{
         background-color:   #cc00cc;
         transition: 0.8s;
     }
     .pink:hover{
+        background-color: #ff1aff;
+    }
+    .selectedPink{
         background-color: #ff1aff;
     }
         a{  
