@@ -8,7 +8,7 @@
 
 html, body {
   height: 100%;
-  background-color: #e5e5e5;
+  background-color: white;
 }
 
 body::-webkit-scrollbar {
@@ -36,6 +36,11 @@ h1, h2, h3, h4, h5, h6, p {
   height: 350px;
   /* Will always be footer height */
   background-color: white;
+}
+
+.color {
+  width: 100%;
+  background-color: #e5e5e5;
 }
 
 .aboveNav {
