@@ -1,0 +1,36 @@
+.content{
+    background-color: rgb(255, 255, 255);
+        min-height: 500px;
+        width: 100%;
+        .bible{
+            max-width: 75%;
+            margin: auto;
+            img{
+                display: block;
+                margin: auto;
+            }
+
+        }
+        .daily{ 
+            height: 45px;
+            width: 950px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            hr{
+                width: 35%;
+                height: 3px;
+                color: black;
+                background-color: black;
+                border: none;
+            }
+            p{
+                padding-bottom:0px;
+                line-height: 45px;
+                text-align: center;
+                font-size: 25px;
+                color: #cf2013;
+            }
+        }
+}

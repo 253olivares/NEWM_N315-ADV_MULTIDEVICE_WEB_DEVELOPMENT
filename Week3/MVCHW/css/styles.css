@@ -197,6 +197,42 @@ nav .nav__holder a {
   min-height: 500px;
   width: 100%;
 }
+.content .bible {
+  max-width: 75%;
+  margin: auto;
+}
+.content .bible img {
+  display: block;
+  margin: auto;
+}
+.content .daily {
+  height: 45px;
+  width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .daily hr {
+  width: 35%;
+  height: 3px;
+  color: black;
+  background-color: black;
+  border: none;
+}
+.content .daily p {
+  padding-bottom: 0px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 25px;
+  color: #cf2013;
+}
 
 .footerNav {
   max-width: 950px;
