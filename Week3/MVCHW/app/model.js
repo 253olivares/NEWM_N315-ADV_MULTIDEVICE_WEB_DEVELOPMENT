@@ -100,7 +100,28 @@ var MODEL = (function(){
 <div class="zoomLink">
     <button>Zoom Link</button>
 </div>`;
-    var _contactPageInfo = `<p>contact page</p>`;
+    var _contactPageInfo = `<div class="getTouch">
+    <p><b>Get In Touch</b></p>
+</div>
+<br>
+<hr class="contentHr">
+<br>
+<br>
+<div class="information">
+    <br>
+    <br>
+    <h3>Office Location:</h3>
+    <img src="img/Map.png" alt="">
+    <br>
+    <br>
+    <p class="address"><b>Address:</b> 377 N Warman Ave, Indianapolis, IN 46222</p>
+    <br>
+    <br>
+    <p class="email"><b>Email:</b> AdMEev@gmail.com</p>
+    <br>
+    <br>
+    <p class="phone"><b>Phone:</b> 1-317-5423</p>
+</div>`;
 
     // this is out hidden function that controls the page changes that occure. Here is where are var is loaded and changes when needed.
     // it does this by targeting our content div and change out the html elements within with what ever information was stored in the var file.

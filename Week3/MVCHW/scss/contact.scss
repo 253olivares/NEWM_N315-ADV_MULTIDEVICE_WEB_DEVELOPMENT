@@ -1,0 +1,47 @@
+.content{
+    .getTouch{
+        max-width: 950px;
+        margin: auto;
+        p{
+            padding-bottom:0px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 35px;
+            color: #cf2013;
+        }
+    }
+    .contentHr{
+        margin: auto;
+        max-width: 400px;
+        height: 3px;
+        color: black;
+        background-color: black;
+        border: none;
+    }
+    .information{
+        max-width: 950px;
+        margin: auto;
+        h3{
+            font-size: 30px;
+            margin-left: 95px;
+        }
+       img{
+           width: 80%;
+           display: block;
+           text-align: center;
+           margin: auto;
+       }
+       .address{
+        font-size: 20px;
+        margin-left: 95px;
+       }
+       .email{
+        font-size: 20px;
+        margin-left: 95px;  
+       }
+       .phone{
+        font-size: 20px;
+        margin-left: 95px;  
+       }
+    }
+}

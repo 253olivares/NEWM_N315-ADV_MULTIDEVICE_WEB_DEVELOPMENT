@@ -386,6 +386,52 @@ nav .nav__holder a {
   background-color: #66abff;
 }
 
+.content .getTouch {
+  max-width: 950px;
+  margin: auto;
+}
+.content .getTouch p {
+  padding-bottom: 0px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 35px;
+  color: #cf2013;
+}
+.content .contentHr {
+  margin: auto;
+  max-width: 400px;
+  height: 3px;
+  color: black;
+  background-color: black;
+  border: none;
+}
+.content .information {
+  max-width: 950px;
+  margin: auto;
+}
+.content .information h3 {
+  font-size: 30px;
+  margin-left: 95px;
+}
+.content .information img {
+  width: 80%;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+.content .information .address {
+  font-size: 20px;
+  margin-left: 95px;
+}
+.content .information .email {
+  font-size: 20px;
+  margin-left: 95px;
+}
+.content .information .phone {
+  font-size: 20px;
+  margin-left: 95px;
+}
+
 .footerNav {
   max-width: 950px;
   margin: auto;
