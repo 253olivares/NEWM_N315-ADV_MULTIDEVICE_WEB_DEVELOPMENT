@@ -37,7 +37,69 @@ var MODEL = (function(){
 <br>
 <br>
 <img class="family" src="img/family.jpg" alt="">`;
-    var _servicesPageInfo = `<p>service page</p>`;
+    var _servicesPageInfo = `<div class="service">
+    <p><b>Service Schedule</b></p>
+</div>
+<br>
+<hr>
+<br>
+<br>
+<div class="time">
+    <p>We connect family and friends together even during difficult times. We offer online masses and study sessions weekly with several time slots to fit any person's time frame. Allowing even the busiest to find time to envelop themselves within the faith.</p>
+</div>
+<br>
+<br>
+<br>
+<div class="weekTimes">
+    <div>
+    <h3>Sunday</h3>
+    <ul>
+        <li>10:00 a.m - English</li>
+        <li>12:00 p.m. - Spanish</li>
+        <li>4:00 p.m. - Spanish</li>
+        <li>8:00 p.m - English</li>
+    </ul>
+    </div>
+    <div>
+    <h3>Monday</h3>
+    <ul>
+        <li>11:00 a.m - English</li>
+        <li>1:00 p.m. - Spanish</li>
+        <li>4:00 p.m. - Spanish</li>
+        <li>8:00 p.m - English</li>
+    </ul>
+    </div>
+    <div>
+        <h3>Wednesday</h3>
+        <ul>
+            <li>2:00 p.m - English</li>
+            <li>4:00 p.m. - Spanish</li>
+        </ul>
+        </div>
+            <div>
+                <h3>Friday</h3>
+                <ul>
+                    <li>2:00 a.m - English</li>
+                    <li>4:00 p.m. - Spanish</li>
+                </ul>
+                </div>
+                <div>
+                    <h3>Saturday</h3>
+                    <ul>
+                        <li>10:00 a.m - English</li>
+                        <li>12:00 p.m. - Spanish</li>
+                        <li>4:00 p.m. - Spanish</li>
+                        <li>8:00 p.m - English</li>
+                    </ul>
+                    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="zoomLink">
+    <button>Zoom Link</button>
+</div>`;
     var _contactPageInfo = `<p>contact page</p>`;
 
     // this is out hidden function that controls the page changes that occure. Here is where are var is loaded and changes when needed.

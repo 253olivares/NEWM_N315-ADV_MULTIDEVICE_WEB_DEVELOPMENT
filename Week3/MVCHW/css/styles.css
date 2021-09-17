@@ -302,7 +302,41 @@ nav .nav__holder a {
   margin: auto;
 }
 
-.footerNav {
+.content .service {
+  height: 45px;
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content .service p {
+  padding-bottom: 0px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 35px;
+  color: #cf2013;
+}
+.content .time {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+.content .time p {
+  margin: auto;
+  width: 90%;
+  line-height: 40px;
+  font-size: 20px;
+  text-indent: 50px;
+  text-align: justify;
+}
+.content .weekTimes {
   max-width: 950px;
   margin: auto;
   display: -webkit-box;
@@ -317,6 +351,55 @@ nav .nav__holder a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.content .weekTimes ul li {
+  list-style: none;
+  line-height: 25px;
+  font-size: 18px;
+}
+.content .weekTimes ul li:hover {
+  cursor: pointer;
+}
+.content .zoomLink {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.content .zoomLink button {
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2D8CFF;
+  color: white;
+  font-size: 20px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+.content .zoomLink button:hover {
+  cursor: pointer;
+  background-color: #66abff;
+}
+
+.footerNav {
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 10px;
 }
 .footerNav .stuff {

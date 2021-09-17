@@ -1,0 +1,68 @@
+.content{
+    .service{ 
+        height: 45px;
+        max-width: 950px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            padding-bottom:0px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 35px;
+            color: #cf2013;
+        }
+    }
+    .time{
+        max-width: 950px;
+        margin: auto;
+        text-align: center;
+        p{
+            margin: auto;
+            width: 90%;
+            line-height: 40px;
+            font-size: 20px;
+            text-indent: 50px;
+            text-align: justify;
+        }
+    }
+    .weekTimes{
+        max-width: 950px;
+        margin: auto;
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    ul{
+        li{
+            list-style: none;
+            line-height: 25px;
+            font-size: 18px;
+        }
+        li:hover{
+            cursor: pointer;
+          }
+    }
+    }
+    .zoomLink{
+        max-width: 950px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        button{
+            padding:20px 40px 20px 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: #2D8CFF;
+            color: white;
+            font-size: 20px;
+            transition: 0.8s;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #66abff;
+        }
+    }
+}
