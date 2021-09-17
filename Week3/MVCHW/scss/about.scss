@@ -1,0 +1,52 @@
+.content{
+    .church{
+        max-width: 950px;
+        margin: auto;
+        img{
+            display: block;
+            margin: auto;
+        }
+
+    }
+    .name{ 
+        height: 45px;
+        max-width: 950px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            padding-bottom:0px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 35px;
+            color: #cf2013;
+        }
+    }
+    hr{
+        margin: auto;
+        max-width: 550px;
+        height: 3px;
+        color: black;
+        background-color: black;
+        border: none;
+    }
+    .aboutUs{
+        max-width: 950px;
+        margin: auto;
+        text-align: center;
+        p{
+            margin: auto;
+            width: 90%;
+            line-height: 40px;
+            font-size: 20px;
+            text-indent: 50px;
+            text-align: justify;
+        }
+    }
+    .family{
+        width: 800px;
+        display: block;
+        margin: auto;
+    }
+}

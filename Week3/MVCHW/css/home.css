@@ -2,6 +2,8 @@
   background-color: white;
   min-height: 500px;
   width: 100%;
+  padding-top: 100px;
+  padding-bottom: 150px;
 }
 .content .bible {
   max-width: 75%;
@@ -38,4 +40,14 @@
   text-align: center;
   font-size: 25px;
   color: #cf2013;
+}
+.content .scripture {
+  width: 950px;
+  margin: auto;
+  text-align: center;
+}
+.content .scripture p {
+  margin: auto;
+  width: 85%;
+  font-size: 20px;
 }
