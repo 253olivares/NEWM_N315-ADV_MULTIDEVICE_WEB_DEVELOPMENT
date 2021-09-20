@@ -1,0 +1,19 @@
+.head{
+    width: 100%;
+    &__holder{
+        width: 100%;
+        min-height: 100px;
+        max-width: 900px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__search{
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.nav{
+    
+}
