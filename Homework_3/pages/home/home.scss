@@ -30,7 +30,7 @@
         justify-content: space-around;
         &__card{
             width: 275px;
-            height: 230px;
+            height: 235px;
             border: 1px solid #9c9c9c;
             position: relative;
             hr{
@@ -58,7 +58,7 @@
                 position: absolute;
                 width: 100%;
                 text-align: center;
-                bottom: 15px;
+                bottom: 20px;
                 button{
                     width: 80%;
                     padding-top: 5px;
@@ -68,6 +68,9 @@
                     border-radius: 5px;
                     border: none;
                     color: white;
+                }
+                button:hover{
+                    cursor: pointer;
                 }
             }
         }

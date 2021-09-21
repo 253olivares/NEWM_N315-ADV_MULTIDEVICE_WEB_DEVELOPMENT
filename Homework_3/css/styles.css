@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6, p {
 .head__holder__search button {
   padding: 15px;
   font-size: 15px;
-  background-color: #2b88f2;
+  background-color: #126bc5;
   color: white;
   border: none;
 }
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .home .offers__card {
   width: 275px;
-  height: 230px;
+  height: 235px;
   border: 1px solid #9c9c9c;
   position: relative;
 }
@@ -191,7 +191,7 @@ h1, h2, h3, h4, h5, h6, p {
   position: absolute;
   width: 100%;
   text-align: center;
-  bottom: 15px;
+  bottom: 20px;
 }
 .home .offers__card .button button {
   width: 80%;
@@ -202,6 +202,9 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 5px;
   border: none;
   color: white;
+}
+.home .offers__card .button button:hover {
+  cursor: pointer;
 }
 .footerHead {
   margin-top: 30px;
