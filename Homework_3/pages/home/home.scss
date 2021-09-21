@@ -28,6 +28,7 @@
         max-width: 900px;
         display: flex;
         justify-content: space-around;
+        margin-bottom: 50px;
         &__card{
             width: 275px;
             height: 235px;
@@ -74,7 +75,43 @@
                 }
             }
         }
+        &__card:hover{
+            cursor: pointer;
+        }
     }
-    .offers:hover{}
-    cursor: pointer;
+    .homehr{
+        color: #444345;
+        background-color: #444345;
+    }
+    .promotionalCards{
+        margin: auto;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        .cards{
+            padding: 30px;
+        }
+        .referalPromotion{
+            width: 70%;
+            color: #444345;
+            h3{
+                margin-top: 30px;
+                font-size: 35px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+            button{
+                border: none;
+                border-radius: 5px;
+                font-size: 20px;
+                padding: 10px;
+                width: 40%;
+                background-color: #398100;
+                color: white;
+            }
+        }
+    }
 }

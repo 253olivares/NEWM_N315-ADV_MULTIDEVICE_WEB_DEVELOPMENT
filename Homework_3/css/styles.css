@@ -118,9 +118,6 @@ h1, h2, h3, h4, h5, h6, p {
   text-decoration-thickness: 5px;
 }
 
-.home {
-  cursor: pointer;
-}
 .home .headHome {
   text-align: center;
   color: #444345;
@@ -159,6 +156,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 50px;
 }
 .home .offers__card {
   width: 275px;
@@ -206,6 +204,49 @@ h1, h2, h3, h4, h5, h6, p {
 .home .offers__card .button button:hover {
   cursor: pointer;
 }
+.home .offers__card:hover {
+  cursor: pointer;
+}
+.home .homehr {
+  color: #444345;
+  background-color: #444345;
+}
+.home .promotionalCards {
+  margin: auto;
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.home .promotionalCards .cards {
+  padding: 30px;
+}
+.home .promotionalCards .referalPromotion {
+  width: 70%;
+  color: #444345;
+}
+.home .promotionalCards .referalPromotion h3 {
+  margin-top: 30px;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.home .promotionalCards .referalPromotion p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.home .promotionalCards .referalPromotion button {
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  width: 40%;
+  background-color: #398100;
+  color: white;
+}
+
 .footerHead {
   margin-top: 30px;
   text-align: center;
