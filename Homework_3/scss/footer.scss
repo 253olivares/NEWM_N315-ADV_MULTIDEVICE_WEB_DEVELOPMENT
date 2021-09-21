@@ -1,0 +1,37 @@
+.footerHolder{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 900px;
+    padding-top: 50px;
+    margin: auto;
+    &__columns{
+        h5{
+            text-decoration: underline;
+            font-size: 15px;
+            color: #414045;
+        }
+        ul{
+            li{
+                list-style: none;
+                line-height: 25px;
+                font-size: 15px;
+            }
+            li:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+.fakeAdvertisment{
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    p{
+        font-size: 15px;
+    }
+    p:nth-child(2){
+        font-size: 13px;
+    }
+}
