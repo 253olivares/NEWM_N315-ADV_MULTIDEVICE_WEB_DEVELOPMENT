@@ -23,4 +23,55 @@
             transform: scale(1.2);
         }
     }
+    .offers{
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: space-around;
+        &__card{
+            width: 275px;
+            height: 230px;
+            border: 1px solid #9c9c9c;
+            position: relative;
+            hr{
+                width: 90%;
+                margin: auto;
+            }
+            .headLine{
+                margin-top: 30px;
+                text-align: center;
+                color: #126bc5;
+            }
+            .information{
+                width: 87%;
+                margin: auto;
+                h3{
+                    color: #444345;
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                }
+                p{
+                    font-size: 15px;
+                }
+            }
+            .button{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                bottom: 15px;
+                button{
+                    width: 80%;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    text-align: center;
+                    background-color:#126bc5 ;
+                    border-radius: 5px;
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    .offers:hover{}
+    cursor: pointer;
 }
