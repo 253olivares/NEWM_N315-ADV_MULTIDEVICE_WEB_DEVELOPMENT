@@ -38,13 +38,6 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #f7f7f7;
 }
 
-#app {
-  min-height: 500px;
-  width: 100%;
-  max-width: 900px;
-  margin: 30px auto 20px auto;
-}
-
 .head {
   width: 100%;
 }
@@ -118,6 +111,12 @@ h1, h2, h3, h4, h5, h6, p {
   text-decoration-thickness: 5px;
 }
 
+.home {
+  min-height: 500px;
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto 20px auto;
+}
 .home .headHome {
   text-align: center;
   color: #444345;
@@ -245,6 +244,108 @@ h1, h2, h3, h4, h5, h6, p {
   width: 40%;
   background-color: #398100;
   color: white;
+}
+
+.products {
+  min-height: 500px;
+  width: 100%;
+  color: #444345;
+  margin: 0px auto 20px auto;
+}
+.products .popularOfferings {
+  background-color: #e6e6e6;
+  width: 100%;
+  min-height: 200px;
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+.products .popularOfferings h1 {
+  width: 900px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.products .popularOfferings .offerHoldidng {
+  width: 900px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.products .popularOfferings .offerHoldidng .card {
+  width: 30%;
+  min-height: 480px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.products .popularOfferings .offerHoldidng .card img {
+  width: 95%;
+  margin-bottom: 20px;
+}
+.products .popularOfferings .offerHoldidng .card .title {
+  width: 95%;
+  text-align: left;
+}
+.products .popularOfferings .offerHoldidng .card .title h4 {
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+.products .popularOfferings .offerHoldidng .card .list {
+  width: 100%;
+  padding-left: 40px;
+  margin: 0px auto 0px auto;
+}
+.products .popularOfferings .offerHoldidng .card .list ul li {
+  margin-bottom: 10px;
+}
+.products .popularOfferings .offerHoldidng .card .acceptOffer {
+  width: 100%;
+  min-height: 90px;
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.products .popularOfferings .offerHoldidng .card .acceptOffer .accept {
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 10px;
+  width: 75%;
+  background-color: #398100;
+  color: white;
+  margin-bottom: 15px;
+}
+.products .popularOfferings .offerHoldidng .card .acceptOffer .learn {
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 10px;
+  width: 75%;
+  background-color: #0b6efd;
+  color: white;
+}
+.products .Travel {
+  background-color: #fff;
 }
 
 .footerHead {
