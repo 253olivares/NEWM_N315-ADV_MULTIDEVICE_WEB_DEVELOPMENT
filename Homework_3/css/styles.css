@@ -245,6 +245,9 @@ h1, h2, h3, h4, h5, h6, p {
   background-color: #398100;
   color: white;
 }
+.home .promotionalCards .referalPromotion button:hover {
+  cursor: pointer;
+}
 
 .products {
   min-height: 500px;
@@ -346,6 +349,56 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .products .Travel {
   background-color: #fff;
+}
+
+.account {
+  min-height: 425px;
+  width: 100%;
+  color: #fff;
+  margin: 0px auto 0px auto;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../img/SlateHero.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../img/SlateHero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.account__holder {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+}
+.account__holder .present {
+  width: 60%;
+  font-size: 20px;
+}
+.account__holder .present h1 {
+  font-size: 50px;
+  text-shadow: 0px 4px 3px rgba(100, 100, 111, 0.2);
+}
+.account__holder .login {
+  width: 300px;
+  height: 275px;
+  color: #444345;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.account__holder .login h1 {
+  font-size: 20px;
 }
 
 .footerHead {
