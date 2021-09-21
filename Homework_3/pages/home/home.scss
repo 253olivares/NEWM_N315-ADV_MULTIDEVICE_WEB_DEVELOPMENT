@@ -1,0 +1,26 @@
+.home{
+    .headHome{
+        text-align: center;
+        color: #444345;
+    }
+    .chooseRight{
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: space-around;
+        min-height: 30px;
+        .card{
+            color: #126bc5;
+            padding: 30px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            transition: .8s;
+            h3{
+                padding-bottom: 0px;
+            }
+        }
+        .card:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}
