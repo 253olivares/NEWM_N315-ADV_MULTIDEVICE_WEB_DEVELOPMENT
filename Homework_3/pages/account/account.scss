@@ -24,7 +24,7 @@
         }
         .login{
             width: 300px;
-            height: 275px;
+            height: 310px;
             color: #444345;
             background-color: #fff;
             border-radius: 5px;
@@ -34,6 +34,33 @@
             h1{
                 font-size: 20px;
             }
+            .label{
+                margin-bottom: 5px;
+            }
+            .cred{
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 1px #444345 solid;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            .rememberMe{
+                padding-bottom: 5px;
+            }
+            .signIn{
+                padding: 10px;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                background-color: #0b6efd;
+                margin-bottom: 5px;
+            }
+            a{
+                text-decoration: none;
+                margin-bottom: 5px;
+            }
+            
         }
     }
 }

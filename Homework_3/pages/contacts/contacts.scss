@@ -1,0 +1,29 @@
+.contacts{
+    min-height: 500px;
+    width: 100%; 
+    color: #444345;
+    background-color: #fff;
+    margin: 0px auto 0px auto;
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        width: 900px;
+        margin: 40px auto 40px auto;
+        &__crd{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            &__icon{
+                width: 25%;
+            }
+            &__information{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 75%;
+            }
+
+        }
+    }
+}
