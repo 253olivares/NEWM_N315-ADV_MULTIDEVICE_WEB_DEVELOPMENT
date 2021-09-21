@@ -395,6 +395,66 @@ h1, h2, h3, h4, h5, h6, p {
           justify-content: center;
   width: 75%;
 }
+.contacts__cards__crd__information span {
+  text-decoration: underline;
+  color: #0b6efd;
+}
+.contacts__cards__crd__information span:hover {
+  cursor: pointer;
+}
+
+.about {
+  color: #444345;
+  min-height: 500px;
+  width: 100%;
+  margin: 0px auto 0px auto;
+  background-color: #f7f7f7;
+}
+.about .nandS {
+  width: 900px;
+  margin: auto;
+}
+.about .nandS h1 {
+  font-size: 40px;
+}
+.about .nandS p {
+  font-size: 20px;
+  color: #0b6efd;
+}
+.about .nandS .storiesFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  min-height: 200px;
+}
+.about .nandS .storiesFlex .card {
+  width: 215px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 15px;
+}
+.about .nandS .storiesFlex .card img {
+  width: 100%;
+}
+.about .nandS .storiesFlex .card p {
+  color: #444345;
+  margin-top: 20px;
+  font-size: 18px;
+}
+.about .nandS .storiesFlex .card:hover {
+  cursor: pointer;
+}
 
 .account {
   min-height: 425px;

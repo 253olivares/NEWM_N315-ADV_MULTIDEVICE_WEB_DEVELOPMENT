@@ -1,0 +1,44 @@
+.about{
+    color: #444345;
+    min-height: 500px;
+    width: 100%; 
+    margin: 0px auto 0px auto;
+    background-color: #f7f7f7;
+    .nandS{
+
+        width: 900px;
+        margin: auto;
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+            color:#0b6efd;
+        }
+        .storiesFlex{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            min-height: 200px
+            ;
+            .card{
+                width: 215px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+                img{
+                    width: 100%;
+                }
+                p{
+                    color: #444345;
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            }
+            .card:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
