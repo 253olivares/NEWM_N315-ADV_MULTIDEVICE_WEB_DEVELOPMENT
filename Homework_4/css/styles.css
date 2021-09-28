@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #content-wrap {
-  padding-bottom: 250px;
+  padding-bottom: 760px;
   /* Footer height */
 }
 
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p {
   bottom: 0;
   width: 100%;
   background-color: #131a22;
-  height: 500px;
+  height: 760px;
   /* Footer height */
   z-index: 0;
   text-align: center;
@@ -98,6 +98,7 @@ nav .holder .left-Nav .location .map {
 }
 nav .holder .left-Nav .location .map h5 {
   font-size: 15px;
+  color: #DDD;
   margin-bottom: 0px;
 }
 nav .holder .left-Nav .location .map h1 {
@@ -217,9 +218,10 @@ nav .holder .right-Nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 1250px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1000px;
   margin: auto;
 }
 .holder2 .columns {
@@ -228,7 +230,7 @@ nav .holder .right-Nav a {
   color: white;
 }
 .holder2 .columns h3 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: left;
 }
 .holder2 .columns ul li {
@@ -236,6 +238,7 @@ nav .holder .right-Nav a {
   line-height: 25px;
   font-size: 15px;
   text-align: left;
+  font-weight: lighter;
 }
 .holder2 .columns ul li:hover {
   cursor: pointer;
@@ -250,7 +253,51 @@ nav .holder .right-Nav a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 1250px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1000px;
   margin: auto;
-  background-color: yellow;
+  padding-top: 30px;
+}
+.holder2 .holder3 .footerMiniNav .card {
+  width: 100px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  height: 50px;
+  text-align: left;
+}
+.holder2 .holder3 .footerMiniNav .card h3 {
+  color: #DDD;
+  margin-bottom: 0px;
+  font-size: 11px;
+}
+.holder2 .holder3 .footerMiniNav .card .text {
+  font-size: 11px;
+  color: #767676;
+}
+.holder2 .holder3 .footerMiniNav .card h3:hover {
+  cursor: pointer;
+}
+.holder2 .holder3 .footerMiniNav .card .text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.holder2 .holder3 .extraInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.holder2 .holder3 .extraInfo a {
+  text-decoration: none;
+  color: #DDD;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 25px;
+  font-size: 13px;
 }
