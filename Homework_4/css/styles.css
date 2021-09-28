@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #eaeded;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 250px;
+  /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #131a22;
+  height: 500px;
+  /* Footer height */
+  z-index: 0;
+  text-align: center;
+}
+#footer .back2Top {
+  background-color: #37475a;
+  height: 50px;
+  line-height: 50px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+#footer p {
+  color: white;
+  font-size: 20px;
+}
+#footer .back2Top:hover {
+  background-color: #44576f;
+  cursor: pointer;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  background-color: #131921;
+}
+nav .holder {
+  width: 98%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+nav .holder .left-Nav {
+  width: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+nav .holder .left-Nav .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+nav .holder .left-Nav .location img {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+nav .holder .left-Nav .location .map {
+  color: white;
+}
+nav .holder .left-Nav .location .map h5 {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+nav .holder .left-Nav .location .map h1 {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+nav .holder .left-Nav img {
+  height: 60px;
+  display: block;
+  margin-top: 3px;
+}
+nav .holder .left-Nav img:hover {
+  cursor: pointer;
+}
+nav .holder .midSearch {
+  width: 66%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 6px;
+}
+nav .holder .midSearch select {
+  border: none;
+  height: 47px;
+  border-radius: 10px 0px 0px 10px;
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+nav .holder .midSearch input {
+  border: none;
+  width: 85%;
+  font-size: 23px;
+  padding: 10px;
+  border-radius: 0px;
+}
+nav .holder .midSearch button {
+  border: none;
+  height: 47px;
+  width: 50px;
+  background-color: #febd69;
+  border-radius: 0px 10px 10px 0px;
+}
+nav .holder .midSearch button:hover {
+  cursor: pointer;
+}
+nav .holder .right-Nav {
+  width: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+nav .holder .right-Nav span {
+  color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 30px;
+}
+nav .holder .right-Nav a {
+  font-size: 23px;
+  color: white;
+  text-decoration: none;
+}
+
+.pages {
+  width: 100%;
+  background-color: #232f3e;
+  height: 40px;
+}
+.pages .holder {
+  width: 98%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.pages .holder a {
+  text-decoration: none;
+  padding-right: 20px;
+  color: white;
+  font-size: 17px;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.pages .holder a img {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.holder2 {
+  z-index: 1;
+  background-color: #232f3e;
+}
+.holder2 .spacing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1250px;
+  margin: auto;
+}
+.holder2 .columns {
+  margin-bottom: 60px;
+  padding-top: 40px;
+  color: white;
+}
+.holder2 .columns h3 {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.holder2 .columns ul li {
+  list-style: none;
+  line-height: 25px;
+  font-size: 15px;
+  text-align: left;
+}
+.holder2 .columns ul li:hover {
+  cursor: pointer;
+}
+.holder2 .holder3 {
+  z-index: 2;
+  background-color: #131a22;
+}
+.holder2 .holder3 .footerMiniNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 1250px;
+  margin: auto;
+  background-color: yellow;
+}
