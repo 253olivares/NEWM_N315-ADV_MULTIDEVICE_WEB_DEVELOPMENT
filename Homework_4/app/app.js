@@ -17,11 +17,14 @@ function route(){
     console.log(pageID);
     if(!pageID){
         MODEL.changeContent("home");
-    }else if(pageID == "Login" || "SignUp"){
-        MODEL.modalPopup(pageID);
     }else{
         MODEL.changeContent(pageID);
     }
+}
+
+function modalOpen(){
+    let val = $(".styling").val()
+    MODEL.modalPopup(val);
 }
 
 function checkHash(){
@@ -32,4 +35,5 @@ function checkHash(){
 $(document).ready(function(){
     console.log("Page Has Loaded! Function have begun running!")
     checkHash();
+    modalOpen();
 });

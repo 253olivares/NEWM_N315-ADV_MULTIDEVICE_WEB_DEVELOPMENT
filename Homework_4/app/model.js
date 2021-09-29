@@ -13,7 +13,7 @@ var MODEL = (function(){
       <input class="textField" type="text" id="password" name="password">
       <label class="textLabel" for="email">Email:</label>
       <input class="textField" type="text" id="email" name="email">
-      <input class="signButton styling" type="submit" value="Signup">
+      <input class="signButton styling" type="submit" value="SignUp">
     </div>
   </div>`;
     var _modalLogin = ` <div class="modal">
@@ -24,7 +24,7 @@ var MODEL = (function(){
       <input class="textField" type="text" id="username" name="username">
       <label class="textLabel" for="password">Password:</label>
       <input class="textField" type="text" id="password" name="password">
-      <input class="loginButton" type="submit" value="Signup">
+      <input class="loginButton styling" type="submit" value="Login">
     </div>
   </div>`;
     var _changeContent = function(page){
