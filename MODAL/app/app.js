@@ -16,7 +16,7 @@ function initListeners(){
     $("#showModal").click(function(e){
         // $("body").append(modal);
         // $(".modal").css("display","flex")
-        gsap.to($(".modal"),{scale:100,duraction:2,onComplete:showAlert});
+        gsap.to($(".modal"),{scale:1,duraction:2,onComplete:showAlert});
         addModalListener();
     });
 }

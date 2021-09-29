@@ -1,3 +1,16 @@
+function addModalListener(){
+    $(".bg-click").click(function(e){
+        $(".modal").remove();
+    });
+    $(".loginButton").click(function(e){
+        $(".modal").remove();
+    });
+    $(".signButton").class(function(e){
+        $(".modal").remove();
+    })
+}
+
+
 function route(){
     let hashTag = window.location.hash;
     let pageID = hashTag.replace("#/","");

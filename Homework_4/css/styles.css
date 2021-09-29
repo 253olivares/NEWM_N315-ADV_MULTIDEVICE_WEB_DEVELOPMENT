@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -252,17 +253,89 @@ nav .holder .right-Nav a {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation: fadeIn 0.8s;
+          animation: fadeIn 0.8s;
+}
+
+.log {
+  width: 600px;
+  height: 400px;
+}
+
+.sig {
+  width: 600px;
+  height: 500px;
 }
 
 .callout {
   position: relative;
   z-index: 10;
-  width: 600px;
-  height: 400px;
   background-color: #eaeded;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.callout img {
+  width: 30%;
+  margin-bottom: 10px;
+}
+.callout .textLabel {
+  width: 70%;
+  margin: 0 auto 15px auto;
+}
+.callout .textField {
+  width: 70%;
+  margin: 0 auto 15px auto;
+  padding: 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px #444345 solid;
+  border-radius: 5px;
+}
+.callout .loginButton {
+  margin-top: 10px;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  background-color: #febd69;
+  border: none;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.8s;
+  transition: background-color 0.8s;
+}
+.callout .loginButton:hover {
+  cursor: pointer;
+  background-color: #fecf4d;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .holder2 {
   z-index: 1;
   background-color: #232f3e;
