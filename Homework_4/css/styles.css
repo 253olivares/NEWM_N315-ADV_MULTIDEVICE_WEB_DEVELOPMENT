@@ -230,6 +230,48 @@ nav .holder .right-Nav a {
   margin: auto;
   display: block;
 }
+#app .home .amazonItems {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+#app .home .amazonItems .card {
+  width: 23.5%;
+  min-height: 200px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+#app .home .amazonItems .card h3 {
+  padding-top: 10px;
+}
+#app .home .amazonItems .card p {
+  padding-top: 25px;
+  color: #348e9e;
+}
+#app .home .amazonItems .card p:hover {
+  cursor: pointer;
+}
+#app .service {
+  min-height: 300px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
 
 .modal {
   position: fixed;

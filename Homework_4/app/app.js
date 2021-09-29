@@ -5,7 +5,7 @@ function addModalListener(){
     $(".loginButton").click(function(e){
         $(".modal").remove();
     });
-    $(".signButton").class(function(e){
+    $(".signButton").click(function(e){
         $(".modal").remove();
     })
 }

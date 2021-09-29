@@ -8,6 +8,38 @@
         width: 100%;
         margin: auto;
         display: block;
+        .amazonItems{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .card{
+                width: 23.5%;
+                min-height: 200px;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 20px;
+                h3{
+                    padding-top: 10px;
+                }
+                p{
+                    padding-top: 25px;
+                    color: #348e9e;
+                }
+                p:hover{
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+    .service{
+        min-height: 300px;
+        width: 100%;
+        margin: auto;
+        display: block;
     }
 }  
 .modal{
