@@ -4,7 +4,9 @@ function route(){
     console.log(pageID);
     if(!pageID){
         MODEL.changeContent("home");
-    }else {
+    }else if(pageID == "Login" || "SignUp"){
+        MODEL.modalPopup(pageID);
+    }else{
         MODEL.changeContent(pageID);
     }
 }

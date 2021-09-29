@@ -1,5 +1,37 @@
 #app{
     width: 1500px;
     padding: 10px;
-    
-}   
+    z-index: 4;
+    margin: auto;
+    .home{
+        min-height: 300px;
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+}  
+.modal{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-click{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.4);
+}
+.callout{
+    position: relative;
+    z-index: 10;
+    width: 600px;
+    height: 400px;
+    background-color: #eaeded;
+    border-radius: 10px;
+}

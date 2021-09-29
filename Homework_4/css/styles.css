@@ -5,9 +5,16 @@
           box-sizing: border-box;
 }
 
-html, body {
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
   height: 100%;
   background-color: #eaeded;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -20,7 +27,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 #content-wrap {
-  padding-bottom: 760px;
+  padding-bottom: 775px;
   /* Footer height */
 }
 
@@ -29,7 +36,7 @@ h1, h2, h3, h4, h5, h6, p {
   bottom: 0;
   width: 100%;
   background-color: #131a22;
-  height: 760px;
+  height: 775px;
   /* Footer height */
   z-index: 0;
   text-align: center;
@@ -210,6 +217,52 @@ nav .holder .right-Nav a {
   width: 20px;
 }
 
+#app {
+  width: 1500px;
+  padding: 10px;
+  z-index: 4;
+  margin: auto;
+}
+#app .home {
+  min-height: 300px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bg-click {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.callout {
+  position: relative;
+  z-index: 10;
+  width: 600px;
+  height: 400px;
+  background-color: #eaeded;
+  border-radius: 10px;
+}
+
 .holder2 {
   z-index: 1;
   background-color: #232f3e;
@@ -225,7 +278,7 @@ nav .holder .right-Nav a {
   margin: auto;
 }
 .holder2 .columns {
-  margin-bottom: 60px;
+  margin-bottom: 75px;
   padding-top: 40px;
   color: white;
 }
@@ -300,4 +353,7 @@ nav .holder .right-Nav a {
   padding-right: 10px;
   margin-top: 25px;
   font-size: 13px;
+}
+.holder2 .holder3 .extraInfo a:hover {
+  text-decoration: underline;
 }

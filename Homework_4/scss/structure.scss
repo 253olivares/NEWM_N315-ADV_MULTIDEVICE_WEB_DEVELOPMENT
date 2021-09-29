@@ -3,9 +3,16 @@
  padding: 0;
  box-sizing: border-box;
 }
-html, body {
+
+ body {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  overflow-y: scroll; 
  height: 100%;
  background-color: #eaeded;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 h1, h2, h3, h4, h5, h6, p {
  margin-bottom: 16px
@@ -16,7 +23,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
   
   #content-wrap {
-    padding-bottom: 760px;    /* Footer height */
+    padding-bottom: 775px;    /* Footer height */
   }
   
   #footer {
@@ -24,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
     bottom: 0;
     width: 100%;
     background-color: #131a22;
-    height:760px;            /* Footer height */
+    height:775px;            /* Footer height */
     z-index: 0;
     text-align: center;
     .back2Top{
