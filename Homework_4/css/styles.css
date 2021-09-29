@@ -258,13 +258,13 @@ nav .holder .right-Nav a {
 }
 
 .log {
-  width: 600px;
+  width: 650px;
   height: 400px;
 }
 
 .sig {
-  width: 600px;
-  height: 500px;
+  width: 650px;
+  height: 650px;
 }
 
 .callout {
@@ -287,15 +287,15 @@ nav .holder .right-Nav a {
           align-items: center;
 }
 .callout img {
-  width: 30%;
+  width: 40%;
   margin-bottom: 10px;
 }
 .callout .textLabel {
-  width: 70%;
+  width: 80%;
   margin: 0 auto 15px auto;
 }
 .callout .textField {
-  width: 70%;
+  width: 80%;
   margin: 0 auto 15px auto;
   padding: 10px;
   border-top: none;
@@ -304,7 +304,7 @@ nav .holder .right-Nav a {
   border-bottom: 1px #444345 solid;
   border-radius: 5px;
 }
-.callout .loginButton {
+.callout .styling {
   margin-top: 10px;
   padding: 10px 30px 10px 30px;
   color: white;
@@ -314,7 +314,7 @@ nav .holder .right-Nav a {
   -webkit-transition: background-color 0.8s;
   transition: background-color 0.8s;
 }
-.callout .loginButton:hover {
+.callout .styling:hover {
   cursor: pointer;
   background-color: #fecf4d;
 }
