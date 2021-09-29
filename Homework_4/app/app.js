@@ -23,9 +23,16 @@ function route(){
 }
 
 function modalOpen(){
-    let val = $(".styling").val()
-    MODEL.modalPopup(val);
+    $(".openLogin").click(function(e){
+        e.preventDefault();
+        MODEL.modalPopup("Login");
+    });
+    $(".openSignUp").click(function(e){
+        e.preventDefault();
+        MODEL.modalPopup("SignUp");
+    });
 }
+
 
 function checkHash(){
     $(window).on("hashchange",route);
