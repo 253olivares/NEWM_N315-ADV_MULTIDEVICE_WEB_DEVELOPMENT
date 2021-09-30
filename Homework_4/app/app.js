@@ -4,8 +4,12 @@ function addModalListener(){
     });
     $(".loginButton").click(function(e){
         $(".modal").remove();
+        let name = $("#username").val();
+        alert(`Succesfully Logged In! Welcome: ${name}`);
     });
     $(".signButton").click(function(e){
+        let name = $("#username").val();
+        alert(`Succesfully Signed In! Welcome: ${name}`);
         $(".modal").remove();
     })
 }
