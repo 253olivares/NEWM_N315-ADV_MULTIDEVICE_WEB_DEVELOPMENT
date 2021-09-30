@@ -17,6 +17,8 @@ function route(){
     console.log(pageID);
     if(!pageID){
         MODEL.changeContent("home");
+        $("#app").css("width", "1500px");
+            $("#app").css("padding", "10px");
     }else{
         if(pageID == "home"){
             $("body").css("background-color", "#eaeded");
