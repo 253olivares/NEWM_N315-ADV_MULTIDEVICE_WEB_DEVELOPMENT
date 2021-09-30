@@ -3,9 +3,9 @@ function addModalListener(){
         $(".modal").remove();
     });
     $(".loginButton").click(function(e){
-        $(".modal").remove();
         let name = $("#username").val();
         alert(`Succesfully Logged In! Welcome: ${name}`);
+        $(".modal").remove();
     });
     $(".signButton").click(function(e){
         let name = $("#username").val();
