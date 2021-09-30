@@ -18,7 +18,18 @@ function route(){
     if(!pageID){
         MODEL.changeContent("home");
     }else{
-        MODEL.changeContent(pageID);
+        if(pageID == "home"){
+            $("body").css("background-color", "#eaeded");
+            $("#app").css("width", "1500px");
+            $("#app").css("padding", "10px");
+            MODEL.changeContent(pageID);
+        }else{
+            $("body").css("background-color", "#fff");
+            $("#app").css("width", "100%");
+            $("#app").css("padding", "0px");
+            MODEL.changeContent(pageID);
+        }
+
     }
 }
 

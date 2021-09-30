@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Amazon Ember", Arial, sans-serif;
 }
 
 body {
@@ -239,6 +239,8 @@ nav .holder .right-Nav a {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding-top: 50px;
+  margin-bottom: 50px;
 }
 #app .home .amazonItems .card {
   width: 23.5%;
@@ -255,6 +257,7 @@ nav .holder .right-Nav a {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 20px;
+  margin-bottom: 25px;
 }
 #app .home .amazonItems .card h3 {
   padding-top: 10px;
@@ -271,6 +274,65 @@ nav .holder .right-Nav a {
   width: 100%;
   margin: auto;
   display: block;
+}
+#app .service h1 {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  width: 1000px;
+  margin: auto;
+  font-weight: normal;
+}
+#app .service hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ccc), color-stop(#333), to(#ccc));
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+#app .service h2 {
+  width: 1000px;
+  margin: 30px auto 10px auto;
+  font-weight: normal;
+}
+#app .service .cusomerOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1000px;
+  margin: 30px auto 70px auto;
+}
+#app .service .cusomerOptions .card {
+  width: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+#app .service .cusomerOptions .card img {
+  width: 65px;
+  height: 65px;
+  margin-right: 10px;
+}
+#app .service .cusomerOptions .card .des h3 {
+  font-size: 22px;
+  padding-top: 5px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+#app .service .cusomerOptions .card .des p {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+#app .service .cusomerOptions .card:hover {
+  cursor: pointer;
 }
 
 .modal {
