@@ -31,4 +31,21 @@ nav{
             border-radius: 26px;
         }
     }
+    .mobile-menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    nav{
+        .menu{
+            display: none;
+        }
+        .mobile-menu{
+            display: block;
+        }
+    }
 }
