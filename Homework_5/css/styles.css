@@ -18,6 +18,10 @@
   font-family: Gillsan-Italic;
   src: url(../css/fonts/GillSans-Italic.ttf); }
 
+@font-face {
+  font-family: Lato-Italic;
+  src: url(../css/fonts/Lato-Italic.ttf); }
+
 * {
   margin: 0;
   padding: 0;
@@ -135,7 +139,7 @@ nav {
         width: 160px;
         height: 80px;
         font-size: 16px;
-        font-family: "lato"; }
+        font-family: "Lato-Italic"; }
 
 #footer {
   color: #393939;
@@ -143,7 +147,7 @@ nav {
   justify-content: space-between;
   padding: 26px 40px 26px 40px;
   font-size: 16px;
-  font-family: "lato";
+  font-family: "Lato-Italic";
   flex-wrap: wrap; }
   #footer .footNav {
     display: flex;
