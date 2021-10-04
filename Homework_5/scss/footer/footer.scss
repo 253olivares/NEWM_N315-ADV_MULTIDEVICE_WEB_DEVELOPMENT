@@ -1,0 +1,26 @@
+#footer{
+    color: #393939;
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 40px 26px 40px;
+    font-size: 16px;
+    font-family: "lato";
+    flex-wrap: wrap;
+    .footNav{
+        display: flex;
+        justify-content: space-between;
+        a{
+            margin-left: 13px;
+            margin-right: 13px;
+            color: #393939;
+            text-decoration: none;
+        }
+    }
+    .social{
+        display: flex;
+        justify-content: flex-end;
+        img:nth-child(2){
+            margin-left: 50px;
+        }
+    }
+}
