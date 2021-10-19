@@ -96,3 +96,23 @@
         }
     }
 }
+@media screen and (max-width: 750px){
+    .loginPage{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 400px;
+        .loginField{
+            margin-bottom: 100px;
+        }
+    }
+}
+@media screen and (max-width: 450px){
+    .loginPage{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 230px;
+        .loginField{
+            margin-bottom: 100px;
+        }
+    }
+}
