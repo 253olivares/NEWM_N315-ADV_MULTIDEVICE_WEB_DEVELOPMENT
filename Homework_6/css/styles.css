@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
 #page-container {
   position: relative;
   min-height: 100vh;
-  background-image: linear-gradient(to right, rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(images/hero.jpg);
+  background-image: linear-gradient(to right, rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(/images/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
