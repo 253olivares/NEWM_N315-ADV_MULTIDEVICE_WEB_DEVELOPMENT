@@ -1,0 +1,52 @@
+nav{
+    font-family: "Caveat-Regular";
+    height: 130px;
+    padding: 38px 50px 38px 50px;
+    display: flex;
+    justify-content: space-between;
+    .menu{
+        width: 60%;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        a{
+            margin-left: 40px;
+            font-size: 25px;
+            color: #000000;
+            text-decoration: none;
+            height: 37px;
+        }
+        .selected{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 3px solid;
+        }
+        .login{
+            width: 158px;
+            background-color: #FFD972;
+            text-align: center;
+            height: 52px;
+            line-height: 52px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+            border-radius: 26px;
+        }
+    }
+    .mobile-menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1025px){
+    nav{
+        .menu{
+            display: none;
+        }
+        .mobile-menu{
+            display: block;
+        }
+    }
+}
