@@ -1,0 +1,118 @@
+.loginPage{
+    display: flex;
+    justify-content: space-around;
+    margin:100px auto 100px auto;
+    width: 100%;
+    max-width: 1000px;
+    .loginField{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 225px;
+        h1{
+        margin-top: 50px;
+        text-align: left;
+        margin-bottom: 0px;
+        height: 50px;
+        font-family: "Lato-Black";
+        }
+        input{
+            width: 225px;
+            font-size: 15px;
+            height: 50px;
+            border-right: none;
+            border-top: none;
+            border-left: none;
+            border-bottom: black solid 3px;
+            background-color: #FFD972 ;
+            margin-top: 50px;
+            color: black ;
+        }
+        input::placeholder{
+            color: black;
+            font-family: "Lato-Regular";
+        }
+        .loginOne{
+            margin:50px auto 0 auto;
+            font-family: "Caveat-Regular";
+            width: 170px;
+            font-size: 25px;
+            background-color: #FFD972;
+            text-align: center;
+            height: 52px;
+            line-height: 52px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+            border-radius: 26px;
+            border: none;
+        }
+        .loginOne:hover{
+            cursor: pointer;
+        }
+    }
+    .signUpField{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 225px;
+        h3{
+            font-family:"Lato-Italic";
+            font-size: 15px;
+        }
+        h1{
+            text-align: left;
+            font-family: "Lato-Black";
+        }
+        input{
+            width: 225px;
+            font-size: 15px;
+            border-right: none;
+            border-top: none;
+            border-left: none;
+            border-bottom: black solid 3px;
+            background-color: #FFD972 ;
+            margin-top: 50px;
+            color: black ;
+            height: 50px;
+        }
+        input::placeholder{
+            color: black;
+            font-family: "Lato-Regular";
+        }
+        .loginTwo{
+            margin:50px auto 0 auto;
+            font-family: "Caveat-Regular";
+            width: 210px;
+            font-size: 25px;
+            background-color: #FFD972;
+            text-align: center;
+            height: 52px;
+            line-height: 52px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+            border-radius: 26px;
+            border: none;
+        }
+        .loginTwo:hover{
+            cursor: pointer;
+        }
+    }
+}
+@media screen and (max-width: 750px){
+    .loginPage{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 400px;
+        .loginField{
+            margin-bottom: 100px;
+        }
+    }
+}
+@media screen and (max-width: 450px){
+    .loginPage{
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 230px;
+        .loginField{
+            margin-bottom: 100px;
+        }
+    }
+}

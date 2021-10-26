@@ -8,7 +8,7 @@ var MODEL = (function(){
             if(page == "home"){
                 $(".navMen").removeClass("selected");
                 $(".mobileLink").removeClass("aSelected");
-                $("#page-container").css("background-image", "linear-gradient(to right, rgba(242,92,84,.6),rgba(242,92,84,.6)), url(../images/hero.jpg)");
+                $("#page-container").css("background-image", `linear-gradient(to right, rgba(242,92,84,.6),rgba(242,92,84,.6)), url("/~migoliva/N315-ADVANCED-MULTI-DEVICE-WEB-DEVELOPMENT/Homework_6/images/hero.jpg")`);
                 $("#page-container").css("background-color", "none");
                 $("."+butnPlace).addClass("selected");
                 $(".homeMobile").addClass("aSelected");
