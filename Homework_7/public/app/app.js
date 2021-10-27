@@ -100,7 +100,8 @@ function createUser() {
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    console.log(errorMessage)
+    console.log(errorMessage);
+    alert(errorCode + " " +errorMessage);
     // ..
   });
 }
@@ -121,7 +122,8 @@ function login() {
  .catch((error) => {
    var errorCode = error.code;
    var errorMessage = error.message;
-   console.log(errorMessage)
+   console.log(errorMessage);
+   alert(errorCode + " " +errorMessage);
  });
 }
 
@@ -130,6 +132,7 @@ function signOut() {
         console.log("Signed Out");
       }).catch((error) => {
           console.log(error);
+          alert(error);
         // An error happened.
       });
 }
@@ -157,5 +160,6 @@ $(document).ready(function(){
         checkMenu();
     } catch {
         console.error(e);
+        alert(e);
     }
 });
