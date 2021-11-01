@@ -54,6 +54,7 @@ function initFirebase(){
             $(".loginMobile").css("display","none");
             $(".logoutMobile").css("display","block");
             $(".yourMobile").css("display","block");
+            MODEL.changeContent("home");
             // MODEL.changeContent("home");
         } else {
             console.log("logged out");
@@ -126,6 +127,10 @@ function login() {
    alert(errorCode + " " +errorMessage);
  });
 }
+
+$("#login").click(function(event){
+    event.preventDefault();
+  });
 
 function signOut() {
     firebase.auth().signOut().then(() => {
