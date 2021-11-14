@@ -475,6 +475,115 @@ nav {
     .recipeSection__display .recipe_hold {
       display: flex;
       flex-direction: column; }
+      .recipeSection__display .recipe_hold .recipe {
+        margin-top: 50px;
+        display: flex; }
+        .recipeSection__display .recipe_hold .recipe__image {
+          border-radius: 24px;
+          width: 320px;
+          height: 283px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color: red;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .recipeSection__display .recipe_hold .recipe__image .viewIngredient {
+            width: 130px;
+            background-color: #FFD972;
+            text-align: center;
+            height: 52px;
+            font-size: 23px;
+            font-family: "Caveat-Regular";
+            line-height: 52px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            border-radius: 26px;
+            border: none; }
+          .recipeSection__display .recipe_hold .recipe__image .viewIngredient:hover {
+            cursor: pointer; }
+        .recipeSection__display .recipe_hold .recipe--pizza {
+          background-image: url("../images/recipe-pizza.jpg"); }
+        .recipeSection__display .recipe_hold .recipe--burger {
+          background-image: url("../images/recipe-burger.jpg"); }
+        .recipeSection__display .recipe_hold .recipe--chow {
+          background-image: url("../images/recipe-chowmein.jpg"); }
+        .recipeSection__display .recipe_hold .recipe--chicken {
+          background-image: url("../images/recipe-pilaf.jpg"); }
+        .recipeSection__display .recipe_hold .recipe__description {
+          width: 244px;
+          height: 283px;
+          border-radius: 24px;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .recipeSection__display .recipe_hold .recipe__description .hold {
+            width: 150px; }
+            .recipeSection__display .recipe_hold .recipe__description .hold h1 {
+              font-size: 15px;
+              font-family: "Lato-Black";
+              margin-bottom: 0px; }
+            .recipeSection__display .recipe_hold .recipe__description .hold hr {
+              height: 4px;
+              background-color: black;
+              border: none; }
+            .recipeSection__display .recipe_hold .recipe__description .hold p {
+              margin-top: 20px;
+              font-size: 10px;
+              font-family: "Lato-Regular"; }
+            .recipeSection__display .recipe_hold .recipe__description .hold .time {
+              justify-content: center;
+              display: flex;
+              font-family: "Lato-Regular"; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .time .showingTime {
+                line-height: 30px;
+                margin-left: 20px; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .time img {
+                width: 30px;
+                height: 30px; }
+            .recipeSection__display .recipe_hold .recipe__description .hold .servings {
+              margin-top: 15px;
+              justify-content: center;
+              display: flex;
+              font-family: "Lato-Regular"; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .servings .showingServing {
+                line-height: 30px;
+                margin-left: 20px; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .servings img {
+                width: 30px;
+                height: 30px; }
+      .recipeSection__display .recipe_hold .buttonFunction {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px; }
+        .recipeSection__display .recipe_hold .buttonFunction .editRecipe {
+          width: 130px;
+          background-color: #FFD972;
+          text-align: center;
+          height: 52px;
+          font-size: 23px;
+          font-family: "Caveat-Regular";
+          line-height: 52px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          border-radius: 26px;
+          border: none; }
+        .recipeSection__display .recipe_hold .buttonFunction .editRecipe:hover {
+          cursor: pointer; }
+        .recipeSection__display .recipe_hold .buttonFunction .deleteRecipe {
+          width: 130px;
+          background-color: #FFD972;
+          text-align: center;
+          height: 52px;
+          font-size: 23px;
+          font-family: "Caveat-Regular";
+          line-height: 52px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          border-radius: 26px;
+          border: none; }
+        .recipeSection__display .recipe_hold .buttonFunction .deleteRecipe:hover {
+          cursor: pointer; }
 
 .loginPage {
   display: flex;

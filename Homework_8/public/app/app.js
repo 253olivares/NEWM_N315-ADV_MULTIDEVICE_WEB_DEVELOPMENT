@@ -67,14 +67,14 @@ function loadPublicRecipes() {
 function loadUserRecipes() {
   $(".browseSection__display").empty();
   $.getJSON("data/data.json", function (recipes) {
-    console.log(recipes);
     $.each(recipes.USER_RECIPES, function (index, recipe) {
       let displayRecipes = "";
       if (recipe.hour == 0) {
         displayRecipes = `
-      <div class="recipe">
+        <div class="recipe_hold">
+        <div class="recipe">
             <div class="recipe__image recipe--${recipe.image}">
-
+                <button title="viewButton" class="viewIngredient" recipeId ="${recipe.id}">View</button>
             </div>
             <div class="recipe__description">
                 <div class="hold">
@@ -92,32 +92,43 @@ function loadUserRecipes() {
                 </div>
             </div>
         </div>
+        <div class="buttonFunction">
+            <button title="editButton" class="editRecipe" recipeId="${recipe.id}">Edit Recipe</button>
+            <button title="deleteButton" class="deleteRecipe" recipeId="${recipe.id}">Delete</button>
+        </div>
+    </div>
       `;
       } else {
         displayRecipes = `
-        <div class="recipe">
-              <div class="recipe__image recipe--${recipe.image}">
-  
-              </div>
-              <div class="recipe__description">
-                  <div class="hold">
-                      <h1>${recipe.name}</h1>
-                      <hr>
-                      <p>${recipe.description}</p>
-                      <div class="time">
-                          <img src="images/time.svg" alt="">
-                          <div class="showingTime"><span>${recipe.hour}</span>h <span>${recipe.min}</span>min</div>
-                      </div>
-                      <div class="servings">
-                          <img src="images/servings.svg" alt="">
-                          <div class="showingServing"><span>${recipe.servings}</span> servings</div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <div class="recipe_hold">
+            <div class="recipe">
+                <div class="recipe__image recipe--${recipe.image}">
+                    <button title="viewButton" class="viewIngredient" recipeId ="${recipe.id}">View</button>
+                </div>
+                <div class="recipe__description">
+                    <div class="hold">
+                        <h1>${recipe.name}</h1>
+                        <hr>
+                        <p>${recipe.description}</p>
+                        <div class="time">
+                            <img src="images/time.svg" alt="">
+                            <div class="showingTime"><span>${recipe.hour}</span>h <span>${recipe.min}</span>min</div>
+                        </div>
+                        <div class="servings">
+                            <img src="images/servings.svg" alt="">
+                            <div class="showingServing"><span>${recipe.servings}</span> servings</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonFunction">
+                <button title="editButton" class="editRecipe" recipeId="${recipe.id}">Edit Recipe</button>
+                <button title="deleteButton" class="deleteRecipe" recipeId="${recipe.id}">Delete</button>
+            </div>
+        </div>
         `;
       }
-      $(".browseSection__display").append(displayRecipes);
+      $(".recipeSection__display ").append(displayRecipes);
     });
   }).fail(function (jqxhr, textStatus, error) {
     console.log(jqxhr + " text " + textStatus + " " + error);
@@ -135,7 +146,7 @@ function afterRoute(pageID) {
     loadPublicRecipes();
   } else if (pageID == "recipes") {
     loaduserName();
-    // loadUserRecipes();
+    loadUserRecipes();
   } else if (pageID == "create") {
     loaduserName();
   }
