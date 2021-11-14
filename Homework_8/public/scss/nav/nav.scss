@@ -1,0 +1,116 @@
+nav{
+    font-family: "Caveat-Regular";
+    height: 130px;
+    padding: 38px 50px 38px 50px;
+    display: flex;
+    justify-content: space-between;
+    .menu{
+
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        a{
+            margin-left: 40px;
+            font-size: 25px;
+            color: #000000;
+            text-decoration: none;
+            height: 37px;
+        }
+        .selected{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 3px solid;
+        }
+        .login{
+            width: 158px;
+            background-color: #FFD972;
+            text-align: center;
+            height: 52px;
+            line-height: 52px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; 
+            border-radius: 26px;
+        }
+        .loginBtn{
+            display: block;
+        }
+        .logoutBtn{
+            display: none;
+        }
+    }
+    .mobile-menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        display: none;
+    }
+    .mobile-menu:hover{
+        cursor: pointer;
+    }
+}
+.hiddenNav{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: -100%;
+    transition: all .8s;
+    z-index: 5;
+    nav{
+        font-family: "Caveat-Regular";
+        display: flex;
+        flex-direction: column;
+        .cancel{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+        .menu{
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+             justify-content: center;
+            a{
+                margin: 40px auto 0px auto;
+                
+                font-size: 30px;
+                text-align: center ;
+                color: white;
+                justify-content: center;
+            }
+            .aSelected{
+                border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 3px solid white;
+            }
+            .yourMobile{
+                display: none;
+            }
+            .logoutMobile{
+                display: none;
+            }
+            .loginMobile{
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1026px){
+    nav{
+        .mobile-menu{
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1025px){
+    nav{
+        .menu{
+            display: none;
+        }
+        .mobile-menu{
+            display: block;
+        }
+    }
+}

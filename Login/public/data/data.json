@@ -1,0 +1,30 @@
+{
+  "PUBLIC_RECIPES": [
+    {
+      "recipeName": "Pot Roast"
+    },
+    {
+      "recipeName": "Hamburger"
+    },
+    {
+      "recipeName": "Chicken Pot Pie"
+    },
+    {
+      "recipeName": "Chicken Critters"
+    }
+  ],
+  "USER_RECIPES": [
+    {
+      "recipeName": "Pot Roast"
+    },
+    {
+      "recipeName": "Hamburger"
+    },
+    {
+      "recipeName": "Chicken Pot Pie"
+    },
+    {
+      "recipeName": "Chicken Critters"
+    }
+  ]
+}

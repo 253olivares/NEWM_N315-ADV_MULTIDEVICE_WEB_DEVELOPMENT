@@ -1,0 +1,118 @@
+.home{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle-holder{
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+        margin-top: 125px;
+        margin-bottom: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .little-circle{
+            width: 167px;
+            height: 167px;
+            border-radius: 167px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            background-color: #FCBCB8;
+            z-index: 1;
+            position: absolute;
+            margin-right: -90%;
+            margin-top: -75%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;            
+            p{
+                width: 105px;
+                font-size: 12px;
+                margin-bottom: 0px;
+                font-family: "Lato-Italic";
+            }
+        }
+        .big-circle{
+            width: 357px;
+            height: 357px;
+            z-index: 2;
+            background-color: #FFD972;
+            border-radius: 357px;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;            h1{
+                font-size: 24px;
+                margin-bottom: 30px;
+                font-family: "Caveat-Bold";
+            }
+            p{
+                width: 160px;
+                height: 80px;
+                font-size: 16px;
+                font-family: "Lato-Italic";
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px){
+    .home{
+        .circle-holder{
+            max-width: 300px;
+            height: 300px;
+            .little-circle{
+                width: 121px;
+                height: 121px;
+                margin-right: -60%;
+            margin-top: -95%;
+            p{
+                font-size: 10px;
+            }
+            }
+            .big-circle{
+                width: 257px;
+                height: 257px;
+                h1{
+                    margin-top: 30px;
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .home{
+        .circle-holder{
+            max-width: 250px;
+            height: 250px;
+            .little-circle{
+                width: 71px;
+                height: 71px;
+                margin-right: -60%;
+            margin-top: -85%;
+            p{
+                font-size: 7px;
+            }
+            }
+            .big-circle{
+                width: 207px;
+                height: 207px;
+                h1{
+                    margin-top: 30px;
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

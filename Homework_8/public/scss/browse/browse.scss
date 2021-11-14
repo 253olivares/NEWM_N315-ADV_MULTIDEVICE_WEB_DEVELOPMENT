@@ -1,0 +1,93 @@
+.browseSection{
+    width: 100%;
+    max-width: 1500px;
+    margin: 50px auto 0px auto;
+    padding: 0px 50px 0px 50px;
+    font-family: "Caveat-Bold";
+    &__display{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+        justify-content: space-between;
+        .recipe{
+            margin-top: 50px;
+            display: flex;
+            &__image{
+                border-radius: 24px;
+                width: 320px;
+                height: 283px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: red;
+            }
+            &--pizza{
+                background-image: url("../images/recipe-pizza.jpg");
+            }
+            &--burger {
+                background-image: url("../images/recipe-burger.jpg");
+            }
+            &--chow{
+                background-image: url("../images/recipe-chowmein.jpg");
+            }
+            &--chicken{
+                background-image: url("../images/recipe-pilaf.jpg");
+            }
+            &__description{
+                width: 244px;
+                height: 283px;
+                border-radius: 24px;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .hold{
+                    width: 150px;
+                    h1{
+                        font-size: 15px;
+                        font-family: "Lato-Black";
+                        margin-bottom: 0px;
+                    }
+                    hr{
+                        height: 4px;
+                        background-color: black;
+                        border: none;
+                    }
+                    p{
+                        margin-top: 20px;
+                        font-size: 10px;
+                        font-family: "Lato-Regular";
+                    }
+                    .time{ 
+                        justify-content: center;
+                        display: flex;
+                        font-family: "Lato-Regular";
+                        .showingTime{
+                            line-height: 30px;
+                            margin-left: 20px;
+                        }
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    .servings{
+                        margin-top: 15px;
+                        justify-content: center;
+                        display: flex;
+                        font-family: "Lato-Regular";
+                        .showingServing{
+                            line-height: 30px;
+                            margin-left: 20px;
+                        }
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

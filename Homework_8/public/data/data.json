@@ -1,0 +1,51 @@
+{
+  "PUBLIC_RECIPES": [
+    {
+      "id": 0,
+      "name": "Supreme Pizza",
+      "image": "pizza",
+      "description": "Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!",
+      "hour": 1,
+      "min": 24,
+      "servings": 4
+    },
+    {
+      "id": 1,
+      "name": "Classic Burger",
+      "image": "burger",
+      "description": "Sink your teeth into a delicious restraunt-style, hamburger recipe made from lean beef. Skip the prepackaged patties and take the extra time to craft up your own, and that little extra effort will be worth it.",
+      "hour": 0,
+      "min": 30,
+      "servings": 4
+    },
+    {
+      "id": 2,
+      "name": "Chicken Biryani",
+      "image": "chicken",
+      "description": "Chicken Biryani is a bold and flavorful Indian dish with crazt tender bites of chicken with bell peppers in a delivously spiced and fragrant rice.",
+      "hour": 1,
+      "min": 15,
+      "servings": 6
+    },
+    {
+      "id": 3,
+      "name": "Ch. Chow Mein",
+      "image": "chow",
+      "description": "A great Chow Mein comes down to the sauce - it takes more than just soy sauce and sugar! Jam packed with surprising amount of hidden vegtables, customize this Chicken Chow Mein recipe using your protein of choice!",
+      "hour": 0,
+      "min": 20,
+      "servings": 4
+    }
+  ],
+  "USER_RECIPES": [
+    {
+      "id": 0,
+      "name": "Supreme Pizza",
+      "image": "pizza",
+      "description": "Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!",
+      "hour": 1,
+      "min": 24,
+      "servings": 4
+    }
+  ]
+}
