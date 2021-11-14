@@ -1,5 +1,5 @@
 var MODEL = (function () {
-  var _changeContent = function (page) {
+  var _changeContent = function (page, callback) {
     $.get(`pages/${page}/${page}.html`, function (data) {
       console.log(data);
       let butnPlace = page + "Btn";
@@ -54,6 +54,10 @@ var MODEL = (function () {
         $("#app").html(data);
       } else {
         $("#app").html(data);
+      }
+
+      if (callback) {
+        callback(page);
       }
     });
   };

@@ -1,4 +1,6 @@
-var localNameSave = "";
+var localNameSave = "Name";
+
+// function loadEditRecipes() {}
 
 function loadPublicRecipes() {
   $(".browseSection__display").empty();
@@ -59,6 +61,7 @@ function loadPublicRecipes() {
     console.log(jqxhr + " text " + textStatus + " " + error);
   });
 }
+
 function loadUserRecipes() {
   $(".browseSection__display").empty();
   $.getJSON("data/data.json", function (recipes) {
@@ -118,23 +121,32 @@ function loadUserRecipes() {
     console.log(jqxhr + " text " + textStatus + " " + error);
   });
 }
+
 function loaduserName() {
-  console.log("test");
-  $(".userName").html(localNameSave);
+  console.log("loadUserName Test");
+  $(".recipeUsername").html(localNameSave);
 }
+
+function afterRoute(pageID) {
+  console.log("Big Test!");
+  if (pageID == "browse") {
+    loadPublicRecipes();
+  } else if (pageID == "recipes") {
+    loaduserName();
+    loadUserRecipes();
+  } else if (pageID == "create") {
+    loaduserName();
+  }
+}
+
 function route() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#/", "");
+
   if (!pageID) {
     MODEL.changeContent("home");
   } else {
-    MODEL.changeContent(pageID);
-    if (pageID == "browse") {
-      loadPublicRecipes();
-    } else if (pageID == "recipes") {
-      loaduserName();
-      loadUserRecipes();
-    }
+    MODEL.changeContent(pageID, afterRoute);
   }
 }
 function checkMenu() {
@@ -162,6 +174,7 @@ function checkMenu() {
     }
   });
 }
+
 function checkHash() {
   $(window).on("hashchange", route);
   route();
@@ -185,7 +198,7 @@ function initFirebase() {
       $(".loginMobile").css("display", "none");
       $(".logoutMobile").css("display", "block");
       $(".recipeMobile").css("display", "block");
-
+      $(".recipeUsername").html(localNameSave);
       // MODEL.changeContent("home");
       // MODEL.changeContent("home");
     } else {
@@ -227,7 +240,7 @@ function createUser() {
       $("#lName").val("");
       $("#emailSignUp").val("");
       $("#passSignup").val("");
-
+      localNameSave = fullName;
       var user = userCredential.user;
       console.log(userCredential.user);
       // ...
@@ -264,10 +277,6 @@ function login() {
   MODEL.changeContent("home");
 }
 
-$("#login").click(function (event) {
-  event.preventDefault();
-});
-
 function signOut() {
   firebase
     .auth()
@@ -300,12 +309,15 @@ $(document).ready(function () {
   console.log(
     "Page functions have loaded! checkHash() function has begun running!"
   );
+  $("#login").click(function (event) {
+    event.preventDefault();
+  });
   try {
     let app = firebase.app();
     initFirebase();
     checkHash();
     checkMenu();
-  } catch {
+  } catch (e) {
     console.error(e);
     alert(e);
   }
