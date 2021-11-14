@@ -30,6 +30,10 @@
   font-family: Lato-Regular;
   src: url(../css/fonts/Lato-Regular.ttf); }
 
+@font-face {
+  font-family: Lato-Light;
+  src: url(../css/fonts/Lato-Regular.ttf); }
+
 * {
   margin: 0;
   padding: 0;
@@ -345,9 +349,132 @@ nav {
 .createSection {
   width: 100%;
   max-width: 1500px;
+  margin: 50px auto 50px auto;
+  padding: 0px 50px 0px 50px;
+  font-family: "Caveat-Bold"; }
+  .createSection .form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .createSection .form .uploadFile {
+      width: 100px;
+      height: 30px;
+      background-color: #EFA7A7;
+      border: none;
+      border-radius: 25px;
+      position: absolute;
+      top: 40px;
+      right: 0px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; }
+    .createSection .form .uploadFile:hover {
+      cursor: pointer; }
+    .createSection .form input {
+      margin-top: 50px;
+      height: 30px;
+      border: none;
+      border-bottom: 3px solid black; }
+      .createSection .form input ::placeholder {
+        font-family: "Lato-Black";
+        font-size: 30px;
+        font-weight: lighter; }
+  .createSection .ingredients {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .createSection .ingredients h4 {
+      font-family: "Lato-Black";
+      font-size: 20px; }
+    .createSection .ingredients input {
+      margin-top: 50px;
+      height: 30px;
+      border: none;
+      border-bottom: 3px solid black; }
+      .createSection .ingredients input ::placeholder {
+        font-family: "Lato-Black";
+        font-size: 30px;
+        font-weight: lighter;
+        height: 30px; }
+    .createSection .ingredients .ingredientsButton {
+      width: 35px;
+      height: 35px;
+      background-color: #EFA7A7;
+      border: none;
+      border-radius: 25px;
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      background-image: url("../images/plus-solid.svg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .createSection .ingredients .ingredientsButton:hover {
+      cursor: pointer; }
+  .createSection .instructions {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .createSection .instructions h4 {
+      font-family: "Lato-Black";
+      font-size: 20px; }
+    .createSection .instructions input {
+      margin-top: 50px;
+      height: 30px;
+      border: none;
+      border-bottom: 3px solid black; }
+      .createSection .instructions input ::placeholder {
+        font-family: "Lato-Black";
+        font-size: 30px;
+        font-weight: lighter;
+        height: 30px; }
+    .createSection .instructions .instructionsButton {
+      width: 35px;
+      height: 35px;
+      background-color: #EFA7A7;
+      border: none;
+      border-radius: 25px;
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      background-image: url("../images/plus-solid.svg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .createSection .instructions .instructionsButton:hover {
+      cursor: pointer; }
+  .createSection .createRecipeButton {
+    display: block;
+    margin: 80px auto 80px auto;
+    width: 80%;
+    max-width: 400px;
+    background-color: #EFA7A7;
+    border: none;
+    text-align: center;
+    font-size: 25px;
+    height: 52px;
+    line-height: 52px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 26px;
+    font-family: "Caveat-Regular"; }
+  .createSection .createRecipeButton:hover {
+    cursor: pointer; }
+
+.recipeSection {
+  width: 100%;
+  max-width: 1500px;
   margin: 50px auto 0px auto;
   padding: 0px 50px 0px 50px;
   font-family: "Caveat-Bold"; }
+  .recipeSection__display {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    justify-content: space-between; }
+    .recipeSection__display .recipe_hold {
+      display: flex;
+      flex-direction: column; }
 
 .loginPage {
   display: flex;

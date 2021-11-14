@@ -1,4 +1,6 @@
 var localNameSave = "Name";
+let ingredientNum = 4;
+let instructionNum = 4;
 
 // function loadEditRecipes() {}
 
@@ -133,7 +135,7 @@ function afterRoute(pageID) {
     loadPublicRecipes();
   } else if (pageID == "recipes") {
     loaduserName();
-    loadUserRecipes();
+    // loadUserRecipes();
   } else if (pageID == "create") {
     loaduserName();
   }
@@ -289,6 +291,22 @@ function signOut() {
       alert(error);
       // An error happened.
     });
+}
+
+function addIngredient() {
+  let ingredientInput = `
+  <input type="text" class="ing${ingredientNum}" placeholder="Ingredient #${ingredientNum}">
+  `;
+  $(".ingredients").append(ingredientInput);
+  ingredientNum++;
+}
+
+function addInstructions() {
+  let instructionsInput = `
+  <input type="text" class="ins${instructionNum}" placeholder="Instructions #${instructionNum}">
+  `;
+  $(".instructions").append(instructionsInput);
+  instructionNum++;
 }
 
 function initListeners(btnID) {

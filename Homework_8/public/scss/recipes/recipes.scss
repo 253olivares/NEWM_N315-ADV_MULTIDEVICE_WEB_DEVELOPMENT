@@ -1,0 +1,23 @@
+.recipeSection{
+    width: 100%;
+    max-width: 1500px;
+    margin: 50px auto 0px auto;
+    padding: 0px 50px 0px 50px;
+    font-family: "Caveat-Bold";
+    &__display{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+        justify-content: space-between;
+        .recipe_hold{
+            display: flex;
+            flex-direction: column;
+            .recipe{
+
+            }
+            .buttonFunction{
+                
+            }
+        }
+    }
+}
