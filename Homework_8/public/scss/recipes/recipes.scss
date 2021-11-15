@@ -149,3 +149,97 @@
         }
     }
 }
+@media screen and (max-width: 1250px) {
+    .recipeSection{
+        h1{
+          width: 564px;
+          margin: auto;
+        }
+        &__display{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .recipeSection{
+          padding: 0px 0px 0px 0px;
+          h1{
+            width: 300px;
+            margin: auto;
+            font-size: 25px ;
+          }
+          &__display{
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .recipe_hold{
+                .recipe{
+                    flex-direction: column;
+                    &__image{
+                       
+                        width: 300px;
+                        height: 150px;
+                    }
+                    &__description {
+                      
+                        width: 300px;
+                        height: 225px;
+                        .hold {
+                            width: 250px;
+                            h1{
+                                text-align: center;
+                                font-size: 10px;
+                                width: 80px;
+                                margin: auto;
+                            }
+                            hr{
+                                width: 80px;
+                                text-align: center;
+                                margin: auto;
+                            }
+                            p{
+                                padding-top: 10px;
+                                width: 200px;
+                                margin: auto;
+                            }
+                            .time{
+                                margin-top: 10px;
+                                .showingTime{
+                                    font-size: 10px;
+                                }
+                                img{
+                                    width: 25px;
+                                    height: 25px;
+                                }
+                            }
+                            .servings{
+                                margin-top: 10px;
+                                .showingServing{
+                                    font-size: 10px;
+                                }
+                                img{
+                                    width: 25px;
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                .buttonFunction{
+                    width: 300px;
+                    .editRecipe{
+                        width: 115px;
+                        height: 45px;
+                    }
+                    .deleteRecipe{
+                        width: 115px;
+                        height: 45px;
+                    }
+                }
+              }
+          }
+      }
+    }

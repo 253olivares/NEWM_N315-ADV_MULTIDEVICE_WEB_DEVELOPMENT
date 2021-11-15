@@ -315,6 +315,7 @@ nav {
           .browseSection__display .recipe__description .hold h1 {
             font-size: 15px;
             font-family: "Lato-Black";
+            font-weight: normal;
             margin-bottom: 0px; }
           .browseSection__display .recipe__description .hold hr {
             height: 4px;
@@ -346,12 +347,71 @@ nav {
               width: 30px;
               height: 30px; }
 
+@media screen and (max-width: 1250px) {
+  .browseSection h1 {
+    width: 564px;
+    margin: auto; }
+  .browseSection__display {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (max-width: 680px) {
+  .browseSection {
+    padding: 0px 0px 0px 0px; }
+    .browseSection h1 {
+      width: 300px;
+      margin: auto; }
+    .browseSection__display {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .browseSection__display .recipe {
+        flex-direction: column; }
+        .browseSection__display .recipe__image {
+          width: 300px;
+          height: 150px; }
+        .browseSection__display .recipe__description {
+          width: 300px;
+          height: 225px; }
+          .browseSection__display .recipe__description .hold {
+            width: 250px; }
+            .browseSection__display .recipe__description .hold h1 {
+              text-align: center;
+              font-size: 10px;
+              width: 80px;
+              margin: auto; }
+            .browseSection__display .recipe__description .hold hr {
+              width: 80px;
+              text-align: center;
+              margin: auto; }
+            .browseSection__display .recipe__description .hold p {
+              padding-top: 10px;
+              width: 200px;
+              margin: auto; }
+            .browseSection__display .recipe__description .hold .time {
+              margin-top: 10px; }
+              .browseSection__display .recipe__description .hold .time .showingTime {
+                font-size: 10px; }
+              .browseSection__display .recipe__description .hold .time img {
+                width: 25px;
+                height: 25px; }
+            .browseSection__display .recipe__description .hold .servings {
+              margin-top: 10px; }
+              .browseSection__display .recipe__description .hold .servings .showingServing {
+                font-size: 10px; }
+              .browseSection__display .recipe__description .hold .servings img {
+                width: 25px;
+                height: 25px; } }
+
 .createSection {
   width: 100%;
   max-width: 1500px;
   margin: 50px auto 50px auto;
-  padding: 0px 50px 0px 50px;
-  font-family: "Caveat-Bold"; }
+  padding: 0px 50px 0px 50px; }
+  .createSection h1 {
+    font-family: "Caveat-Bold";
+    font-size: 30px; }
   .createSection .form {
     margin-top: 50px;
     display: flex;
@@ -460,6 +520,21 @@ nav {
     font-family: "Caveat-Regular"; }
   .createSection .createRecipeButton:hover {
     cursor: pointer; }
+
+@media screen and (max-width: 1026px) {
+  .createSection h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px; } }
+
+@media screen and (max-width: 500px) {
+  .createSection h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 20px; }
+  .createSection .form .uploadFile {
+    width: 75px;
+    height: 25px; } }
 
 .recipeSection {
   width: 100%;
@@ -584,6 +659,72 @@ nav {
           border: none; }
         .recipeSection__display .recipe_hold .buttonFunction .deleteRecipe:hover {
           cursor: pointer; }
+
+@media screen and (max-width: 1250px) {
+  .recipeSection h1 {
+    width: 564px;
+    margin: auto; }
+  .recipeSection__display {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; } }
+
+@media screen and (max-width: 680px) {
+  .recipeSection {
+    padding: 0px 0px 0px 0px; }
+    .recipeSection h1 {
+      width: 300px;
+      margin: auto;
+      font-size: 25px; }
+    .recipeSection__display {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .recipeSection__display .recipe_hold .recipe {
+        flex-direction: column; }
+        .recipeSection__display .recipe_hold .recipe__image {
+          width: 300px;
+          height: 150px; }
+        .recipeSection__display .recipe_hold .recipe__description {
+          width: 300px;
+          height: 225px; }
+          .recipeSection__display .recipe_hold .recipe__description .hold {
+            width: 250px; }
+            .recipeSection__display .recipe_hold .recipe__description .hold h1 {
+              text-align: center;
+              font-size: 10px;
+              width: 80px;
+              margin: auto; }
+            .recipeSection__display .recipe_hold .recipe__description .hold hr {
+              width: 80px;
+              text-align: center;
+              margin: auto; }
+            .recipeSection__display .recipe_hold .recipe__description .hold p {
+              padding-top: 10px;
+              width: 200px;
+              margin: auto; }
+            .recipeSection__display .recipe_hold .recipe__description .hold .time {
+              margin-top: 10px; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .time .showingTime {
+                font-size: 10px; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .time img {
+                width: 25px;
+                height: 25px; }
+            .recipeSection__display .recipe_hold .recipe__description .hold .servings {
+              margin-top: 10px; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .servings .showingServing {
+                font-size: 10px; }
+              .recipeSection__display .recipe_hold .recipe__description .hold .servings img {
+                width: 25px;
+                height: 25px; }
+      .recipeSection__display .recipe_hold .buttonFunction {
+        width: 300px; }
+        .recipeSection__display .recipe_hold .buttonFunction .editRecipe {
+          width: 115px;
+          height: 45px; }
+        .recipeSection__display .recipe_hold .buttonFunction .deleteRecipe {
+          width: 115px;
+          height: 45px; } }
 
 .loginPage {
   display: flex;
