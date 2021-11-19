@@ -1,4 +1,4 @@
-.createSection{
+.editpage{
     width: 100%;
     max-width: 1500px;
     margin: 50px auto 50px auto;
@@ -7,7 +7,7 @@
         font-family: "Caveat-Bold";
         font-size: 30px;
     }
-    .form{
+    .editform{
         margin-top: 50px;
         display: flex;
         flex-direction: column;
@@ -120,7 +120,7 @@
             cursor: pointer;
         }
     }
-    .createRecipeButton{
+    .submitRecipeButton{
         display: block;
         margin:80px auto 80px auto;
         width: 80%;
@@ -135,13 +135,13 @@
         border-radius: 26px;
         font-family: "Caveat-Regular";
     }
-    .createRecipeButton:hover{
+    .submitRecipeButton:hover{
         cursor: pointer;
     }
 }
 
 @media screen and (max-width: 1026px) {
-    .createSection{
+    .editpage{
         h1{
             width: 100%;
             text-align: center;
@@ -150,7 +150,7 @@
     }
 }
 @media screen and (max-width: 500px) {
-    .createSection{
+    .editpage{
         h1{
             width: 100%;
             text-align: center;

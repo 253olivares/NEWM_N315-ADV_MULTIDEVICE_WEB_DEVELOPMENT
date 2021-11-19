@@ -52,6 +52,14 @@ var MODEL = (function () {
         $("." + butnPlace).addClass("selected");
         $(".yourMobile").addClass("aSelected");
         $("#app").html(data);
+      } else if (page == "view") {
+        $("#page-container").css("background-image", "none");
+        $("#page-container").css("background-color", "#fff");
+        $("#app").html(data);
+      } else if (page == "edit") {
+        $("#page-container").css("background-image", "none");
+        $("#page-container").css("background-color", "#fff");
+        $("#app").html(data);
       } else {
         $("#app").html(data);
       }

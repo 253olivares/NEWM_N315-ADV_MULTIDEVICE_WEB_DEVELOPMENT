@@ -1,0 +1,145 @@
+.viewpage{
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 50px auto;
+    padding: 0px 50px 0px 50px;
+    .main{
+        display: flex;
+        justify-content: start;
+        .pizzaImage{
+            display: flex;
+            .pizzaImg{
+                width: 470px;
+                height: 430px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: blue;
+                position: relative;
+                background-image: url("../images/recipe-pizza.jpg");
+            }
+            .burgerImg{
+                width: 470px;
+                height: 430px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: blue;
+                position: relative;
+                background-image: url("../images/recipe-burger.jpg");
+            }
+            .chickenImg{
+                width: 470px;
+                height: 430px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: blue;
+                position: relative;
+                background-image: url("../images/recipe-pilaf.jpg");
+            }
+            .chowImg{
+                width: 470px;
+                height: 430px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: blue;
+                position: relative;
+                background-image: url("../images/recipe-chowmein.jpg");
+            }
+            
+            p{ 
+                top: 140px;
+                left: -130px;
+                margin-bottom: 0px;
+                position: absolute ;
+                width: 220px;
+                height: 30px;
+                font-family: "Lato-Black";
+                font-size: 25px ;
+                transform: rotate(-90deg);
+            }
+        }
+        .information{
+            padding-left: 45px;
+            font-size: 25px;
+            h3{
+                font-family: "Lato-Black";
+                margin-bottom: 35px;
+            }
+            .pad{
+                margin-bottom: 38px;
+            }
+            p{
+                font-family: "Caveat-Regular";
+            }
+            .description{
+                font-size: 25px;
+                font-family: "Lato-Black";
+            }
+        }
+    }
+    .ingredientsLists{
+        margin-top: 60px;
+        h3{
+            font-size: 25px;
+            font-family: "Lato-Black";
+            margin-bottom: 35px;
+        }
+        p{
+            font-family: "Caveat-Regular";
+            font-size: 20px;
+        }
+    }
+    .instructionLists{
+        margin-top: 60px;
+        h3{
+            font-size: 25px;
+            font-family: "Lato-Black";
+            margin-bottom: 35px;
+        }
+        p{
+            font-family: "Caveat-Regular";
+            font-size: 20px; 
+        }
+    }
+    .editButtonView{
+        font-family: "Caveat-Regular";
+        font-size: 20px;
+        width: 158px;
+        background-color: #FFD972;
+        text-align: center;
+        height: 52px;
+        border: none;
+        margin-top: 50px;
+        line-height: 52px;
+        border-radius: 26px;
+    }
+    .editButtonView:hover{
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .viewpage{
+        .main{
+            flex-direction: column;
+            .pizzaImage{
+                .pizzaImg{
+                    margin-left: 30px;
+                    width: 300px;
+                    height: 275px;
+                }
+                p{
+                    top: 150px;
+                    left: -130px;
+                }
+            }
+            .information{
+                margin-top: 60px;
+                padding-left: 0px;
+            }
+        }
+    }
+}

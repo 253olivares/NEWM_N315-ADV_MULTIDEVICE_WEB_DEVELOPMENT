@@ -417,18 +417,9 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative; }
-    .createSection .form .uploadFile {
-      width: 100px;
-      height: 30px;
-      background-color: #EFA7A7;
+    .createSection .form .recipeImage {
       border: none;
-      border-radius: 25px;
-      position: absolute;
-      top: 40px;
-      right: 0px;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; }
-    .createSection .form .uploadFile:hover {
-      cursor: pointer; }
+      border-bottom: 3px solid black; }
     .createSection .form input {
       margin-top: 50px;
       height: 30px;
@@ -725,6 +716,244 @@ nav {
         .recipeSection__display .recipe_hold .buttonFunction .deleteRecipe {
           width: 115px;
           height: 45px; } }
+
+.editpage {
+  width: 100%;
+  max-width: 1500px;
+  margin: 50px auto 50px auto;
+  padding: 0px 50px 0px 50px; }
+  .editpage h1 {
+    font-family: "Caveat-Bold";
+    font-size: 30px; }
+  .editpage .editform {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .editpage .editform .recipeImage {
+      border: none;
+      border-bottom: 3px solid black; }
+    .editpage .editform input {
+      margin-top: 50px;
+      height: 30px;
+      border: none;
+      border-bottom: 3px solid black; }
+      .editpage .editform input ::placeholder {
+        font-family: "Lato-Black";
+        font-size: 30px;
+        font-weight: lighter; }
+  .editpage .ingredients {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .editpage .ingredients h4 {
+      font-family: "Lato-Black";
+      font-size: 20px; }
+    .editpage .ingredients input {
+      margin-top: 50px;
+      height: 30px;
+      border: none;
+      border-bottom: 3px solid black; }
+      .editpage .ingredients input ::placeholder {
+        font-family: "Lato-Black";
+        font-size: 30px;
+        font-weight: lighter;
+        height: 30px; }
+    .editpage .ingredients .ingredientsButton {
+      width: 35px;
+      height: 35px;
+      background-color: #EFA7A7;
+      border: none;
+      border-radius: 25px;
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      background-image: url("../images/plus-solid.svg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .editpage .ingredients .ingredientsButton:hover {
+      cursor: pointer; }
+  .editpage .instructions {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    position: relative; }
+    .editpage .instructions h4 {
+      font-family: "Lato-Black";
+      font-size: 20px; }
+    .editpage .instructions input {
+      margin-top: 50px;
+      height: 30px;
+      border: none;
+      border-bottom: 3px solid black; }
+      .editpage .instructions input ::placeholder {
+        font-family: "Lato-Black";
+        font-size: 30px;
+        font-weight: lighter;
+        height: 30px; }
+    .editpage .instructions .instructionsButton {
+      width: 35px;
+      height: 35px;
+      background-color: #EFA7A7;
+      border: none;
+      border-radius: 25px;
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      background-image: url("../images/plus-solid.svg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .editpage .instructions .instructionsButton:hover {
+      cursor: pointer; }
+  .editpage .submitRecipeButton {
+    display: block;
+    margin: 80px auto 80px auto;
+    width: 80%;
+    max-width: 400px;
+    background-color: #EFA7A7;
+    border: none;
+    text-align: center;
+    font-size: 25px;
+    height: 52px;
+    line-height: 52px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 26px;
+    font-family: "Caveat-Regular"; }
+  .editpage .submitRecipeButton:hover {
+    cursor: pointer; }
+
+@media screen and (max-width: 1026px) {
+  .editpage h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px; } }
+
+@media screen and (max-width: 500px) {
+  .editpage h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 20px; }
+  .editpage .form .uploadFile {
+    width: 75px;
+    height: 25px; } }
+
+.viewpage {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto 50px auto;
+  padding: 0px 50px 0px 50px; }
+  .viewpage .main {
+    display: flex;
+    justify-content: start; }
+    .viewpage .main .pizzaImage {
+      display: flex; }
+      .viewpage .main .pizzaImage .pizzaImg {
+        width: 470px;
+        height: 430px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: blue;
+        position: relative;
+        background-image: url("../images/recipe-pizza.jpg"); }
+      .viewpage .main .pizzaImage .burgerImg {
+        width: 470px;
+        height: 430px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: blue;
+        position: relative;
+        background-image: url("../images/recipe-burger.jpg"); }
+      .viewpage .main .pizzaImage .chickenImg {
+        width: 470px;
+        height: 430px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: blue;
+        position: relative;
+        background-image: url("../images/recipe-pilaf.jpg"); }
+      .viewpage .main .pizzaImage .chowImg {
+        width: 470px;
+        height: 430px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: blue;
+        position: relative;
+        background-image: url("../images/recipe-chowmein.jpg"); }
+      .viewpage .main .pizzaImage p {
+        top: 140px;
+        left: -130px;
+        margin-bottom: 0px;
+        position: absolute;
+        width: 220px;
+        height: 30px;
+        font-family: "Lato-Black";
+        font-size: 25px;
+        transform: rotate(-90deg); }
+    .viewpage .main .information {
+      padding-left: 45px;
+      font-size: 25px; }
+      .viewpage .main .information h3 {
+        font-family: "Lato-Black";
+        margin-bottom: 35px; }
+      .viewpage .main .information .pad {
+        margin-bottom: 38px; }
+      .viewpage .main .information p {
+        font-family: "Caveat-Regular"; }
+      .viewpage .main .information .description {
+        font-size: 25px;
+        font-family: "Lato-Black"; }
+  .viewpage .ingredientsLists {
+    margin-top: 60px; }
+    .viewpage .ingredientsLists h3 {
+      font-size: 25px;
+      font-family: "Lato-Black";
+      margin-bottom: 35px; }
+    .viewpage .ingredientsLists p {
+      font-family: "Caveat-Regular";
+      font-size: 20px; }
+  .viewpage .instructionLists {
+    margin-top: 60px; }
+    .viewpage .instructionLists h3 {
+      font-size: 25px;
+      font-family: "Lato-Black";
+      margin-bottom: 35px; }
+    .viewpage .instructionLists p {
+      font-family: "Caveat-Regular";
+      font-size: 20px; }
+  .viewpage .editButtonView {
+    font-family: "Caveat-Regular";
+    font-size: 20px;
+    width: 158px;
+    background-color: #FFD972;
+    text-align: center;
+    height: 52px;
+    border: none;
+    margin-top: 50px;
+    line-height: 52px;
+    border-radius: 26px; }
+  .viewpage .editButtonView:hover {
+    cursor: pointer; }
+
+@media screen and (max-width: 1000px) {
+  .viewpage .main {
+    flex-direction: column; }
+    .viewpage .main .pizzaImage .pizzaImg {
+      margin-left: 30px;
+      width: 300px;
+      height: 275px; }
+    .viewpage .main .pizzaImage p {
+      top: 150px;
+      left: -130px; }
+    .viewpage .main .information {
+      margin-top: 60px;
+      padding-left: 0px; } }
 
 .loginPage {
   display: flex;

@@ -1,26 +1,31 @@
 <div class="createSection">
     <h1>Hey <span class="recipeUsername"></span>, create your recipe!</h1>
     <div class="form">
-        <button title="uploadFileToLocalStorage" class="uploadFile">Attach file</button>
-        <input type="text" id="upload" placeholder="Add Recipe Image"/>
-        <input type="text" id="name" placeholder="Recipe Name"/>
-        <input type="text" id="description" placeholder="Recipe Description"/>
-        <input type="text" id="total" placeholder="Recipe Total Time"/>
-        <input type="text" id="serving" placeholder="Recipe Serving Size"/>
+        <select title="recipeImage" name="recipeImage" class="recipeImage">
+            <option value="pizza">Pizza</option>
+            <option value="burger">Burger</option>
+            <option value="chicken">Chicken</option>
+            <option value="chow">Chow Mein</option>
+        </select>
+        <input type="text" id="cname" placeholder="Recipe Name"/>
+        <input type="text" id="cdescription" placeholder="Recipe Description"/>
+        <input type="text" id="totalh" placeholder="Recipe Total Hours (Only Numbers)"/>
+        <input type="text" id="totalm" placeholder="Recipe Total Minutes (Only Numbers)"/>
+        <input type="text" id="cserving" placeholder="Recipe Serving Size"/>
     </div>
     <div class="ingredients">
         <h4>Enter Ingredients:</h4>
-        <input type="text" class="ing1" placeholder="Ingredient #1">
-        <input type="text" class="ing2" placeholder="Ingredient #2">
-        <input type="text" class="ing3" placeholder="Ingredient #3">
+        <input type="text" class="ing1 createcollecting" placeholder="Ingredient #1">
+        <input type="text" class="ing2 createcollecting" placeholder="Ingredient #2">
+        <input type="text" class="ing3 createcollecting" placeholder="Ingredient #3">
         <button title="addIngredient" class="ingredientsButton" onclick="addIngredient()"></button>
     </div>
     <div class="instructions">
         <h4>Enter Instructions:</h4>
-        <input type="text" class="ins1" placeholder="Instructions #1">
-        <input type="text" class="ins2" placeholder="Instructions #2">
-        <input type="text" class="ins3" placeholder="Instructions #3">
+        <input type="text" class="ins1 createcollectins" placeholder="Instructions #1">
+        <input type="text" class="ins2 createcollectins" placeholder="Instructions #2">
+        <input type="text" class="ins3 createcollectins" placeholder="Instructions #3">
         <button title="addInstruction" class="instructionsButton" onclick="addInstructions()"></button>
     </div>
-    <button title="createRecipe" class="createRecipeButton">Create Recipe</button>
+    <button title="createRecipe" class="createRecipeButton" onclick="createRecipe()">Create Recipe</button>
 </div>
