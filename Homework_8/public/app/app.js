@@ -96,8 +96,8 @@ function loadUserRecipes() {
             </div>
         </div>
         <div class="buttonFunction">
-            <button title="editButton" class="editRecipe" recipeId="${recipe.id}">Edit Recipe</button>
-            <button title="deleteButton" class="deleteRecipe" recipeId="${recipe.id}">Delete</button>
+            <button title="editButton" class="editRecipe" recipeId="${recipe.id}" onclick="editListener(${recipe.id})">Edit Recipe</button>
+            <button title="deleteButton" class="deleteRecipe" recipeId="${recipe.id}"  onclick="deleteListener(${recipe.id})">Delete</button>
         </div>
     </div>
       `;

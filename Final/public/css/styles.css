@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 16px; }
+
+#page-container {
+  position: relative;
+  min-height: 100vh; }
+
+#content-wrap {
+  padding-bottom: 100px; }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px; }
+
+#app {
+  width: 1200px;
+  margin: auto;
+  background-color: chocolate;
+  min-height: 320px; }
+
+nav {
+  padding: 35px 45px 10px 45px;
+  display: flex;
+  flex-direction: column; }
+  nav .topNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; }
+    nav .topNav__image {
+      display: flex;
+      align-items: center; }
+      nav .topNav__image img {
+        width: 200px;
+        margin-left: 15px; }
+    nav .topNav__searchBar {
+      padding: 5px 20px 5px 20px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #dfdfdf;
+      background-color: #f3f3f3;
+      width: 100%;
+      max-width: 650px; }
+      nav .topNav__searchBar img {
+        height: 100%; }
+      nav .topNav__searchBar input {
+        margin-left: 25px;
+        border: none;
+        background-color: #f3f3f3;
+        font-size: 16px;
+        width: 90%; }
+      nav .topNav__searchBar ::placeholder {
+        color: #212529; }
+    nav .topNav__extraRight {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 15px; }
+      nav .topNav__extraRight button {
+        background-color: #fff;
+        border: none;
+        text-align: center;
+        margin-right: 30px;
+        font-size: 16px; }
+      nav .topNav__extraRight__profile {
+        width: 35px;
+        height: 35px;
+        margin-right: 25px; }
+        nav .topNav__extraRight__profile img {
+          width: 100%;
+          height: 100%; }
+      nav .topNav__extraRight__cart {
+        width: 35px;
+        height: 35px; }
+        nav .topNav__extraRight__cart img {
+          width: 100%;
+          height: 100%; }
+  nav .bottomNav {
+    width: 100%;
+    display: flex;
+    justify-content: start; }
+    nav .bottomNav a {
+      padding: 15px 20px 15px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px; }
+    nav .bottomNav a:hover {
+      background-color: #f3f3f3; }
+    nav .bottomNav__other {
+      color: #333333; }
+    nav .bottomNav__deals {
+      color: #C8102E; }
+      nav .bottomNav__deals span {
+        margin-right: 15px; }
+        nav .bottomNav__deals span img {
+          width: 12px; }
+
+.footer__footerHolder {
+  width: 1200px;
+  margin: auto; }
