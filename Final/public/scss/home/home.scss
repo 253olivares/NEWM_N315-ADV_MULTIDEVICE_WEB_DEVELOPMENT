@@ -1,0 +1,104 @@
+.homePage{
+    width: 100%;
+    &__banner{
+        width: 100%;
+        height: 225px;
+        background-image:url("../images/CLP-Banner-CoffeeMakers-Holiday.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        h5{
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+        h1{
+            font-size: 60px;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            margin-bottom: 0px;
+        }
+    }
+    &__filterBanner{
+        padding: 20px 10px 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        &__left{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            p{
+                padding: 15px;
+                color: #b3b3b3;
+                margin-bottom: 0px;
+                border: 3px solid 
+                #999999;
+                margin-right: 15px;
+                border-radius: 3px;
+                letter-spacing: 1px;
+                font-size: 13px;
+                display: flex;
+                align-items: center ;
+                img{
+                    width: 20px;
+                    margin-left: 10px;
+                }
+                .blackDownArrow{
+                    display: none;
+                    transform: rotate(180deg);
+                }
+
+            }
+            p:hover{
+                cursor: pointer;
+                border:3px solid #1a1a1a;
+            }
+            p:hover .blackDownArrow{
+                display: block;
+            }
+            p:hover .greyDownArrow{
+                display: none;
+            }
+        }
+        &__right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .arrowFilter{
+                display: flex;
+                flex-direction: column;
+                .sortLetters{
+                    color: #b3b3b3;
+                    font-size: 13px;
+                }
+                p{
+                    margin-bottom: 0px;
+                }
+            }
+            .arrow{
+                img{
+                    width: 25px;
+                    margin-left: 10px;
+                }
+                .blackDownArrow{
+                    margin-top: 12px;
+                    display: block;
+                   
+                }
+            }
+            
+        }
+        &__right:hover{
+            cursor: pointer;
+        }
+        &__right:hover .blackDownArrow{
+            transform: rotate(180deg);
+            
+        }
+    }
+}
