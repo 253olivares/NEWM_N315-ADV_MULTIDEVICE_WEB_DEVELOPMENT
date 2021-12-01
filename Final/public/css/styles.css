@@ -374,6 +374,8 @@ nav {
     letter-spacing: 1px; }
     .footer__footerHolder__copyRightStuff p {
       margin-bottom: 0px; }
+    .footer__footerHolder__copyRightStuff p:hover {
+      cursor: pointer; }
     .footer__footerHolder__copyRightStuff .TOS {
       margin-left: 20px;
       margin-right: 15px; }
