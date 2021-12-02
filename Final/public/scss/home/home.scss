@@ -101,4 +101,122 @@
             
         }
     }
+    &__List{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px 10px 20px 10px;
+        &__coffeeHolder{
+                padding: 10px;
+                width: 20%;
+                color: #333333;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            &__Coffee{
+                height: 500px;
+                position: relative;
+                .banner{
+                    position: relative;
+                    border-radius: 5px;
+                    color: white;
+                    font-size: 12px;
+                    padding: 5px 0px 5px 8px;
+                    margin-bottom: 5px;
+                    &--purple{
+                        background-color: #4e36ab;
+                    }
+                }
+                img{
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                &__information{
+                    h1{
+                        font-size: 15px;
+                        font-weight: lighter;
+                        
+                    }
+                    p{
+                        font-size: 23px;
+                        font-weight: lighter;
+                        position: relative;
+                        padding-left: 12px;
+                        color: #333333;
+                        span{
+                            position: absolute;
+                            font-size: 18px;
+                            left: 0;
+                        }
+                    }
+                    &__reviews{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        margin-bottom: 15px;
+                        span{
+                            font-size: 15px;
+                        }
+                        .checked{
+                            color: #ffc10a;
+                        }
+                        .endstar{
+                            margin-right: 6px;
+                        }
+                        p{
+                            margin-bottom: 0px;
+                            font-size: 15px;
+                            padding-left: 0px;
+                            margin-right: 5px;
+                            color: #333333;  
+                        }
+                    }
+                    &__shipping{
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 15px;
+                        img{
+                            width: 33px;
+                            margin-bottom: 0px;
+                        }
+                        p{
+                            margin-bottom: 0px;
+                            margin-left: 5px;
+                            padding-left: 0px;
+                            font-size: 15px;
+                        }
+                    }
+                    &__compare{
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 0;
+                        input{
+                            height: 20px;
+                            width: 20px;
+                            border: 2px solid rgb(210, 210, 210);
+                        }
+                        label{
+                            margin-left: 10px;
+                            font-size: 13px;
+                        }
+                    }
+                }            
+            }
+            &__Coffee{
+                cursor: pointer;
+            }
+            .buyNow{
+                margin-top: 15px;
+                border: 3px solid #f1be48;
+                border-radius: 2px;
+                width: 100%;
+                font-size: 15px;
+                padding: 10px;
+                background-color: #fff;
+                transition: all .8s;
+            }
+            .buyNow:hover{
+                background-color: #f1be48;
+            }
+        }
+    }
 }

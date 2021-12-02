@@ -113,6 +113,98 @@ h1, h2, h3, h4, h5, h6, p {
       cursor: pointer; }
     .homePage__filterBanner__right:hover .blackDownArrow {
       transform: rotate(180deg); }
+  .homePage__List {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 10px 20px 10px; }
+    .homePage__List__coffeeHolder {
+      padding: 10px;
+      width: 20%;
+      color: #333333;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; }
+      .homePage__List__coffeeHolder__Coffee {
+        height: 500px;
+        position: relative; }
+        .homePage__List__coffeeHolder__Coffee .banner {
+          position: relative;
+          border-radius: 5px;
+          color: white;
+          font-size: 12px;
+          padding: 5px 0px 5px 8px;
+          margin-bottom: 5px; }
+          .homePage__List__coffeeHolder__Coffee .banner--purple {
+            background-color: #4e36ab; }
+        .homePage__List__coffeeHolder__Coffee img {
+          width: 100%;
+          margin-bottom: 30px; }
+        .homePage__List__coffeeHolder__Coffee__information h1 {
+          font-size: 15px;
+          font-weight: lighter; }
+        .homePage__List__coffeeHolder__Coffee__information p {
+          font-size: 23px;
+          font-weight: lighter;
+          position: relative;
+          padding-left: 12px;
+          color: #333333; }
+          .homePage__List__coffeeHolder__Coffee__information p span {
+            position: absolute;
+            font-size: 18px;
+            left: 0; }
+        .homePage__List__coffeeHolder__Coffee__information__reviews {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          margin-bottom: 15px; }
+          .homePage__List__coffeeHolder__Coffee__information__reviews span {
+            font-size: 15px; }
+          .homePage__List__coffeeHolder__Coffee__information__reviews .checked {
+            color: #ffc10a; }
+          .homePage__List__coffeeHolder__Coffee__information__reviews .endstar {
+            margin-right: 6px; }
+          .homePage__List__coffeeHolder__Coffee__information__reviews p {
+            margin-bottom: 0px;
+            font-size: 15px;
+            padding-left: 0px;
+            margin-right: 5px;
+            color: #333333; }
+        .homePage__List__coffeeHolder__Coffee__information__shipping {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px; }
+          .homePage__List__coffeeHolder__Coffee__information__shipping img {
+            width: 33px;
+            margin-bottom: 0px; }
+          .homePage__List__coffeeHolder__Coffee__information__shipping p {
+            margin-bottom: 0px;
+            margin-left: 5px;
+            padding-left: 0px;
+            font-size: 15px; }
+        .homePage__List__coffeeHolder__Coffee__information__compare {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          bottom: 0; }
+          .homePage__List__coffeeHolder__Coffee__information__compare input {
+            height: 20px;
+            width: 20px;
+            border: 2px solid #d2d2d2; }
+          .homePage__List__coffeeHolder__Coffee__information__compare label {
+            margin-left: 10px;
+            font-size: 13px; }
+      .homePage__List__coffeeHolder__Coffee {
+        cursor: pointer; }
+      .homePage__List__coffeeHolder .buyNow {
+        margin-top: 15px;
+        border: 3px solid #f1be48;
+        border-radius: 2px;
+        width: 100%;
+        font-size: 15px;
+        padding: 10px;
+        background-color: #fff;
+        transition: all .8s; }
+      .homePage__List__coffeeHolder .buyNow:hover {
+        background-color: #f1be48; }
 
 nav {
   padding: 35px 45px 10px 45px;
