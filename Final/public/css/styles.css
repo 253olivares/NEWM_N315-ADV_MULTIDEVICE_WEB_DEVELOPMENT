@@ -117,27 +117,37 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 10px 20px 10px; }
+    padding: 15px 18px 30px 18px; }
     .homePage__List__coffeeHolder {
       padding: 10px;
       width: 20%;
       color: #333333;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; }
       .homePage__List__coffeeHolder__Coffee {
-        height: 500px;
+        height: 540px;
         position: relative; }
+        .homePage__List__coffeeHolder__Coffee img {
+          width: 100%;
+          margin-bottom: 30px; }
+        .homePage__List__coffeeHolder__Coffee__colors {
+          display: flex; }
+          .homePage__List__coffeeHolder__Coffee__colors img {
+            width: 25px;
+            height: 25px;
+            margin-left: 0px;
+            margin-right: 5px;
+            margin-bottom: 15px; }
         .homePage__List__coffeeHolder__Coffee .banner {
           position: relative;
           border-radius: 5px;
           color: white;
           font-size: 12px;
           padding: 5px 0px 5px 8px;
-          margin-bottom: 5px; }
+          display: flex;
+          margin-bottom: 10px;
+          align-items: center; }
           .homePage__List__coffeeHolder__Coffee .banner--purple {
             background-color: #4e36ab; }
-        .homePage__List__coffeeHolder__Coffee img {
-          width: 100%;
-          margin-bottom: 30px; }
         .homePage__List__coffeeHolder__Coffee__information h1 {
           font-size: 15px;
           font-weight: lighter; }
@@ -204,7 +214,8 @@ h1, h2, h3, h4, h5, h6, p {
         background-color: #fff;
         transition: all .8s; }
       .homePage__List__coffeeHolder .buyNow:hover {
-        background-color: #f1be48; }
+        background-color: #f1be48;
+        cursor: pointer; }
 
 nav {
   padding: 35px 45px 10px 45px;
@@ -219,9 +230,11 @@ nav {
     nav .topNav__image {
       display: flex;
       align-items: center; }
-      nav .topNav__image img {
+      nav .topNav__image a {
         width: 200px;
         margin-left: 15px; }
+        nav .topNav__image a img {
+          width: 100%; }
     nav .topNav__searchBar {
       padding: 5px 20px 5px 20px;
       border-radius: 25px;
@@ -278,9 +291,12 @@ nav {
         align-items: center;
         justify-content: center;
         transition: all .8s; }
-        nav .topNav__extraRight__cart img {
+        nav .topNav__extraRight__cart a {
           width: 70%;
           height: 70%; }
+          nav .topNav__extraRight__cart a img {
+            width: 100%;
+            height: 100%; }
       nav .topNav__extraRight__cart:hover {
         background-color: #e6e6e6;
         cursor: pointer; }

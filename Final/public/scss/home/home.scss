@@ -105,29 +105,42 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 20px 10px 20px 10px;
+        padding: 15px 18px 30px 18px;
         &__coffeeHolder{
                 padding: 10px;
                 width: 20%;
                 color: #333333;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
             &__Coffee{
-                height: 500px;
+                height: 540px;
                 position: relative;
+                img{
+                    
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                &__colors{
+                    display: flex;
+                    img{
+                        width: 25px;
+                        height: 25px;
+                        margin-left: 0px;
+                        margin-right: 5px;
+                        margin-bottom: 15px;
+                    }
+                }
                 .banner{
                     position: relative;
                     border-radius: 5px;
                     color: white;
                     font-size: 12px;
                     padding: 5px 0px 5px 8px;
-                    margin-bottom: 5px;
+                    display: flex;
+                    margin-bottom: 10px;
+                    align-items: center;
                     &--purple{
                         background-color: #4e36ab;
                     }
-                }
-                img{
-                    width: 100%;
-                    margin-bottom: 30px;
                 }
                 &__information{
                     h1{
@@ -216,6 +229,7 @@
             }
             .buyNow:hover{
                 background-color: #f1be48;
+                cursor: pointer;
             }
         }
     }
