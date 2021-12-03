@@ -1,18 +1,29 @@
+// this code sits at the top of my css and sets the basic structure of the website.
+
 @font-face{
     font-family: MarkOT-Medium;
     src: url(../css/fonts/MarkOT-Medium.ttf);
 }
 * {
     font-family: "MarkOT-Medium";
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html, body {
     width: 100%;
- height: 100%
-
+    height: 100%;
 }
+.grayOverlay{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 164px);
+    top: 164px;
+    z-index: 5;
+    background-color: rgba(153, 153, 153,.5);
+}
+
 body::-webkit-scrollbar {
     display: none;
 }

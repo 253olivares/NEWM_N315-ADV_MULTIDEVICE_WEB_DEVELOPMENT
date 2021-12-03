@@ -40,6 +40,7 @@ function route() {
 function afterRoute(page) {
   let app = firebase.app();
   initFirebase();
+  // initLogin();
   switch (page) {
     case "home":
       console.log("You are on the home page!");

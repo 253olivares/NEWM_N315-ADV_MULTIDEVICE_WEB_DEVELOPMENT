@@ -1,0 +1,8 @@
+// this is my hover css stuff 
+//A little disorganized but that is because im having elements from one nest affect elements in another nest
+.profilehov:hover .login{
+    display: block;
+} 
+.profilehov:hover .grayOverlay{
+    display: block;
+} 

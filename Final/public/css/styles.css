@@ -12,6 +12,15 @@ html, body {
   width: 100%;
   height: 100%; }
 
+.grayOverlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 164px);
+  top: 164px;
+  z-index: 5;
+  background-color: rgba(153, 153, 153, 0.5); }
+
 body::-webkit-scrollbar {
   display: none; }
 
@@ -220,7 +229,8 @@ h1, h2, h3, h4, h5, h6, p {
 nav {
   padding: 35px 45px 10px 45px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   nav .topNav {
     width: 100%;
     display: flex;
@@ -321,6 +331,18 @@ nav {
         margin-right: 15px; }
         nav .bottomNav__deals span img {
           width: 12px; }
+  nav .login {
+    display: none;
+    background-color: #fff;
+    top: 100px;
+    right: 140px;
+    position: fixed;
+    width: 350px;
+    min-height: 200px;
+    padding: 25px;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; }
 
 .footer__footerHolder {
   width: 1280px;
@@ -495,3 +517,9 @@ nav {
       color: black;
       margin-bottom: 16px;
       margin-right: 5px; }
+
+.profilehov:hover .login {
+  display: block; }
+
+.profilehov:hover .grayOverlay {
+  display: block; }

@@ -2,6 +2,7 @@ nav{
     padding: 35px 45px 10px 45px;
     display: flex;
     flex-direction: column;
+    position: relative;
     .topNav{
         width: 100%;
         display: flex;
@@ -126,5 +127,19 @@ nav{
             }
             color: #C8102E;
         }
+    }
+    .login{
+        display: none;
+        background-color: #fff ;
+        top: 100px;
+        right: 140px;
+        position: fixed;
+        width: 350px;
+        min-height: 200px;
+        padding: 25px;
+        z-index: 10;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+
     }
 }
