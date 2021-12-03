@@ -53,14 +53,25 @@ function afterRoute(page) {
   // checkMenu();
 }
 
+//this function runs ater our route switch stament and gives our 
+//coffee makers a listener that checks to see if the user is signed 
+//in and if they are it will poush that coffee maker into a array 
+//otherwise it will push an error telling the user to login
 function buyListener() {
   $(".buyNow").click(function () {
     if (userStatus == "notLogged") {
-      alert("You must log in first before Buying this coffee maker");
+      alert("You must log in first before Buying this coffee maker!");
+    } else {
+      console.log( $(this).attr("coffeeid"));
     }
   });
 }
 
+
+
+//this function here runs our firebase that authenticats 
+//the user when logged in will store an external value letting the 
+//page know if a user is signed in or not
 function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
