@@ -40,7 +40,8 @@ function route() {
 function afterRoute(page) {
   let app = firebase.app();
   initFirebase();
-  // initLogin();
+  initLogin();
+  initNav();
   switch (page) {
     case "home":
       console.log("You are on the home page!");
@@ -54,16 +55,46 @@ function afterRoute(page) {
   // checkMenu();
 }
 
-//this function runs ater our route switch stament and gives our 
-//coffee makers a listener that checks to see if the user is signed 
-//in and if they are it will poush that coffee maker into a array 
+//listener for the login profile button that will make the gray
+//overlay appear when the user hovers the profile icon
+function initLogin() {
+  let click = false;
+  $(".profilehov").hover(
+    function () {
+      if (click == false) {
+        $(".login").css("display", "block");
+        $(".grayOverlay").css("display", "block");
+      }
+    },
+    function () {
+      if (click == false) {
+        $(".login").css("display", "none");
+        $(".grayOverlay").css("display", "none");
+      }
+    }
+  );
+  $(".profilehov").click(function () {
+    if (click == false) {
+      $(".login").css("display", "block");
+      $(".grayOverlay").css("display", "block");
+    } else {
+      $(".login").css("display", "none");
+      $(".grayOverlay").css("display", "none");
+    }
+    click = !click;
+  });
+}
+
+//this function runs ater our route switch stament and gives our
+//coffee makers a listener that checks to see if the user is signed
+//in and if they are it will poush that coffee maker into a array
 //otherwise it will push an error telling the user to login
 function buyListener() {
   $(".buyNow").click(function () {
     if (userStatus == "notLogged") {
       alert("You must log in first before Buying this coffee maker!");
     } else {
-      console.log( $(this).attr("coffeeid"));
+      console.log($(this).attr("coffeeid"));
     }
   });
 }
