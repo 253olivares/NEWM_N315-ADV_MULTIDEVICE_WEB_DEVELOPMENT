@@ -509,6 +509,21 @@ nav {
       nav .topNav__extraRight__profile:hover {
         background-color: #e6e6e6;
         cursor: pointer; }
+      nav .topNav__extraRight__signout {
+        display: none;
+        width: 50px;
+        height: 50px;
+        margin-right: 25px;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        transition: all .8s; }
+        nav .topNav__extraRight__signout img {
+          width: 70%;
+          height: 70%; }
+      nav .topNav__extraRight__signout:hover {
+        background-color: #e6e6e6;
+        cursor: pointer; }
       nav .topNav__extraRight__cart {
         width: 50px;
         height: 50px;

@@ -50,6 +50,7 @@ function afterRoute(page) {
     case "home":
       console.log("You are on the home page!");
       buyListener();
+      checkCart();
       break;
     case "cart":
       console.log("you are on the cart page!");
@@ -137,32 +138,20 @@ function checkCart() {
 }
 
 //Sign in function that will log the user into our applicaiton using the firebase profile feature.
-function signIn() {
-  let email = $("#loginEmail").val();
-  let password = $("#loginPassword").val();
-  
-  if (!email || !password) {
-    alert("Please make sure to fill out both fields");
-  } else {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        var user = userCredential.user;
-        $("#loginEmail").val("");
-        $("#loginPassword").val("");
-        $(".login").css("display", "none");
-        $(".grayOverlay").css("display", "none");
-        click = false;
-        alert("Welcome "+ user.displayName);
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorMessage);
-        alert(errorCode + " " + errorMessage);
-      });
-  }
+function signIn(email, password) {
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      var user = userCredential.user;
+      alert("Welcome " + user.displayName);
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      alert(errorCode + " " + errorMessage);
+    });
 }
 
 //function to allow the user to sign out
@@ -172,6 +161,7 @@ function signOut() {
     .signOut()
     .then(() => {
       console.log("Signed Out");
+      alert("You have been succesfully signed out! Goodbye!");
     })
     .catch((error) => {
       console.log(error);
@@ -181,37 +171,25 @@ function signOut() {
 }
 
 //Sign up function that will allow the user to create an account on firebase to sign into our application
-function signUp() {
-  let fn = $("#signUpFN").val();
-  let ln = $("#signUpLN").val();
-  let email = $("#signUpEmail").val();
-  let password = $("#signUpPassword").val();
-  if (!fn || !ln || !email || !password) {
-    alert("Please make sure to fill out all fields");
-  } else {
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        let fullName = fn + " " + ln;
-        firebase.auth().currentUser.updateProfile({
-          displayName: fullName,
-        });
-
-        $("#signUpFN").val("");
-        $("#signUpLN").val("");
-        $("#signUpEmail").val("");
-        $("#signUpPassword").val("");
-        localNameSave = fullName;
-        var user = userCredential.user;
-      })
-      .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log(errorMessage);
-        alert(errorCode + " " + errorMessage);
+function signUp(fn, ln, email, password) {
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      let fullName = fn + " " + ln;
+      firebase.auth().currentUser.updateProfile({
+        displayName: fullName,
       });
-  }
+      localNameSave = fullName;
+      var user = userCredential.user;
+      alert("Welcome! Your account has been successfully created");
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorMessage);
+      alert(errorCode + " " + errorMessage);
+    });
 }
 
 //listener for the login profile button that will make the gray
@@ -272,6 +250,39 @@ function initLogin() {
         $(".grayOverlay").css("display", "none");
         click = false;
       });
+      $(".SignInButton").click(function () {
+        let email = $("#loginEmail").val();
+        let password = $("#loginPassword").val();
+
+        if (!email || !password) {
+          alert("Please make sure to fill out both fields");
+        } else {
+          $("#loginEmail").val("");
+          $("#loginPassword").val("");
+          signIn(email, password);
+          $(".login").css("display", "none");
+          $(".grayOverlay").css("display", "none");
+          click = false;
+        }
+      });
+      $(".SignUpButton").click(function () {
+        let fn = $("#signUpFN").val();
+        let ln = $("#signUpLN").val();
+        let email = $("#signUpEmail").val();
+        let password = $("#signUpPassword").val();
+        if (!fn || !ln || !email || !password) {
+          alert("Please make sure to fill out all fields");
+        } else {
+          $("#signUpFN").val("");
+          $("#signUpLN").val("");
+          $("#signUpEmail").val("");
+          $("#signUpPassword").val("");
+          signUp(fn, ln, email, password);
+          $(".login").css("display", "none");
+          $(".grayOverlay").css("display", "none");
+          click = false;
+        }
+      });
     } else {
       $(".login").css("display", "none");
       $(".grayOverlay").css("display", "none");
@@ -303,10 +314,15 @@ function initFirebase() {
     if (user) {
       console.log("A user is logged in!");
       userLogStatus = true;
+      localNameSave = user.displayName;
+      $(".profilehov").css("display", "none");
+      $(".signoutHov").css("display", "flex");
     } else {
       console.log("A user is not logged in!");
       userLogStatus = false;
       localNameSave = "";
+      $(".profilehov").css("display", "flex");
+      $(".signoutHov").css("display", "none");
     }
   });
 }

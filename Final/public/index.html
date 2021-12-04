@@ -30,7 +30,10 @@
             <div class="topNav__extraRight">
               <button title="Free Shipping $29+" class="topNav__extraRight__freeShipping">FREE SHIPPING $29+</button>
               <div class="topNav__extraRight__profile profilehov">
-                <img src="images/profile.svg" alt="Profile">
+                <img onclick="signOut()" src="images/profile.svg" alt="Profile">
+              </div>
+              <div class="topNav__extraRight__signout signoutHov">
+                <img src="images/signOut.png" alt="SignOut">
               </div>
               <div class="topNav__extraRight__cart">
                 <a href="#/cart"><img src="images/keurig-cart.svg" alt="Search"></a>
@@ -65,7 +68,7 @@
                   <label for="keep">Keep me signed in. <i class="fa fa-info-circle"></i></label>
                 </div>
               </div>
-              <button title="SignInButton" class="SignInButton" onclick="signIn()">SIGN IN</button>
+              <button title="SignInButton" class="SignInButton">SIGN IN</button>
               <p>Forgot Password?</p>
             </div>
             <div class="inputFieldsSign">
@@ -83,7 +86,7 @@
                   <label for="keep">Keep me signed in. <i class="fa fa-info-circle"></i></label>
                 </div>
               </div>
-              <button title="SignUpButton" class="SignUpButton" onclick="signUp()">CREATE AN ACCOUNT</button>
+              <button title="SignUpButton" class="SignUpButton">CREATE AN ACCOUNT</button>
               <p>By clicking "Create an Account" I accept Keurig <span>Terms of User</span> and <span>Privacy Policy</span>.</p>
             </div>
             <div class="whyBoxL wB">
