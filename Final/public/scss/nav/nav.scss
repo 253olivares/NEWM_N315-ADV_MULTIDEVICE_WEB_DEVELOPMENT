@@ -32,6 +32,9 @@ nav{
             img{
                 height: 100%;
             }
+            img:hover{
+                cursor: pointer;
+            }
             input{
                 margin-left: 25px;
                 border: none;
@@ -133,13 +136,213 @@ nav{
         background-color: #fff ;
         top: 100px;
         right: 140px;
-        position: fixed;
+        position: absolute;
         width: 350px;
         min-height: 200px;
-        padding: 25px;
         z-index: 10;
-        border-radius: 10px;
+        border-radius: 5px;
+        color:#333333;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        .closeButton{
+            display: flex;
+            justify-content: flex-start;
+            font-size: 20px;
+            margin: 25px 25px 10px 25px;
+            p{
+                margin-left: 10px;
+            }
+        }
+        .closeButton:hover {
+            cursor: pointer;
+        }
+        .loginSignup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 25px 0px 25px;
+            button{
+                width: 50%;
+                padding: 10px;
+                background-color: #ffffff;
+                font-weight: lighter;
+                border: none;
+                font-size: 16px;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+            .selected{
+                background-color:#ece9e4;
+                font-weight: bold;
+            }
+        }
+        .inputFieldsLogin{
+            margin: 15px 25px 15px 25px;
+            .inputs{
+                .loginInputs{
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
+                .loginInputs:hover{
+                    cursor: pointer;
+                }
+                .keepSignedIn{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    input{
+                        width: 20px;
+                        height: 20px;
+                    }
+                    input:hover{
+                        cursor: pointer;
+                    }
+                    label{
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .SignInButton{
+                width: 100%;
+                background-color: #3b2b2f;
+                color:white;
+                border: none;
+                padding: 10px;
+                border-radius: 25px;
+                letter-spacing: 1px;
+                margin-bottom: 15px;
+            }
+            .SignInButton:hover {
+                cursor: pointer;
+            }
+            p{
+                text-align: center;
+                text-decoration: underline;
+                color: #0f7db5;
+            }
+            p:hover{
+                cursor: pointer;
+            }
+        }
+        .inputFieldsSign{
+            margin: 15px 25px 15px 25px;
+            .inputs{
+                .SignupInputs{
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
+                .SignupInputs:hover{
+                    cursor: pointer;
+                }
+                .specialOffers{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    input{
+                        width: 20px;
+                        height: 20px;
+                    }
+                    input:hover{
+                        cursor: pointer;
+                    }
+                    label{
+                        margin-left: 10px;
+                    }
+                }
+                .keepSignedIn{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    input{
+                        width: 20px;
+                        height: 20px;
+                    }
+                    input:hover{
+                        cursor: pointer;
+                    }
+                    label{
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .SignUpButton{
+                width: 100%;
+                background-color: #3b2b2f;
+                color:white;
+                border: none;
+                padding: 10px;
+                border-radius: 25px;
+                letter-spacing: 1px;
+                margin-bottom: 15px;
+            }
+            .SignUpButton:hover {
+                cursor: pointer;
+            }
+            p{
+                font-size: 12px;
+                text-align: center;
+                span{
+                    font-weight: bold;
+                    text-decoration: underline;
+                    color:#3b2b2f;
+                }
+            }
+            p:hover{
+                cursor: pointer;
+            }
+        }
+        .whyBoxL{
+            display: block;
+        }
+        .whyBoxS{
+            display: none;
+        }
+        .wB{
+            padding: 25px 30px 25px 30px;
+            background-color: #f3f3f3;
+            h1{
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+            ul{
+                li{
+                    font-size: 14px;
+                    margin-left: 15px;
+                }
+            }
 
+        }
+        
+        .inputFieldsSign{
+            display: none;
+        }
+        .endButtons{
+            margin: 15px 25px 25px 25px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            button{
+                background-color: white;
+                width: 100%;
+                font-size: 15px;
+                padding: 10px;
+                border-radius: 25px;
+                border: none;
+                border: 1px solid #dfdfdf;
+            }
+            button:hover{
+                background-color:#f2f2f2;
+                cursor: pointer;
+            }
+            .firstBtn{
+                margin-bottom: 10px;
+            }
+        }
     }
 }

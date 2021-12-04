@@ -4,6 +4,8 @@ var coffee = [];
 var cart = [];
 //this function will check to see if a user is signed in.
 var userStatus = "notLogged";
+//this is a variable that will keep track of our toggle to see if we have login or sign up in the account div
+var loginToggle = true;
 
 //this funcion keeps track of our address URL
 function checkHash() {
@@ -41,7 +43,7 @@ function afterRoute(page) {
   let app = firebase.app();
   initFirebase();
   initLogin();
-  initNav();
+  // initNav();
   switch (page) {
     case "home":
       console.log("You are on the home page!");
@@ -49,10 +51,20 @@ function afterRoute(page) {
       break;
     case "cart":
       console.log("you are on the cart page!");
-
+      // checkCart();
       break;
   }
   // checkMenu();
+}
+
+//function that looks at the cart array and sees if 
+//it contains anything and if it does then displays items 
+//otherwise says it has nothing
+function checkCart() {
+  if (cart.length== 0) {
+    $(".cartPage").html(`<p class="emptyitems">0 ITEMS</p>
+    <h1 class="emptyText">You don't have any items in your shopping cart</h1>`);
+  }
 }
 
 //listener for the login profile button that will make the gray
@@ -64,6 +76,32 @@ function initLogin() {
       if (click == false) {
         $(".login").css("display", "block");
         $(".grayOverlay").css("display", "block");
+        $(".closeButton").click(function () {
+          $(".login").css("display", "none");
+          $(".grayOverlay").css("display", "none");
+          click = false;
+        });
+        $(".grayOverlay").click(function () {
+          $(".login").css("display", "none");
+          $(".grayOverlay").css("display", "none");
+          click = false;
+        });
+        $(".lsButton").click(function () {
+          let selected = $(this).attr("dir");
+          $(".lsButton").removeClass("selected");
+          $(this).addClass("selected");
+          if (selected == "signup") {
+            $(".inputFieldsLogin").css("display", "none");
+            $(".whyBoxL").css("display", "none");
+            $(".inputFieldsSign").css("display", "block");
+            $(".whyBoxS").css("display","block");
+          } else {
+            $(".inputFieldsLogin").css("display", "block");
+            $(".whyBoxL").css("display", "block");
+            $(".inputFieldsSign").css("display", "none");
+            $(".whyBoxS").css("display","none");
+          }
+        });
       }
     },
     function () {
@@ -77,6 +115,16 @@ function initLogin() {
     if (click == false) {
       $(".login").css("display", "block");
       $(".grayOverlay").css("display", "block");
+      $(".closeButton").click(function () {
+        $(".login").css("display", "none");
+        $(".grayOverlay").css("display", "none");
+        click = false;
+      });
+      $(".grayOverlay").click(function () {
+        $(".login").css("display", "none");
+        $(".grayOverlay").css("display", "none");
+        click = false;
+      });
     } else {
       $(".login").css("display", "none");
       $(".grayOverlay").css("display", "none");
@@ -85,6 +133,7 @@ function initLogin() {
   });
 }
 
+//init close function that closes the modal when you click the close button
 //this function runs ater our route switch stament and gives our
 //coffee makers a listener that checks to see if the user is signed
 //in and if they are it will poush that coffee maker into a array

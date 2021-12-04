@@ -1,0 +1,271 @@
+.cartPage{
+    margin-top: 20px;
+    min-height: 500px;
+    .emptyitems{
+        text-align: center;
+    }
+    .emptyText{
+        text-align: center;
+        font-size: 50px;
+        font-weight: lighter;
+    }
+    .freeship{
+        text-align: center;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i{
+            font-size: 20px;
+            color: #498428;
+            margin-right: 10px ;
+        }
+    }
+    .ShoppingCart{
+        width: 100%;
+        min-height: 250px;
+        margin-top: 30px;
+        padding: 0px 15px 0px 15px;
+        display: flex;
+        justify-content: space-around;
+        .sCLeft{
+            width: 73%;
+            min-height: 200px;
+            .purchases{
+                display: flex;
+                flex-direction: column;
+                padding: 20px 20px 0px 20px;
+                background-color: #e7e4df;
+                border-radius: 15px;
+                margin-bottom: 25px;
+                h1{
+                    font-weight: normal;
+                    font-size: 18px;
+                    margin-bottom: 5px;
+                }
+                p{
+                    font-size: 12px;
+                    font-style: italic;
+                }
+                .coffeeListed{
+                    width: 100%;
+                    min-height: 175px;
+                    background-color: #fff;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    &__left{
+                        width: 50%;
+                        display: flex;
+                        &__image{
+                            width: 35%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+                                width: 95%;
+                            }
+                        }
+                        &__title{
+                            width: 65%;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            h1{
+                                width: 90%;
+                            }
+                        }
+                    }
+                    &__right{
+                        width: 50%;
+                        display: flex;
+                        &__cost{
+                            width: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            p{
+                                margin-bottom: 0px;
+
+                            }
+                            select{
+                                margin-left: 20px;
+                                padding: 10px;
+                                border: 3px solid #f1be48;
+                            }
+                        }
+                        &__later{
+                            width: 50%;
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                            margin-right: 40px;
+                        }
+                    }
+                    &__close{
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 40px;
+                        color: #68676b;
+                        p{
+                            margin-bottom: 0px;
+                            margin-right: 15px;
+                            text-decoration: underline;
+                        }
+                        p:hover{
+                            cursor: pointer;
+                        }
+                        i:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .coffeeListed:last-child {
+                    border-radius: 0px 0px 20px 20px;
+                }
+            }
+            .discount{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 30px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                h3{
+                    margin-bottom: 0px;
+                    font-weight: lighter;
+                }
+                .couponCode{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        width: 200px;
+                        padding: 8px;
+                        border: 3px solid #dfdfdf;
+                        border-right: none;
+                        
+                    }
+                    button{
+                        padding: 8px;
+                        background-color: #fff;
+                        border: 3px solid #f1be48;
+                        width: 80px;
+                    }
+                    button:hover{
+                        cursor: pointer;
+                        border: 3px solid black;
+                    }
+                }
+            }
+
+        }
+        .sCRight{
+            width: 24%;
+            min-height: 300px;
+            font-weight: lighter;
+            .showTotal{
+            min-height: 300px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            h1{
+                padding-top: 25px;
+                margin: 0px 25px 20px 25px;
+                font-size: 18px;
+                font-weight: lighter;
+            }
+            .subtotal{
+                display: flex;
+                justify-content: space-between;
+                margin: 0px 25px 0px 25px;
+                p{
+                    margin-bottom: 10px;
+                }
+            }
+            .firsthr{
+                margin: 0px 25px 20px 25px;
+                border-style: dashed;
+                border-width: 1px;
+            }
+            .savingDiscounts{
+                display: flex;
+                justify-content: space-between;
+                margin: 0px 25px 0px 25px;
+                .subCost{
+                    color: #dd168c;
+                }
+                p{
+                    margin-bottom: 0px;
+                }
+            }
+            .addCoup{
+                margin: 0px 25px 0px 25px;
+                color: 
+                #33cfff;
+            }
+            .shippingTotal{
+                display: flex;
+                justify-content: space-between;
+                margin: 0px 25px 0px 25px;
+                .shippingFree{
+                    color: #498428;
+                }
+            }
+            .orderTotal{
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 8px 8px 25px;
+                margin-right: 25px;
+                background-color: #e7e4df;
+                border-radius: 0px 25px 25px 0px;
+                margin-bottom: 8px;
+                p{
+
+                    i{
+                        margin-left: 5px;
+                    }
+                    margin-bottom: 0px;
+                }
+            }
+            .secondhr{
+                margin: 0px 25px 20px 25px;
+                border-style: dashed;
+                border-width: 1px;
+            }
+            .buttonsCheckout{
+                display: flex;
+                flex-direction: column;
+                margin: 0px 25px 0px 25px;
+                padding-bottom: 25px;
+                button:hover{
+                    cursor: pointer;
+                }
+                .secureCheckout{
+                    padding: 10px;
+                    border: none;
+                    background-color: #f1be48;
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                }
+                .Paypal{
+                    border: none;
+                    padding: 12px;
+                    background-color: #ebebeb;
+                    font-size: 12px;
+                    i{
+                        margin-left: 10px;
+                        color:#0099ff;
+                    }
+                }
+            }
+            }
+        }
+    }
+}

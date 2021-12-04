@@ -2,5 +2,68 @@
 <!-- this is our main cart page that loads when we call the cart -->
 
 <div class="cartPage">
-
+    <p class="freeship"><i class="fa fa-check-square"></i>You get FREE shipping!</p>
+    <div class="ShoppingCart">
+        <div class="sCLeft">
+            <div class="purchases">
+                <h1>Regular Purchases</h1>
+                <p>These items will be processed today and ship right away.</p>
+                <div class="coffeeListed">
+                    <div class="coffeeListed__left">
+                        <div class="coffeeListed__left__image">
+                            <img src="images/Coffee1.jpg" alt="">
+                        </div>
+                        <div class="coffeeListed__left__title">
+                            <p>Keurig®</p>
+                            <h1>K-Supreme Plus® SMART Single Serve Coffee Maker</h1>
+                        </div>
+                    </div>
+                    <div class="coffeeListed__right">
+                        <div class="coffeeListed__right__cost">
+                            <p>$199.99 each</p>
+                            <select title="selectTotal" name="selectTotal" class="selectedTotal">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="coffeeListed__right__later">
+                            <div class="coffeeListed__right__later__total">
+                                <p>$199.99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coffeeListed__close">
+                        <p>Save For Later</p>
+                        <i class="fa fa-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="discount">
+                <h3>Savings & Discounts</h3>
+                <div class="couponCode">
+                    <input title="coupon" placeholder="Coupon Code" type="text">
+                    <button>APPLY</button>
+                </div>
+            </div>
+        </div>
+        <div class="sCRight">
+            <div class="showTotal">
+                <h1>Cart Summary</h1>
+                <div class="subtotal"><p>Subtotal (1 Item)</p> <p>$199.99</p></div>
+                <hr class="firsthr">
+                <div class="savingDiscounts"><p>Savings & Discounts</p> <p class="subCost">-$0.00</p></div>
+                <p class="addCoup">Add coupon</p>
+                <div class="shippingTotal"><p>Shipping</p> <p class="shippingFree">FREE</p></div>
+                <div class="orderTotal"><p>Order Total<i class="fa fa-info-circle"></i></p> <p>$199.99</p></div>
+                <hr class="secondhr">
+                <div class="buttonsCheckout">
+                    <button title="secureCheckout" class="secureCheckout">SECURE CHECKOUT</button>
+                    <button title="Paypal" class="Paypal">Check out with <i class="fa fa-paypal"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
