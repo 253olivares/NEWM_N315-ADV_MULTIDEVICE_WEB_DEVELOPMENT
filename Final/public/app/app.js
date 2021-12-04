@@ -6,6 +6,8 @@ var cart = [];
 var userLogStatus = false;
 //this is a variable that will keep track of our toggle to see if we have login or sign up in the account div
 var loginToggle = true;
+//local name save
+var localNameSave = "";
 
 //this funcion keeps track of our address URL
 function checkHash() {
@@ -138,7 +140,7 @@ function checkCart() {
 function signIn() {
   let email = $("#loginEmail").val();
   let password = $("#loginPassword").val();
-
+  
   if (!email || !password) {
     alert("Please make sure to fill out both fields");
   } else {
@@ -149,6 +151,10 @@ function signIn() {
         var user = userCredential.user;
         $("#loginEmail").val("");
         $("#loginPassword").val("");
+        $(".login").css("display", "none");
+        $(".grayOverlay").css("display", "none");
+        click = false;
+        alert("Welcome "+ user.displayName);
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -157,6 +163,21 @@ function signIn() {
         alert(errorCode + " " + errorMessage);
       });
   }
+}
+
+//function to allow the user to sign out
+function signOut() {
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      console.log("Signed Out");
+    })
+    .catch((error) => {
+      console.log(error);
+      alert(error);
+      // An error happened.
+    });
 }
 
 //Sign up function that will allow the user to create an account on firebase to sign into our application
@@ -168,6 +189,28 @@ function signUp() {
   if (!fn || !ln || !email || !password) {
     alert("Please make sure to fill out all fields");
   } else {
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        let fullName = fn + " " + ln;
+        firebase.auth().currentUser.updateProfile({
+          displayName: fullName,
+        });
+
+        $("#signUpFN").val("");
+        $("#signUpLN").val("");
+        $("#signUpEmail").val("");
+        $("#signUpPassword").val("");
+        localNameSave = fullName;
+        var user = userCredential.user;
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorMessage);
+        alert(errorCode + " " + errorMessage);
+      });
   }
 }
 
@@ -263,6 +306,7 @@ function initFirebase() {
     } else {
       console.log("A user is not logged in!");
       userLogStatus = false;
+      localNameSave = "";
     }
   });
 }
