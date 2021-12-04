@@ -3,7 +3,7 @@ var coffee = [];
 //this is an array that we will push coffee into when we click buy now and if the user is signed in
 var cart = [];
 //this function will check to see if a user is signed in.
-var userStatus = "notLogged";
+var userLogStatus = false;
 //this is a variable that will keep track of our toggle to see if we have login or sign up in the account div
 var loginToggle = true;
 
@@ -51,19 +51,123 @@ function afterRoute(page) {
       break;
     case "cart":
       console.log("you are on the cart page!");
-      // checkCart();
+      checkCart();
       break;
   }
   // checkMenu();
 }
 
-//function that looks at the cart array and sees if 
-//it contains anything and if it does then displays items 
+//function that looks at the cart array and sees if
+//it contains anything and if it does then displays items
 //otherwise says it has nothing
 function checkCart() {
-  if (cart.length== 0) {
+  if (cart.length !== 0) {
     $(".cartPage").html(`<p class="emptyitems">0 ITEMS</p>
     <h1 class="emptyText">You don't have any items in your shopping cart</h1>`);
+  } else {
+    //this portion of the if statment is a bit long becuase it lays out the page structure before filling in values.
+    $(".cartPage")
+      .html(`<p class="freeship"><i class="fa fa-check-square"></i>You get FREE shipping!</p>
+    <div class="ShoppingCart">
+        <div class="sCLeft">
+            <div class="purchases">
+            <h1>Regular Purchases</h1>
+            <p>These items will be processed today and ship right away.</p>
+            </div>
+            <div class="discount">
+                <h3>Savings & Discounts</h3>
+                <div class="couponCode">
+                    <input title="coupon" placeholder="Coupon Code" type="text">
+                    <button>APPLY</button>
+                </div>
+            </div>
+        </div>
+        <div class="sCRight">
+            <div class="showTotal">
+                <h1>Cart Summary</h1>
+                <div class="subtotal"><p>Subtotal (1 Item)</p> <p>$199.99</p></div>
+                <hr class="firsthr">
+                <div class="savingDiscounts"><p>Savings & Discounts</p> <p class="subCost">-$0.00</p></div>
+                <p class="addCoup">Add coupon</p>
+                <div class="shippingTotal"><p>Shipping</p> <p class="shippingFree">FREE</p></div>
+                <div class="orderTotal"><p>Order Total<i class="fa fa-info-circle"></i></p> <p>$199.99</p></div>
+                <hr class="secondhr">
+                <div class="buttonsCheckout">
+                    <button title="secureCheckout" class="secureCheckout">SECURE CHECKOUT</button>
+                    <button title="Paypal" class="Paypal">Check out with <i class="fa fa-paypal"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>`);
+    $(".purchases").append(`<div class="coffeeListed">
+    <div class="coffeeListed__left">
+        <div class="coffeeListed__left__image">
+            <img src="images/Coffee1.jpg" alt="">
+        </div>
+        <div class="coffeeListed__left__title">
+            <p>Keurig®</p>
+            <h1>K-Supreme Plus® SMART Single Serve Coffee Maker</h1>
+        </div>
+    </div>
+    <div class="coffeeListed__right">
+        <div class="coffeeListed__right__cost">
+            <p>$199.99 each</p>
+            <select title="selectTotal" name="selectTotal" class="selectedTotal">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="coffeeListed__right__later">
+            <div class="coffeeListed__right__later__total">
+                <p>$199.99</p>
+            </div>
+        </div>
+    </div>
+    <div class="coffeeListed__close">
+        <p>Save For Later</p>
+        <i class="fa fa-times"></i>
+    </div>
+</div>`);
+  }
+}
+
+//Sign in function that will log the user into our applicaiton using the firebase profile feature.
+function signIn() {
+  let email = $("#loginEmail").val();
+  let password = $("#loginPassword").val();
+
+  if (!email || !password) {
+    alert("Please make sure to fill out both fields");
+  } else {
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        var user = userCredential.user;
+        $("#loginEmail").val("");
+        $("#loginPassword").val("");
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorMessage);
+        alert(errorCode + " " + errorMessage);
+      });
+  }
+}
+
+//Sign up function that will allow the user to create an account on firebase to sign into our application
+function signUp() {
+  let fn = $("#signUpFN").val();
+  let ln = $("#signUpLN").val();
+  let email = $("#signUpEmail").val();
+  let password = $("#signUpPassword").val();
+  if (!fn || !ln || !email || !password) {
+    alert("Please make sure to fill out all fields");
+  } else {
   }
 }
 
@@ -94,12 +198,12 @@ function initLogin() {
             $(".inputFieldsLogin").css("display", "none");
             $(".whyBoxL").css("display", "none");
             $(".inputFieldsSign").css("display", "block");
-            $(".whyBoxS").css("display","block");
+            $(".whyBoxS").css("display", "block");
           } else {
             $(".inputFieldsLogin").css("display", "block");
             $(".whyBoxL").css("display", "block");
             $(".inputFieldsSign").css("display", "none");
-            $(".whyBoxS").css("display","none");
+            $(".whyBoxS").css("display", "none");
           }
         });
       }
@@ -140,7 +244,7 @@ function initLogin() {
 //otherwise it will push an error telling the user to login
 function buyListener() {
   $(".buyNow").click(function () {
-    if (userStatus == "notLogged") {
+    if (userLogStatus == false) {
       alert("You must log in first before Buying this coffee maker!");
     } else {
       console.log($(this).attr("coffeeid"));
@@ -148,19 +252,17 @@ function buyListener() {
   });
 }
 
-
-
-//this function here runs our firebase that authenticats 
-//the user when logged in will store an external value letting the 
+//this function here runs our firebase that authenticats
+//the user when logged in will store an external value letting the
 //page know if a user is signed in or not
 function initFirebase() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
       console.log("A user is logged in!");
-      userStatus = "logged";
+      userLogStatus = true;
     } else {
       console.log("A user is not logged in!");
-      userStatus = "notLogged";
+      userLogStatus = false;
     }
   });
 }

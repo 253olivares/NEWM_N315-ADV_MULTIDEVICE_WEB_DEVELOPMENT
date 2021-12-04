@@ -455,12 +455,12 @@ nav {
       display: flex;
       align-items: center; }
       nav .topNav__image a {
-        width: 200px;
+        width: 180px;
         margin-left: 15px; }
         nav .topNav__image a img {
           width: 100%; }
     nav .topNav__searchBar {
-      padding: 5px 20px 5px 20px;
+      padding: 4px 19px 4px 19px;
       border-radius: 25px;
       display: flex;
       align-items: center;
@@ -476,7 +476,7 @@ nav {
         margin-left: 25px;
         border: none;
         background-color: #f3f3f3;
-        font-size: 16px;
+        font-size: 15px;
         width: 90%; }
       nav .topNav__searchBar ::placeholder {
         color: #212529; }
@@ -533,7 +533,7 @@ nav {
     nav .bottomNav a {
       padding: 15px 20px 15px 20px;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 13px;
       border-radius: 5px;
       transition: all .8s;
       letter-spacing: 3px; }
@@ -829,7 +829,8 @@ nav {
         font-size: 14px;
         padding: 10px;
         border: 1px solid #899099;
-        border-radius: 3px 0px 0px 3px; }
+        border-radius: 3px 0px 0px 3px;
+        border-right: none; }
       .footer__footerHolder__information__column4 .email ::placeholder {
         color: #333333; }
       .footer__footerHolder__information__column4 .email button {
