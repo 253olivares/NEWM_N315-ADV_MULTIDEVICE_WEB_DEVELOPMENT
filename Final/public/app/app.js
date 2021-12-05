@@ -1,5 +1,4 @@
-//We are going to push our JSON code into this local save of coffee
-var coffee = [];
+subtotal = 0;
 //this is an array that we will push coffee into when we click buy now and if the user is signed in
 var cart = [];
 //this function will check to see if a user is signed in.
@@ -49,22 +48,86 @@ function afterRoute(page) {
   switch (page) {
     case "home":
       console.log("You are on the home page!");
-      buyListener();
-      checkCart();
+      loadCoffee();
+      cartupdate();
       break;
     case "cart":
       console.log("you are on the cart page!");
       checkCart();
+      cartupdate();
+      console.log(cart);
       break;
   }
   // checkMenu();
+}
+
+//this function loads our coffee on the page by cycling through our coffee array
+function loadCoffee() {
+  $(".homePage__List").empty();
+  $.getJSON("data/data.json", function (coffee) {
+    $.each(coffee.MACHINES, function (index, x) {
+      let displayCoffee = `
+      <div class="homePage__List__coffeeHolder">
+        <div class="homePage__List__coffeeHolder__Coffee">
+          <p class="banner banner--purple" style="background-color:${x.bannerColor};">${x.bannerMessage}</p>
+          <img src="images/${x.images}" alt="Coffee Machine">
+          <div id="collectionColor${x.id}" class="homePage__List__coffeeHolder__Coffee__colors">
+          </div>
+          <div class="homePage__List__coffeeHolder__Coffee__information">
+            <h1>${x.name}</h1>
+            <p class="cost"><span>$</span>${x.price}</p>
+            <div class="homePage__List__coffeeHolder__Coffee__information__reviews">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star endstar"></span><p>${x.rating}</p><p>|</p> <p>(${x.numRating})</p>
+            </div>
+            <div class="homePage__List__coffeeHolder__Coffee__information__shipping">
+              <img src="images/Shipping.svg" alt="Shipping">
+              <p>Free shipping</p>
+            </div>
+            <div class="homePage__List__coffeeHolder__Coffee__information__compare">
+              <input title="compare" type="checkbox" class="compare" name="compare" value="compareValue">
+              <label for="compare">Compare</label>
+            </div>
+          </div>
+        </div>
+        <button onclick="buyListener(${x.id})" class="buyNow" coffeeArray="${x}" coffeeid="${x.id}"> BUY NOW</button>
+      </div>`;
+      $(".homePage__List").append(displayCoffee);
+      $.each(x.color, function (index, y) {
+        console.log(y);
+        let circles = `<div style="background-color:${y};" alt="circle">`;
+        $(`#collectionColor${x.id}`).append(circles);
+      });
+    });
+  });
+  // $.each(coffee, function (index, x) {
+  //   console.log(x);
+  //   $("#coffeeDisplay").append(displayCoffee);
+  //   // $.each(x.color, function (index, y) {
+  //   //   circles = `<img src="images/circle-solid.svg" style="color: ${y};" alt="circle">`;
+  //   //   $("colorCircles").append(circles);
+  //   // });
+  // });
+}
+
+//this function here keeps track of the number of coffee makers we have pushed into our array
+function cartupdate() {
+  if (cart.length == 0) {
+    $("#countThingy").css("display", "none");
+  } else {
+    $("#countThingy").css("display", "flex");
+    $("#countThingy").html(cart.length);
+  }
 }
 
 //function that looks at the cart array and sees if
 //it contains anything and if it does then displays items
 //otherwise says it has nothing
 function checkCart() {
-  if (cart.length !== 0) {
+  if (cart.length == 0) {
     $(".cartPage").html(`<p class="emptyitems">0 ITEMS</p>
     <h1 class="emptyText">You don't have any items in your shopping cart</h1>`);
   } else {
@@ -73,7 +136,7 @@ function checkCart() {
       .html(`<p class="freeship"><i class="fa fa-check-square"></i>You get FREE shipping!</p>
     <div class="ShoppingCart">
         <div class="sCLeft">
-            <div class="purchases">
+            <div id="displayCoffeArea" class="purchases">
             <h1>Regular Purchases</h1>
             <p>These items will be processed today and ship right away.</p>
             </div>
@@ -88,53 +151,77 @@ function checkCart() {
         <div class="sCRight">
             <div class="showTotal">
                 <h1>Cart Summary</h1>
-                <div class="subtotal"><p>Subtotal (1 Item)</p> <p>$199.99</p></div>
+                <div class="subtotal"><p>Subtotal (1 Item)</p> <p>$<span id="cartSubTotal">199.99</span></p></div>
                 <hr class="firsthr">
                 <div class="savingDiscounts"><p>Savings & Discounts</p> <p class="subCost">-$0.00</p></div>
                 <p class="addCoup">Add coupon</p>
                 <div class="shippingTotal"><p>Shipping</p> <p class="shippingFree">FREE</p></div>
-                <div class="orderTotal"><p>Order Total<i class="fa fa-info-circle"></i></p> <p>$199.99</p></div>
+                <div class="orderTotal"><p>Order Total<i class="fa fa-info-circle"></i></p> <p>$<span id="cartOrderTotal">199.99</span></p></div>
                 <hr class="secondhr">
                 <div class="buttonsCheckout">
-                    <button title="secureCheckout" class="secureCheckout">SECURE CHECKOUT</button>
+                    <button title="secureCheckout" onclick="checkout();" class="secureCheckout">SECURE CHECKOUT</button>
                     <button title="Paypal" class="Paypal">Check out with <i class="fa fa-paypal"></i></button>
                 </div>
             </div>
         </div>
     </div>`);
-    $(".purchases").append(`<div class="coffeeListed">
-    <div class="coffeeListed__left">
-        <div class="coffeeListed__left__image">
-            <img src="images/Coffee1.jpg" alt="">
-        </div>
-        <div class="coffeeListed__left__title">
-            <p>Keurig®</p>
-            <h1>K-Supreme Plus® SMART Single Serve Coffee Maker</h1>
-        </div>
-    </div>
-    <div class="coffeeListed__right">
-        <div class="coffeeListed__right__cost">
-            <p>$199.99 each</p>
-            <select title="selectTotal" name="selectTotal" class="selectedTotal">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="coffeeListed__right__later">
-            <div class="coffeeListed__right__later__total">
-                <p>$199.99</p>
-            </div>
-        </div>
-    </div>
-    <div class="coffeeListed__close">
-        <p>Save For Later</p>
-        <i class="fa fa-times"></i>
-    </div>
-</div>`);
+
+    loadCartMachines();
   }
+}
+
+//this function clears our cart successfully completing the transaction
+function checkout() {
+  cart = [];
+  alert("Congratulations on your order " + localNameSave);
+  MODEL.changeContent("cart", afterRoute);
+  subtotal = 0;
+}
+
+//This function loads our cart array and grabs the coffee machines we saved.
+
+function loadCartMachines() {
+  $("#coffeeDisplay").empty();
+  $.getJSON("data/data.json", function (coffee) {
+    $.each(cart, function (c) {
+      let displayCoffee = `
+      <div class="coffeeListed">
+      <div class="coffeeListed__left">
+          <div class="coffeeListed__left__image">
+              <img src="images/${coffee.MACHINES[cart[c]].images}" alt="">
+          </div>
+          <div class="coffeeListed__left__title">
+              <p>Keurig®</p>
+              <h1>${coffee.MACHINES[cart[c]].name}</h1>
+          </div>
+      </div>
+      <div class="coffeeListed__right">
+          <div class="coffeeListed__right__cost">
+              <p>${coffee.MACHINES[cart[c]].price} each</p>
+              <select title="selectTotal" name="selectTotal" class="selectedTotal">
+                  <option value="1">1</option>
+              </select>
+          </div>
+          <div class="coffeeListed__right__later">
+              <div class="coffeeListed__right__later__total">
+                  <p>${coffee.MACHINES[cart[c]].price}</p>
+              </div>
+          </div>
+      </div>
+      <div class="coffeeListed__close">
+          <p>Save For Later</p>
+          <i class="fa fa-times"></i>
+      </div>
+  </div>
+      `;
+      subtotal = subtotal + coffee.MACHINES[c].price;
+      $("#displayCoffeArea").append(displayCoffee);
+      $("#cartSubTotal").empty();
+      $("#cartSubTotal").html(subtotal);
+      $("#cartOrderTotal").empty();
+      $("#cartOrderTotal").html(subtotal);
+    });
+  });
 }
 
 //Sign in function that will log the user into our applicaiton using the firebase profile feature.
@@ -296,14 +383,13 @@ function initLogin() {
 //coffee makers a listener that checks to see if the user is signed
 //in and if they are it will poush that coffee maker into a array
 //otherwise it will push an error telling the user to login
-function buyListener() {
-  $(".buyNow").click(function () {
-    if (userLogStatus == false) {
-      alert("You must log in first before Buying this coffee maker!");
-    } else {
-      console.log($(this).attr("coffeeid"));
-    }
-  });
+function buyListener(x) {
+  if (userLogStatus == false) {
+    alert("You must log in first before Buying this coffee maker!");
+  } else {
+    cart.push(x);
+    cartupdate();
+  }
 }
 
 //this function here runs our firebase that authenticats
@@ -332,11 +418,6 @@ function initFirebase() {
 $(document).ready(function () {
   try {
     checkHash();
-    $.getJSON("data/data.json", function (coffeeMachines) {
-      coffee = coffeeMachines.MACHINES;
-      //consol logs our array so we can see what we are getting from the page
-      console.log(coffee);
-    });
     //this console log runs after our JSON and has telling us they ran sucessfully.
     console.log(
       "If you see this console log then that means that the check hash function has finished running. And the page has successfully collected our JSON data."

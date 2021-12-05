@@ -129,8 +129,9 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 15px 18px 30px 18px; }
     .homePage__List__coffeeHolder {
       padding: 10px;
-      width: 20%;
+      width: 24%;
       color: #333333;
+      margin-bottom: 25px;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; }
       .homePage__List__coffeeHolder__Coffee {
         height: 540px;
@@ -140,12 +141,13 @@ h1, h2, h3, h4, h5, h6, p {
           margin-bottom: 30px; }
         .homePage__List__coffeeHolder__Coffee__colors {
           display: flex; }
-          .homePage__List__coffeeHolder__Coffee__colors img {
+          .homePage__List__coffeeHolder__Coffee__colors div {
             width: 25px;
             height: 25px;
             margin-left: 0px;
             margin-right: 5px;
-            margin-bottom: 15px; }
+            margin-bottom: 15px;
+            border-radius: 25px; }
         .homePage__List__coffeeHolder__Coffee .banner {
           position: relative;
           border-radius: 5px;
@@ -155,8 +157,6 @@ h1, h2, h3, h4, h5, h6, p {
           display: flex;
           margin-bottom: 10px;
           align-items: center; }
-          .homePage__List__coffeeHolder__Coffee .banner--purple {
-            background-color: #4e36ab; }
         .homePage__List__coffeeHolder__Coffee__information h1 {
           font-size: 15px;
           font-weight: lighter; }
@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 100%;
     min-height: 250px;
     margin-top: 30px;
-    padding: 0px 15px 0px 15px;
+    padding: 0px 15px 25px 15px;
     display: flex;
     justify-content: space-around; }
     .cartPage .ShoppingCart .sCLeft {
@@ -531,13 +531,26 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all .8s; }
+        transition: all .8s;
+        position: relative; }
         nav .topNav__extraRight__cart a {
           width: 70%;
           height: 70%; }
           nav .topNav__extraRight__cart a img {
             width: 100%;
             height: 100%; }
+        nav .topNav__extraRight__cart__count {
+          width: 25px;
+          height: 25px;
+          border-radius: 25px;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          background-color: #212529;
+          top: 0;
+          right: 0; }
       nav .topNav__extraRight__cart:hover {
         background-color: #e6e6e6;
         cursor: pointer; }

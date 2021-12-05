@@ -108,8 +108,9 @@
         padding: 15px 18px 30px 18px;
         &__coffeeHolder{
                 padding: 10px;
-                width: 20%;
+                width: 24%;
                 color: #333333;
+                margin-bottom: 25px;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
             &__Coffee{
                 height: 540px;
@@ -121,12 +122,13 @@
                 }
                 &__colors{
                     display: flex;
-                    img{
+                    div{
                         width: 25px;
                         height: 25px;
                         margin-left: 0px;
                         margin-right: 5px;
                         margin-bottom: 15px;
+                        border-radius: 25px;
                     }
                 }
                 .banner{
@@ -138,9 +140,6 @@
                     display: flex;
                     margin-bottom: 10px;
                     align-items: center;
-                    &--purple{
-                        background-color: #4e36ab;
-                    }
                 }
                 &__information{
                     h1{

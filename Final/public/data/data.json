@@ -1,3 +1,167 @@
 {
-  "MACHINES": [{}]
+  "MACHINES": [
+    {
+      "id": 0,
+      "name": "K-Supreme Plus® SMART Single Serve Coffee Maker",
+      "color": ["#000000"],
+      "images": "Coffee1.jpg",
+      "price": 199.99,
+      "rating": 4.5,
+      "count": 5,
+      "numRating": 681,
+      "banner": true,
+      "bannerColor": "#4e36ab",
+      "bannerMessage": "NEW"
+    },
+    {
+      "id": 1,
+      "name": "K-Mini® Single Serve Coffee Maker",
+      "color": ["#a9a9a6", "#ffe7e8", "#333333", "#a7cfca", "#ff0000"],
+      "images": "Coffee2.png",
+      "price": 79.99,
+      "rating": 3.9,
+      "count": 4,
+      "numRating": 319,
+      "banner": false,
+      "bannerColor": "#fff",
+      "bannerMessage": "&nbsp;"
+    },
+    {
+      "id": 2,
+      "name": "Keurig® K-Select® Coffee Maker",
+      "color": [
+        "#716c6d",
+        "#bb3a56",
+        "#333333",
+        "#a7cfca",
+        "#ddc7a5",
+        "#32425e"
+      ],
+      "images": "Coffee3.png",
+      "price": 99.99,
+      "rating": 4.1,
+      "count": 4,
+      "numRating": 1767,
+      "banner": false,
+      "bannerColor": "#fff",
+      "bannerMessage": "&nbsp;"
+    },
+    {
+      "id": 3,
+      "name": "Keurig® K-Elite® Single Serve Coffee Maker",
+      "color": ["#c4b8aa", "#a3a7a8", "#676260"],
+      "images": "Coffee4.png",
+      "price": 179.99,
+      "rating": 4.3,
+      "count": 4,
+      "numRating": 2705,
+      "banner": true,
+      "bannerColor": "#007c91",
+      "bannerMessage": "SAVE 50% BY BUILDING A KIT"
+    },
+    {
+      "id": 4,
+      "name": "K-Café® Single Serve Coffee Latte & Cappuccino Maker",
+      "color": ["#1b2631"],
+      "images": "Coffee5.png",
+      "price": 179.99,
+      "rating": 4.3,
+      "count": 4,
+      "numRating": 769,
+      "banner": true,
+      "bannerColor": "#007c91",
+      "bannerMessage": "SAVE 50% BY BUILDING A KIT"
+    },
+    {
+      "id": 5,
+      "name": "K-Mini Plus® Single Serve Coffee Maker",
+      "color": ["#2c2c33", "#bb3a56", "#a9a9a6", "#578295", "#77bcda"],
+      "images": "Coffee6.png",
+      "price": 99.99,
+      "rating": 3.9,
+      "count": 4,
+      "numRating": 1955,
+      "banner": false,
+      "bannerColor": "",
+      "bannerMessage": ""
+    },
+    {
+      "id": 7,
+      "name": "K-Slim® Single Serve Coffee Maker",
+      "color": ["#000000"],
+      "images": "Coffee7.png",
+      "price": 89.99,
+      "rating": 4.0,
+      "count": 4,
+      "numRating": 932,
+      "banner": true,
+      "bannerColor": "#4e36ab",
+      "bannerMessage": "NEW MULTISTREAM TECHNOLOGY"
+    },
+    {
+      "id": 7,
+      "name": "K-Duo™ Single Serve & Carafe Coffee Maker",
+      "color": ["#000000"],
+      "images": "Coffee8.png",
+      "price": 169.99,
+      "rating": 3.6,
+      "count": 3,
+      "numRating": 992,
+      "banner": true,
+      "bannerColor": "#007c91",
+      "bannerMessage": "SAVE 50% BY BUILDING A KIT"
+    },
+    {
+      "id": 8,
+      "name": "Keurig® K-Classic® Coffee Maker",
+      "color": ["#000000", "#bb3a56"],
+      "images": "Coffee9.png",
+      "price": 119.99,
+      "rating": 4.1,
+      "count": 4,
+      "numRating": 1982,
+      "banner": true,
+      "bannerColor": "#007c91",
+      "bannerMessage": "SAVE 50% BY BUILDING A KIT"
+    },
+    {
+      "id": 9,
+      "name": "Keurig® K-Supreme® Single Serve Coffee Maker",
+      "color": ["#eae8d4", "#66676d", "#000708", "#9ab39b"],
+      "images": "Coffee10.png",
+      "price": 119.99,
+      "rating": 4.0,
+      "count": 4,
+      "numRating": 1477,
+      "banner": true,
+      "bannerColor": "#4e36ab",
+      "bannerMessage": "NEW MUTLISTREAM TECHNOLOGY"
+    },
+    {
+      "id": 10,
+      "name": "K-Duo Plus™ Single Serve & Carafe Coffee Maker",
+      "color": ["#1b2631"],
+      "images": "Coffee11.png",
+      "price": 199.99,
+      "rating": 4.0,
+      "count": 4,
+      "numRating": 1003,
+      "banner": true,
+      "bannerColor": "#007c91",
+      "bannerMessage": "SAVE 50% BY BUILDING A KIT"
+    },
+    {
+      "id": 11,
+      "name": "K-Duo® Special Edition Single Serve & Carafe Coffee Maker",
+      "color": ["#b6b6b6"],
+      "images": "Coffee12.png",
+      "price": 199.99,
+      "rating": 4.3,
+      "count": 4,
+      "numRating": 192,
+      "banner": true,
+      "bannerColor": "#4e36ab",
+      "bannerMessage": "NEW"
+    }
+  ]
 }
