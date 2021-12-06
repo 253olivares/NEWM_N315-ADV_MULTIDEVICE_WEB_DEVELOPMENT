@@ -14,12 +14,49 @@
     <link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
+  <body style="overflow: auto;">
     <div id="page-container">
+      <div class="mobileCoffeMenu">
+          <div class="welcomeNav">
+            <h1>Welcome</h1>
+            <div class="welcomeNav__LoginCreate">
+              <div class="accountStuff">
+                <a>Login</a>
+                &nbsp;&nbsp;
+                <a>.</a>
+                &nbsp;&nbsp;
+                <a>Create Account</a>
+              </div>
+              <p>FREE SHIPPING $29+</p>
+            </div>
+          </div>
+          <div class="navigationOptions">
+            <a href="#" class="navigationOptions__extra">COFFEE, TEA & MORE <span>></span></a>
+            <a href="#" class="navigationOptions__extra">COFFEE MAKERS <span>></span></a>
+            <a href="#" class="navigationOptions__extra">ACCESSORIES <span>></span></a>
+            <a href="#" class="underHov">AUTO DELIVERY</a>
+            <a href="#" class="underHov">GET STARTED</a>
+            <a href="#" class="underHov">GIFT GUIDE</a>
+          </div>
+          <div class="DnC">
+            <a href="#" class="DnC__color underHov">DEALS</a>
+            <br>
+            <a href="#" class="DnC__cuzt underHov">CUSTOMIZE</a>
+          </div>
+          <div class="QRS">
+            <a href="#">Quick-reorder</a>
+            <a href="#">Register Coffee Maker</a>
+            <a href="#">Support</a>
+          </div>
+      </div>
       <div id="content-wrap">
         <!-- MVC Page Contents -->
         <nav>
           <div class="topNav">
+            <div class="topNav__menuBurger">
+              <img class="openMenu" src="images/bars-solid.svg" alt="menuBurger">
+              <img class="closeMenu" src="images/times-solid.svg" alt="menuBurger">
+            </div>
             <div class="topNav__image">
               <a href="#/home"><img src="images/Logo.svg" alt="StoreLogo"></a>
             </div>
@@ -48,8 +85,14 @@
             <a href="#" class="bottomNav__other"> AUTO DELIVERY</a>
             <a href="#" class="bottomNav__other"> GET STARTED</a>  
             <a href="#" class="bottomNav__other"> GIFT GUIDE</a>
-            <a href="#" class="bottomNav__deals"> <span><img src="images/sale-label.svg" alt="sales"></span>DEALS</a>
-            <a href="#" class="bottomNav__other"> CUSTOMIZE</a>
+            <a href="#" class="bottomNav__deals remove"> <span><img src="images/sale-label.svg" alt="sales"></span>DEALS</a>
+            <a href="#" class="bottomNav__other remove"> CUSTOMIZE</a>
+            <div class="mobileSearch">
+              <input type="text" placeholder="Search hundreds of ways to bew...">
+            </div>
+            <div class="mobileDeals">
+              <p>TODAY'S DEALS <span>+</span></p>
+            </div>
           </div>
           <div class="login">
             <div class="closeButton">
@@ -133,18 +176,31 @@
               <p class="footer__footerHolder__banner__right__follow">
                 Follow Us
               </p>
-              <img src="images/twitter.png" alt="">
-              <img src="images/facebook.png" alt="">
-              <img src="images/instagram.png" alt="">
+              <img src="images/twitter.png" alt="Twitter">
+              <img src="images/facebook.png" alt="Facebook">
+              <img src="images/instagram.png" alt="Instagram">
+            </div>
+          </div>
+          <div class="footer__footerHolder__mobileBanner">
+            <div class="footer__footerHolder__mobileBanner__FS">
+              <img src="images/location.png" alt="locations">
+              <p>Find a Store</p>
+            </div>
+            <div class="footer__footerHolder__mobileBanner__CS">
+              <img src="images/customer-support-phone.svg" alt="phone">
+              <p>Customer Support: 866-901-BREW(2739)</p>
+            </div>
+            <div class="footer__footerHolder__mobileBanner__Social">
+              <img src="images/twitter.png" alt="Twitter">
+              <img src="images/facebook.png" alt="Facebook">
+              <img src="images/instagram.png" alt="Instagram">
             </div>
           </div>
           <div class="footer__footerHolder__information">
             <div class="footer__footerHolder__information__column1 col">
               <h1>Shop</h1>
               <p>Coffee Makers</p>
-              <p>Beverages</p>
-              <br>
-              <br>
+              <p class="footer__footerHolder__information__column1__Bev">Beverages</p>
               <h1>Orders</h1>
               <p>Track Your Order</p>
               <p>Returns</p>
@@ -170,14 +226,15 @@
               <p>Rewards Program</p>
               <p>Accepted Payment</p>
             </div>
+            <hr class="footer__footerHolder__information__mobileHRCol">
             <div class="footer__footerHolder__information__column4 col">
-              <h1>Join Our Mailing List</h1>
+              <h1 class="footer__footerHolder__information__column4__Mailing">Join Our Mailing List</h1>
               <p>Stay up-to-date with the latest news and new arrivals direct to your inbox.</p>
               <div class="email">
                 <input title="email" class="emailInput" type="text" placeholder="Your email"><button class="emailButton">Sign Up</button>
               </div>
               <hr>
-              <h1>Select Country</h1>
+              <h1 class="footer__footerHolder__information__column4__CountryName">Select Country</h1>
               <div class="countrySelection">
                 <img src="images/countryImage.png" alt="countryImage">
                 <select title="country" name="countrys" id="country">
@@ -188,7 +245,7 @@
               </div>
             </div>
           </div>
-          <hr>
+          <hr class="footer__footerHolder__mobileHR">
           <div class="footer__footerHolder__copyRightStuff">
             <p>&#169; 2021 Keurig Green Mountain, Inc. -All Rights Reserved</p>
             <p class="TOS">Terms of Use</p>

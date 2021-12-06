@@ -44,7 +44,103 @@ h1, h2, h3, h4, h5, h6, p {
     height: 515px;
 }
 #app{
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: auto;
     min-height: 320px;
+}
+.mobileCoffeMenu{
+    border-top: 1px solid #899099;
+    display: none;
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: #fff;
+    z-index: 10;
+    .underHov:hover{
+        text-decoration: underline;
+    }
+    .welcomeNav{
+        padding: 20px;
+        background-color: #f5f5f5;
+        h1{
+            font-size: 25px;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+        &__LoginCreate{
+            display: flex;
+            justify-content: space-between;
+            .accountStuff{
+                display: flex;
+                a{
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                    text-decoration: underline;
+                }
+            }
+            p{
+                font-size: 13px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .navigationOptions{
+        display: flex;
+        flex-direction: column;
+        &__extra{
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            padding:10px 20px 10px 20px;
+            text-decoration: none;
+            color: #333333;
+            border-bottom: 1px solid #333333;
+            span{
+            }
+        }
+    }
+    .DnC{
+        border-bottom: 1px solid #333333 ;
+        padding:25px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+        }
+        &__color{
+            color: #C8102E;
+        }
+        &__cuzt{
+            color: #333333;
+        }
+    }
+    .QRS{
+        display: flex;
+        flex-direction: column;
+        padding:25px 20px 20px 20px;
+        a{
+            text-decoration: none;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1468px) {
+    .grayOverlay{
+        top: 178px;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .grayOverlay{
+        top: 161px;
+    }
+}
+@media screen and (max-width: 1195px) {
+    .grayOverlay{
+        top: 177px;
+    }
 }

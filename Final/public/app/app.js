@@ -1,3 +1,5 @@
+var menu = "close";
+
 subtotal = 0;
 //this is an array that we will push coffee into when we click buy now and if the user is signed in
 var cart = [];
@@ -70,7 +72,7 @@ function loadCoffee() {
       <div class="homePage__List__coffeeHolder">
         <div class="homePage__List__coffeeHolder__Coffee">
           <p class="banner banner--purple" style="background-color:${x.bannerColor};">${x.bannerMessage}</p>
-          <img src="images/${x.images}" alt="Coffee Machine">
+          <img class="cofImg" src="images/${x.images}" alt="Coffee Machine">
           <div id="collectionColor${x.id}" class="homePage__List__coffeeHolder__Coffee__colors">
           </div>
           <div class="homePage__List__coffeeHolder__Coffee__information">
@@ -121,6 +123,25 @@ function cartupdate() {
     $("#countThingy").css("display", "flex");
     $("#countThingy").html(cart.length);
   }
+}
+
+//Function that controls our mobile menu options that lets us show and hide our menu
+function mobileMenu() {
+  $(".topNav__menuBurger").click(function (e) {
+    if (menu == "close") {
+      $(".mobileCoffeMenu").css("display", "block");
+      $(".openMenu").css("display", "none");
+      $(".closeMenu").css("display", "block");
+      $("body").css("overflow", "hidden");
+      menu = "open";
+    } else {
+      $(".mobileCoffeMenu").css("display", "none");
+      $(".openMenu").css("display", "block");
+      $(".closeMenu").css("display", "none");
+      $("body").css("overflow", "auto");
+      menu = "close";
+    }
+  });
 }
 
 //function that looks at the cart array and sees if
@@ -418,6 +439,7 @@ function initFirebase() {
 $(document).ready(function () {
   try {
     checkHash();
+    mobileMenu();
     //this console log runs after our JSON and has telling us they ran sucessfully.
     console.log(
       "If you see this console log then that means that the check hash function has finished running. And the page has successfully collected our JSON data."

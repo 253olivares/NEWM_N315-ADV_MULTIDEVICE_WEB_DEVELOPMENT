@@ -41,9 +41,83 @@ h1, h2, h3, h4, h5, h6, p {
   height: 515px; }
 
 #app {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: auto;
   min-height: 320px; }
+
+.mobileCoffeMenu {
+  border-top: 1px solid #899099;
+  display: none;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  height: calc(100% - 90px);
+  background-color: #fff;
+  z-index: 10; }
+  .mobileCoffeMenu .underHov:hover {
+    text-decoration: underline; }
+  .mobileCoffeMenu .welcomeNav {
+    padding: 20px;
+    background-color: #f5f5f5; }
+    .mobileCoffeMenu .welcomeNav h1 {
+      font-size: 25px;
+      font-weight: lighter;
+      margin-bottom: 10px; }
+    .mobileCoffeMenu .welcomeNav__LoginCreate {
+      display: flex;
+      justify-content: space-between; }
+      .mobileCoffeMenu .welcomeNav__LoginCreate .accountStuff {
+        display: flex; }
+        .mobileCoffeMenu .welcomeNav__LoginCreate .accountStuff a {
+          font-size: 13px;
+          margin-bottom: 5px;
+          text-decoration: underline; }
+      .mobileCoffeMenu .welcomeNav__LoginCreate p {
+        font-size: 13px;
+        margin-bottom: 5px; }
+  .mobileCoffeMenu .navigationOptions {
+    display: flex;
+    flex-direction: column; }
+    .mobileCoffeMenu .navigationOptions__extra {
+      display: flex;
+      justify-content: space-between; }
+    .mobileCoffeMenu .navigationOptions a {
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+      color: #333333;
+      border-bottom: 1px solid #333333; }
+  .mobileCoffeMenu .DnC {
+    border-bottom: 1px solid #333333;
+    padding: 25px 20px 20px 20px;
+    display: flex;
+    flex-direction: column; }
+    .mobileCoffeMenu .DnC a {
+      text-decoration: none; }
+    .mobileCoffeMenu .DnC__color {
+      color: #C8102E; }
+    .mobileCoffeMenu .DnC__cuzt {
+      color: #333333; }
+  .mobileCoffeMenu .QRS {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px 20px 20px; }
+    .mobileCoffeMenu .QRS a {
+      text-decoration: none;
+      color: #333333;
+      margin-bottom: 15px; }
+
+@media screen and (max-width: 1468px) {
+  .grayOverlay {
+    top: 178px; } }
+
+@media screen and (max-width: 1300px) {
+  .grayOverlay {
+    top: 161px; } }
+
+@media screen and (max-width: 1195px) {
+  .grayOverlay {
+    top: 177px; } }
 
 .homePage {
   width: 100%; }
@@ -68,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p {
       letter-spacing: 3px;
       margin-bottom: 0px; }
   .homePage__filterBanner {
-    padding: 20px 10px 20px 10px;
+    padding: 20px 10px 0px 10px;
     display: flex;
     justify-content: space-between; }
     .homePage__filterBanner__left {
@@ -79,7 +153,7 @@ h1, h2, h3, h4, h5, h6, p {
       .homePage__filterBanner__left p {
         padding: 15px;
         color: #b3b3b3;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         border: 3px solid  #999999;
         margin-right: 15px;
         border-radius: 3px;
@@ -100,10 +174,13 @@ h1, h2, h3, h4, h5, h6, p {
         display: block; }
       .homePage__filterBanner__left p:hover .greyDownArrow {
         display: none; }
+      .homePage__filterBanner__left .sortnfilt {
+        display: none; }
     .homePage__filterBanner__right {
       display: flex;
       justify-content: center;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: 10px; }
       .homePage__filterBanner__right .arrowFilter {
         display: flex;
         flex-direction: column; }
@@ -124,21 +201,24 @@ h1, h2, h3, h4, h5, h6, p {
       transform: rotate(180deg); }
   .homePage__List {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding: 15px 18px 30px 18px; }
+    padding: 15px 5px 30px 5px; }
     .homePage__List__coffeeHolder {
       padding: 10px;
-      width: 24%;
+      width: 23.5%;
+      min-width: 300px;
       color: #333333;
       margin-bottom: 25px;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; }
       .homePage__List__coffeeHolder__Coffee {
         height: 540px;
         position: relative; }
-        .homePage__List__coffeeHolder__Coffee img {
+        .homePage__List__coffeeHolder__Coffee .cofImg {
           width: 100%;
-          margin-bottom: 30px; }
+          max-width: 260px;
+          display: block;
+          margin: 0px auto 30px auto; }
         .homePage__List__coffeeHolder__Coffee__colors {
           display: flex; }
           .homePage__List__coffeeHolder__Coffee__colors div {
@@ -225,6 +305,30 @@ h1, h2, h3, h4, h5, h6, p {
       .homePage__List__coffeeHolder .buyNow:hover {
         background-color: #f1be48;
         cursor: pointer; }
+
+@media screen and (max-width: 1235px) {
+  .homePage__List__coffeeHolder {
+    width: 32%; } }
+
+@media screen and (max-width: 990px) {
+  .homePage__filterBanner__left .filtOption {
+    display: none; }
+  .homePage__filterBanner__left .sortnfilt {
+    display: block; }
+  .homePage__filterBanner__right {
+    display: none; } }
+
+@media screen and (max-width: 990px) {
+  .homePage__banner h5 {
+    font-size: 15px;
+    margin-bottom: 10px; }
+  .homePage__banner h1 {
+    font-size: 30px; } }
+
+@media screen and (max-width: 935px) {
+  .homePage__List__coffeeHolder {
+    width: 49%;
+    min-width: 150px; } }
 
 .cartPage {
   margin-top: 20px;
@@ -459,6 +563,13 @@ nav {
         margin-left: 15px; }
         nav .topNav__image a img {
           width: 100%; }
+    nav .topNav__menuBurger {
+      display: none; }
+      nav .topNav__menuBurger .closeMenu {
+        display: none; }
+      nav .topNav__menuBurger i {
+        width: 50px;
+        height: 50px; }
     nav .topNav__searchBar {
       padding: 4px 19px 4px 19px;
       border-radius: 25px;
@@ -557,14 +668,20 @@ nav {
   nav .bottomNav {
     width: 100%;
     display: flex;
-    justify-content: start; }
+    justify-content: start;
+    flex-direction: row; }
+    nav .bottomNav .mobileSearch {
+      display: none; }
+    nav .bottomNav .mobileDeals {
+      display: none; }
     nav .bottomNav a {
       padding: 15px 20px 15px 20px;
       text-decoration: none;
       font-size: 13px;
       border-radius: 5px;
       transition: all .8s;
-      letter-spacing: 3px; }
+      letter-spacing: 3px;
+      text-align: center; }
     nav .bottomNav a:hover {
       background-color: #e6e6e6; }
     nav .bottomNav__other {
@@ -736,8 +853,89 @@ nav {
       nav .login .endButtons .firstBtn {
         margin-bottom: 10px; }
 
+@media screen and (max-width: 1400px) {
+  nav .topNav__searchBar {
+    max-width: 500px; }
+  nav .topNav__extraRight button {
+    font-size: 11px; } }
+
+@media screen and (max-width: 1300px) {
+  nav .topNav__searchBar {
+    max-width: 300px; }
+  nav .bottomNav .remove {
+    display: none; } }
+
+@media screen and (max-width: 990px) {
+  nav {
+    padding: 35px 3px 0px 3px; }
+    nav .topNav__image a {
+      width: 120px;
+      margin-left: 0; }
+    nav .topNav__menuBurger {
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin-left: 15px; }
+      nav .topNav__menuBurger img {
+        width: 80%;
+        height: 80%; }
+    nav .topNav__menuBurger {
+      cursor: pointer; }
+    nav .topNav__searchBar {
+      display: none; }
+    nav .topNav__extraRight {
+      margin-right: 15px; }
+      nav .topNav__extraRight button {
+        display: none; }
+      nav .topNav__extraRight__profile {
+        width: 40px;
+        height: 40px; }
+      nav .topNav__extraRight__signout {
+        width: 40px;
+        height: 40px; }
+      nav .topNav__extraRight__cart {
+        width: 40px;
+        height: 40px; }
+        nav .topNav__extraRight__cart__count {
+          width: 15px;
+          height: 15px; }
+    nav .bottomNav {
+      justify-content: center;
+      flex-direction: column; }
+      nav .bottomNav a {
+        display: none; }
+      nav .bottomNav .mobileSearch {
+        display: block;
+        width: 100%;
+        padding: 2px; }
+        nav .bottomNav .mobileSearch input {
+          padding: 10px;
+          border: 1px solid #dfdfdf;
+          background-color: #f3f3f3;
+          width: 100%; }
+      nav .bottomNav .mobileDeals {
+        width: 100%;
+        display: block;
+        padding-bottom: 2px; }
+        nav .bottomNav .mobileDeals p {
+          font-weight: lighter;
+          width: 100%;
+          margin-bottom: 0px;
+          padding: 8px;
+          text-align: center;
+          background-color: #cdcdcd;
+          line-height: 30px;
+          font-size: 15px; }
+          nav .bottomNav .mobileDeals p span {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold; }
+    nav .login {
+      right: 80px; } }
+
 .footer__footerHolder {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: auto; }
   .footer__footerHolder__banner {
     background-color: #3b2b2f;
@@ -779,11 +977,16 @@ nav {
         fill: white; }
       .footer__footerHolder__banner__right img:hover {
         cursor: pointer; }
+  .footer__footerHolder__mobileBanner {
+    display: none; }
   .footer__footerHolder__information {
     width: 100%;
     min-height: 100px;
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px; }
     .footer__footerHolder__information .col {
       width: 300px;
       display: flex;
@@ -801,6 +1004,8 @@ nav {
       text-decoration: underline;
       cursor: pointer;
       color: #737373; }
+    .footer__footerHolder__information__column1__Bev {
+      padding-bottom: 35px; }
     .footer__footerHolder__information__column2 h1 {
       font-size: 20px;
       margin-bottom: 25px;
@@ -823,6 +1028,8 @@ nav {
       text-decoration: underline;
       cursor: pointer;
       color: #737373; }
+    .footer__footerHolder__information__mobileHRCol {
+      display: none; }
     .footer__footerHolder__information__column4 .countrySelection {
       width: 100%;
       display: flex;
@@ -886,6 +1093,8 @@ nav {
     border: none;
     height: 1px;
     width: 100%; }
+  .footer__footerHolder__mobileHR {
+    display: none; }
   .footer__footerHolder__copyRightStuff {
     width: 80%;
     margin: 10px auto 0px auto;
@@ -910,6 +1119,182 @@ nav {
       color: black;
       margin-bottom: 16px;
       margin-right: 5px; }
+
+@media screen and (max-width: 990px) {
+  .footer__footerHolder__banner__left img {
+    width: 12px;
+    height: 20px; }
+  .footer__footerHolder__banner__left span {
+    font-size: 20px; }
+  .footer__footerHolder__banner__left p {
+    font-size: 10px; }
+  .footer__footerHolder__banner__right__follow {
+    font-size: 10px; }
+  .footer__footerHolder__banner__right img {
+    width: 17px;
+    height: 17px; }
+  .footer__footerHolder__information__column1 h1 {
+    font-size: 15px; }
+  .footer__footerHolder__information__column1 p {
+    font-size: 10px; }
+  .footer__footerHolder__information__column2 h1 {
+    font-size: 15px; }
+  .footer__footerHolder__information__column2 p {
+    font-size: 10px; }
+  .footer__footerHolder__information__column3 h1 {
+    font-size: 15px; }
+  .footer__footerHolder__information__column3 p {
+    font-size: 10px; }
+  .footer__footerHolder__information__column4 .countrySelection img {
+    width: 30px;
+    height: 30px; }
+  .footer__footerHolder__information__column4 .countrySelection select {
+    height: 18px;
+    width: 140px;
+    font-size: 10px;
+    margin-left: 8px; }
+  .footer__footerHolder__information__column4 h1 {
+    font-size: 15px; }
+  .footer__footerHolder__information__column4 p {
+    font-size: 10px; }
+  .footer__footerHolder__information__column4 .email input {
+    font-size: 12px; }
+  .footer__footerHolder__information__column4 .email button {
+    font-size: 12px; } }
+
+@media screen and (max-width: 990px) {
+  .footer__footerHolder__banner {
+    display: none; }
+  .footer__footerHolder__mobileBanner {
+    display: block;
+    flex-direction: column;
+    background-color: #3b2b2f; }
+    .footer__footerHolder__mobileBanner__FS {
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid  #ad7d6d; }
+      .footer__footerHolder__mobileBanner__FS p {
+        width: 175px;
+        margin: auto;
+        text-align: center; }
+      .footer__footerHolder__mobileBanner__FS img {
+        width: 15px;
+        height: 25px; }
+    .footer__footerHolder__mobileBanner__CS {
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid  #ad7d6d; }
+      .footer__footerHolder__mobileBanner__CS p {
+        width: 175px;
+        margin: auto;
+        text-align: center; }
+      .footer__footerHolder__mobileBanner__CS img {
+        width: 20px;
+        height: 20px; }
+    .footer__footerHolder__mobileBanner__Social {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .footer__footerHolder__mobileBanner__Social img {
+        width: 25px;
+        height: 25px;
+        margin-left: 25px;
+        margin-right: 25px; }
+  .footer__footerHolder__information {
+    justify-content: center;
+    flex-direction: column; }
+    .footer__footerHolder__information .col {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 10px; }
+    .footer__footerHolder__information__column1 h1 {
+      font-size: 23px; }
+    .footer__footerHolder__information__column1 p {
+      font-size: 14px;
+      letter-spacing: 2px; }
+    .footer__footerHolder__information__column1__Bev {
+      padding-bottom: 10px; }
+    .footer__footerHolder__information__column2 h1 {
+      font-size: 23px; }
+    .footer__footerHolder__information__column2 p {
+      font-size: 14px;
+      letter-spacing: 2px; }
+    .footer__footerHolder__information__column3 h1 {
+      font-size: 23px; }
+    .footer__footerHolder__information__column3 p {
+      font-size: 14px;
+      letter-spacing: 2px; }
+    .footer__footerHolder__information__mobileHRCol {
+      display: block; }
+    .footer__footerHolder__information__column4__Mailing {
+      font-size: 20px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      width: 90%;
+      margin-left: 5%;
+      text-align: left; }
+    .footer__footerHolder__information__column4__CountryName {
+      width: 90%;
+      text-align: center;
+      margin-left: 5%;
+      margin-top: 5px; }
+    .footer__footerHolder__information__column4 .countrySelection {
+      width: 90%;
+      margin-left: 5%;
+      margin-bottom: 10px; }
+      .footer__footerHolder__information__column4 .countrySelection img {
+        width: 45px;
+        height: 45px; }
+      .footer__footerHolder__information__column4 .countrySelection select {
+        height: 25px;
+        width: 165px; }
+    .footer__footerHolder__information__column4 p {
+      font-size: 12px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      width: 90%;
+      margin-left: 5%;
+      text-align: left; }
+    .footer__footerHolder__information__column4 .email {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 50px; }
+      .footer__footerHolder__information__column4 .email input {
+        width: 75%;
+        margin-left: 5%; }
+      .footer__footerHolder__information__column4 .email button {
+        width: 15%; }
+  .footer__footerHolder__mobileHR {
+    display: block; }
+  .footer__footerHolder__copyRightStuff {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: #848d9c;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-left: 0;
+    width: 90%;
+    margin-left: 5%; }
+    .footer__footerHolder__copyRightStuff p {
+      text-align: left;
+      width: 100%;
+      font-size: 14px;
+      margin-left: 0px;
+      padding-bottom: 10px; }
+    .footer__footerHolder__copyRightStuff span {
+      display: none; }
+    .footer__footerHolder__copyRightStuff .PP {
+      margin-left: 0;
+      margin-right: 0; }
+    .footer__footerHolder__copyRightStuff .TOS {
+      margin-left: 0;
+      margin-right: 0; } }
 
 .profilehov:hover .login {
   display: block; }

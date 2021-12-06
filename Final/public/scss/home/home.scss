@@ -24,7 +24,7 @@
         }
     }
     &__filterBanner{
-        padding: 20px 10px 20px 10px;
+        padding: 20px 10px 0px 10px;
         display: flex;
         justify-content: space-between;
         &__left{
@@ -35,7 +35,7 @@
             p{
                 padding: 15px;
                 color: #b3b3b3;
-                margin-bottom: 0px;
+                margin-bottom: 10px;
                 border: 3px solid 
                 #999999;
                 margin-right: 15px;
@@ -64,11 +64,15 @@
             p:hover .greyDownArrow{
                 display: none;
             }
+            .sortnfilt{
+                display: none;
+            }
         }
         &__right{
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 10px;
             .arrowFilter{
                 display: flex;
                 flex-direction: column;
@@ -103,22 +107,24 @@
     }
     &__List{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
-        padding: 15px 18px 30px 18px;
+        padding: 15px 5px 30px 5px;
         &__coffeeHolder{
                 padding: 10px;
-                width: 24%;
+                width: 23.5%;
+                min-width: 300px;
                 color: #333333;
                 margin-bottom: 25px;
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
             &__Coffee{
                 height: 540px;
                 position: relative;
-                img{
-                    
+                .cofImg{
                     width: 100%;
-                    margin-bottom: 30px;
+                    max-width: 260px;
+                    display: block;
+                    margin: 0px auto 30px auto;
                 }
                 &__colors{
                     display: flex;
@@ -233,3 +239,53 @@
         }
     }
 }
+@media screen and (max-width: 1235px) {
+    .homePage{
+        &__List{
+            &__coffeeHolder{
+                width: 32%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 990px) {
+    .homePage{
+        &__filterBanner{
+            &__left{
+                .filtOption{
+                    display: none;
+                }
+                .sortnfilt{
+                    display: block;
+                }
+            }
+            &__right{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 990px){
+    .homePage{
+        &__banner{
+            h5{
+                font-size: 15px;
+                margin-bottom: 10px;
+            }
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 935px) {
+    .homePage{
+        &__List{
+            &__coffeeHolder{
+                width: 49%;
+                min-width: 150px;
+            }
+        }
+    }
+}
+

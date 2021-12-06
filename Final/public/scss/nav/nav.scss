@@ -20,6 +20,16 @@ nav{
                 }
             }
         }
+        &__menuBurger{
+            display: none;
+            .closeMenu{
+                display: none;
+            }
+            i{
+                width: 50px;
+                height: 50px;
+            }
+        }
         &__searchBar{
             padding: 4px 19px 4px 19px;
             border-radius: 25px;
@@ -139,6 +149,13 @@ nav{
         width: 100%;
         display: flex;
         justify-content: start;
+        flex-direction: row;
+        .mobileSearch{
+            display: none;
+        }
+        .mobileDeals{
+            display: none;
+        }
         a{
             padding: 15px 20px 15px 20px;
             text-decoration: none;
@@ -146,6 +163,7 @@ nav{
             border-radius: 5px;
             transition: all .8s;
             letter-spacing: 3px;
+            text-align: center;
         }
         a:hover{
             background-color: #e6e6e6;
@@ -375,6 +393,130 @@ nav{
             .firstBtn{
                 margin-bottom: 10px;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    nav{
+        .topNav{
+            &__searchBar{
+                max-width: 500px;
+            }
+            &__extraRight{
+                button{
+                    font-size: 11px;
+                }
+            }
+        }
+        .bottomNav{
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    nav{
+        .topNav{
+            &__searchBar{
+                max-width: 300px;
+            }
+        }
+        .bottomNav{
+            .remove{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 990px) {
+    nav{
+        padding: 35px 3px 0px 3px;
+        .topNav{
+            &__image{
+                a{
+                    width: 120px;
+                    margin-left: 0;
+                }
+            }
+            &__menuBurger{
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-left: 15px;
+                img{
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+            &__menuBurger{
+                cursor: pointer;
+            }
+            &__searchBar{
+                display: none;
+            }
+            &__extraRight{
+                margin-right:15px;
+                button{
+                    display: none;
+                }
+                &__profile{
+                    width: 40px;
+                    height: 40px;
+                }
+                &__signout{
+                    width: 40px;
+                    height: 40px;
+                }
+                &__cart{
+                    width: 40px;
+                    height: 40px;
+                    &__count{
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+        .bottomNav{
+            justify-content: center;
+            flex-direction: column;
+            a{
+                display: none;
+            }
+            .mobileSearch{
+                display: block;
+                width: 100%;
+                padding: 2px;
+                input{
+                    padding: 10px;
+                    border: 1px solid #dfdfdf;
+                    background-color: #f3f3f3;
+                    width: 100%;
+                }
+            }
+            .mobileDeals{
+                width: 100%;
+                display: block;
+                padding-bottom: 2px;
+                p{
+                    font-weight: lighter;
+                    width: 100%;
+                    margin-bottom: 0px;
+                    padding: 8px;
+                    text-align: center;
+                    background-color: 
+                    #cdcdcd;
+                    line-height: 30px;
+                    font-size: 15px;
+                    span{
+                        margin-left: 10px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .login{
+            right: 80px;
         }
     }
 }

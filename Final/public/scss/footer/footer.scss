@@ -1,5 +1,6 @@
 .footer__footerHolder{
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     margin: auto;
     &__banner{
         background-color: #3b2b2f;
@@ -51,11 +52,17 @@
             }
         }
     }
+    &__mobileBanner{
+        display: none;
+    }
     &__information{
         width: 100%;
         min-height: 100px;
         display: flex;
         justify-content: space-around;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-right: 10px;
         .col{
             width: 300px;
             display: flex;
@@ -77,6 +84,9 @@
                 text-decoration: underline;
                 cursor: pointer;
                 color: #737373;
+            }
+            &__Bev{
+                padding-bottom: 35px;
             }
         }
         &__column2{
@@ -110,6 +120,9 @@
                 cursor: pointer;
                 color: #737373;
             }
+        }
+        &__mobileHRCol{
+            display: none;
         }
         &__column4{
             .countrySelection{
@@ -189,6 +202,9 @@
         height: 1px;
         width: 100%;
     }
+    &__mobileHR{
+        display: none;
+    }
     &__copyRightStuff{
         width: 80%;
         margin: 10px auto 0px auto;
@@ -217,6 +233,275 @@
             color: black    ;
             margin-bottom: 16px;
             margin-right: 5px;
+        }
+    }
+}
+@media screen and (max-width: 990px) {
+    .footer__footerHolder{
+        &__banner{
+            &__left{
+                img{
+                    width: 12px;
+                    height: 20px;
+                }
+                 span{
+                     font-size: 20px;
+                 }
+                 p{
+                     font-size: 10px;
+                 }
+            }
+            &__right{
+                &__follow{
+                    font-size: 10px;
+                }
+                img{
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+        &__information{
+            &__column1{
+                h1{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+            &__column2{
+                h1{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+            &__column3{
+                h1{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 10px;
+                }
+            }
+            &__column4{
+                .countrySelection{
+                    img{
+                        width: 30px;
+                        height: 30px;
+                    }
+                    select{
+                        height: 18px;
+                        width: 140px;
+                        font-size: 10px;
+                        margin-left: 8px;
+                    }
+                }
+                h1{
+                    font-size: 15px;
+                }
+                p{
+                    font-size: 10px;
+                }
+                .email{
+                    input{
+                        font-size: 12px;
+                    }
+                    button{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        hr{
+
+        }
+        &__copyRightStuff{
+
+        }
+    }
+}
+@media screen and (max-width: 990px){
+    .footer__footerHolder{
+        &__banner{
+            display: none;
+        }
+        &__mobileBanner{
+            display:block;
+            flex-direction: column;
+            background-color: #3b2b2f;
+            &__FS{
+                color: white;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid 
+                #ad7d6d;
+                p{
+                    width: 175px;
+                    margin: auto;
+                    text-align: center;
+                }
+                img{
+                    width: 15px;
+                    height: 25px;
+                }
+            }
+            &__CS{
+                color:white;
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                border-bottom: 2px solid 
+                #ad7d6d;
+                p{
+                    width: 175px;
+                    margin: auto;
+                    text-align: center;
+                }
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &__Social{
+                padding:20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 25px;
+                    height: 25px;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                }
+            }
+        }
+        &__information{
+            justify-content: center;
+            flex-direction: column;
+            .col{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            &__column1{
+                h1{
+                    font-size: 23px;
+                }
+                p{
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                }
+                &__Bev{
+                    padding-bottom: 10px;
+                }
+            }
+            &__column2{
+                h1{
+                    font-size: 23px;
+                }
+                p{
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                }
+
+            }
+            &__column3{
+                h1{
+                    font-size: 23px;
+                }
+                p{
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                }
+            }
+            &__mobileHRCol{
+                display: block;
+            }
+            &__column4{
+                &__Mailing{
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                    letter-spacing: 2px;
+                    width: 90%;
+                    margin-left: 5%;
+                    text-align: left;
+                }
+                &__CountryName{
+                    width: 90%;
+                    text-align: center;
+                    margin-left: 5%;
+                    margin-top: 5px;
+                }
+                .countrySelection{
+                  width: 90%;
+                  margin-left: 5%;
+                  margin-bottom: 10px;
+                  img{
+                      width: 45px;
+                      height: 45px;
+                  }
+                  select{
+                    height: 25px;
+                    width: 165px;
+                  }
+                }
+                p{
+                    font-size: 12px;
+                    margin-bottom: 15px;
+                    letter-spacing: 2px;
+                    width: 90%;
+                    margin-left: 5%;
+                    text-align: left;
+                }
+                .email{
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-bottom: 50px;
+                    input{
+                        width: 75%;
+                        margin-left: 5%;
+                    }
+                    button{
+                        width: 15%;
+                    }
+                }
+            }
+        }
+        &__mobileHR{
+            display: block;
+        }
+        &__copyRightStuff{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            color:#848d9c;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            margin-left: 0;
+            width: 90%;
+            margin-left: 5%;
+            p{
+                text-align: left;
+                width: 100%;
+                font-size: 14px;
+                margin-left: 0px;
+                padding-bottom: 10px;
+            }
+            span{
+                display: none;
+            }
+            .PP{
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .TOS{
+                margin-left: 0;
+                margin-right: 0;
+            }
         }
     }
 }
