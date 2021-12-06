@@ -378,18 +378,19 @@ function initLogin() {
         let ln = $("#signUpLN").val();
         let email = $("#signUpEmail").val();
         let password = $("#signUpPassword").val();
-        if (!fn || !ln || !email || !password) {
-          alert("Please make sure to fill out all fields");
-        } else {
-          $("#signUpFN").val("");
-          $("#signUpLN").val("");
-          $("#signUpEmail").val("");
-          $("#signUpPassword").val("");
-          signUp(fn, ln, email, password);
-          $(".login").css("display", "none");
-          $(".grayOverlay").css("display", "none");
-          click = false;
-        }
+        // if (!fn || !ln || !email || !password) {
+        //   alert("Please make sure to fill out all fields");
+        // } else {
+
+        // }
+        $("#signUpFN").val("");
+        $("#signUpLN").val("");
+        $("#signUpEmail").val("");
+        $("#signUpPassword").val("");
+        signUp(fn, ln, email, password);
+        $(".login").css("display", "none");
+        $(".grayOverlay").css("display", "none");
+        click = false;
       });
     } else {
       $(".login").css("display", "none");
