@@ -203,6 +203,7 @@ function checkout() {
 
 function loadCartMachines() {
   $("#coffeeDisplay").empty();
+  subtotal = 0;
   $.getJSON("data/data.json", function (coffee) {
     $.each(cart, function (c) {
       let displayCoffee = `
