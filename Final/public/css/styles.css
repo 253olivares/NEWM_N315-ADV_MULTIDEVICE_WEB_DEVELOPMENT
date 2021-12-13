@@ -544,6 +544,25 @@ h1, h2, h3, h4, h5, h6, p {
               margin-left: 10px;
               color: #0099ff; }
 
+@media screen and (max-width: 1200px) {
+  .cartPage .ShoppingCart {
+    flex-direction: column; }
+    .cartPage .ShoppingCart .sCLeft {
+      width: 100%; }
+      .cartPage .ShoppingCart .sCLeft .discount .couponCode input {
+        width: 100px; }
+      .cartPage .ShoppingCart .sCLeft .discount .couponCode button {
+        width: 40px; }
+    .cartPage .ShoppingCart .sCRight {
+      margin-top: 20px;
+      width: 100%; } }
+
+@media screen and (max-width: 300px) {
+  .cartPage .ShoppingCart .sCLeft .discount .couponCode input {
+    width: 100px; }
+  .cartPage .ShoppingCart .sCLeft .discount .couponCode button {
+    width: 40px; } }
+
 nav {
   padding: 35px 45px 10px 45px;
   display: flex;

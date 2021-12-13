@@ -269,3 +269,51 @@
         }
     }
 }
+@media screen and (max-width: 1200px) {
+    .cartPage{
+        .ShoppingCart{
+            flex-direction: column;
+            .sCLeft{
+                width: 100%;
+                .discount{
+                    
+                    .couponCode{
+                        input{
+                            width: 100px;
+                            
+                        }
+                        button{
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+            .sCRight{
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 300px) {
+    .cartPage{
+        .ShoppingCart{
+            .sCLeft{
+                .discount{
+                    
+                    .couponCode{
+                        input{
+                            width: 100px;
+                            
+                        }
+                        button{
+                            width: 40px;
+                        }
+                    }
+                }
+            }
+            .sCRight{
+            }
+        }
+    }
+}
